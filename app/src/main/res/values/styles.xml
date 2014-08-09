@@ -1,0 +1,78 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Holo">
+        <!-- Customize your theme here. -->
+    </style>
+
+
+    <style name="SingleItem">
+       <item name="android:background">@color/white</item>
+       <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="SingleExerciseButton">
+        <item name="android:background">@drawable/singleexercisebutton</item>
+        <item name="android:textColor">@drawable/singleexercisebuttontext</item>
+        <item name="android:minHeight">100dp</item>
+        <item name="android:minWidth">100dp</item>
+        <item name="android:maxWidth">100dp</item>
+        <item name="android:maxHeight">100dp</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:textSize">40dp</item>
+
+
+
+    </style>
+
+    <style name="DajSpisacTheme" parent="android:Theme.Holo.Light">
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle</item>
+        <item name="android:actionBarSize">70dip</item>
+        <item name="android:actionBarStyle">@style/DajSpisacTheme.ActionBarDajSpisac</item>
+        <item name="android:panelFullBackground">@color/actionBarColor</item>
+        <item name="android:panelBackground">@color/actionBarColor</item>
+        <item name="android:panelColorBackground">@color/actionBarColor</item>
+        <item name="android:itemBackground">@color/actionBarColor</item>
+        <item name="android:actionMenuTextColor">@color/orangeDajSpisac</item>
+        <item name="android:itemTextAppearance">@style/TextAppearance</item>
+    </style>
+
+    <style name="TextAppearance">
+        <item name="android:textColor">@color/orangeDajSpisac</item>
+
+    </style>
+
+    <style name="ActionBarTabStyle" parent="@android:style/Widget.Holo.ActionBar.TabView">
+        <item name="android:minHeight">80dip</item>
+    </style>
+
+    <style name="DajSpisacTheme.ActionBarDajSpisac" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:titleTextStyle">@style/DajSpisacTheme.ActionBarDajSpisac.TitleTextStyle</item>
+        <item name="android:background">@color/actionBarColor</item>
+        <item name="android:actionOverflowButtonStyle">@style/DajSpisacTheme.ActionBarDajSpisac.Overflow</item>
+    </style>
+
+    <style name="DajSpisacTheme.ActionBarDajSpisac.TitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/orangeDajSpisac</item>
+        <item name="android:left">20dp</item>
+    </style>
+
+    <style name="DajSpisacTheme.ActionBarDajSpisac.Overflow" parent="android:style/Widget.Holo.ActionButton.Overflow">
+        <item name="android:src">@drawable/ic_launcher</item>
+    </style>
+
+    <style name="cust_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowTitleStyle">@style/dialog_title_style</item>
+    </style>
+
+    <style name="dialog_title_style" parent="android:Widget.TextView">
+        <item name="android:background">@color/darkBlueDajSpisac</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+
+
+
+
+
+</resources>
