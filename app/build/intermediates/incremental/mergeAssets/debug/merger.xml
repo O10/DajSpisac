@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="2" >
+
+    <dataSet config="5.0.77" >
+        <source path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/assets" />
+    </dataSet>
+    <dataSet config="main" >
+        <source path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/assets" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/debug/assets" />
+    </dataSet>
+
+</merger>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.olek.firsttest"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:maxSdkVersion="19"
+        android:minSdkVersion="15"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/DajSpisacTheme" >
+        <activity
+            android:name="com.example.olek.firsttest.HomeActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.swmansion.dajspisac.book.SingleBookActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.swmansion.dajspisac.exercise.SingleExerciseActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.swmansion.dajspisac.settings.ChooseClassActivity"
+            android:label="Zmień klasę" >
+        </activity>
+        <activity
+            android:name="com.swmansion.dajspisac.book.BooksActivity"
+            android:label="Wybierz Książkę" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.octo.android.robospice.Jackson2SpringAndroidSpiceService"
+            android:exported="false" />
+    </application>
+
+</manifest>

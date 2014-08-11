@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid
+                android:color="@color/buttonClickedBackground" />
+            <stroke
+                android:width="3dp"
+                android:color="@color/lightBlueDajSpisac" />
+            <corners android:radius="10dp"/>
+            <padding
+                android:left="5dp"
+                android:top="5dp"
+                android:right="5dp"
+                android:bottom="5dp" />
+        </shape>
+    </item>
+</selector><!-- From: file:/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/button_background_chooseclass_anuluj_clicked.xml -->

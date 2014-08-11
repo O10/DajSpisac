@@ -1,6 +1,5 @@
 package com.swmansion.dajspisac.book;
 
-import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -15,21 +14,24 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.TabHost;
+import android.widget.Toast;
 
-import com.swmansion.dajspisac.settings.ChooseClassActivity;
 import com.example.olek.firsttest.R;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.octo.android.robospice.SpiceManager;
+import com.swmansion.dajspisac.settings.ChooseClassActivity;
 
 /**
  * Created by olek on 04.08.14.
  */
-public class BooksActivity extends FragmentActivity {
+public class BooksActivity extends FragmentActivity implements TabHost.OnTabChangeListener{
     protected SpiceManager spiceManager;
     DemoCollectionPagerAdapter mDemoCollectionPagerAdapter;
     ViewPager mViewPager;
+    private TabHost mTabHost;
 
     //String baseQUERY=new String("ksiazki?class_nr=I+gimnazjum");
 
@@ -38,7 +40,10 @@ public class BooksActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.books_activity_layout);
         spiceManager = new SpiceManager(com.octo.android.robospice.Jackson2SpringAndroidSpiceService.class);
-        mViewPager = (ViewPager) findViewById(R.id.viewPager);
+        mViewPager = (ViewPager) findViewById(R.id.viewpager);
+
+        initialiseTabHost();
+
 
         mDemoCollectionPagerAdapter =
             new DemoCollectionPagerAdapter(
@@ -47,12 +52,16 @@ public class BooksActivity extends FragmentActivity {
         mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                if(positionOffset>0){
+                }
 
             }
 
             @Override
             public void onPageSelected(int position) {
-                getActionBar().setSelectedNavigationItem(position);
+                //int pos = BooksActivity.this.mViewPager.getCurrentItem();
+                BooksActivity.this.mTabHost.setCurrentTab(position);
+                Toast.makeText(BooksActivity.this,Integer.toString(position),Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -67,41 +76,33 @@ public class BooksActivity extends FragmentActivity {
         ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(getApplicationContext()).build();
         ImageLoader.getInstance().init(config);
 
-        ActionBar actionBar = getActionBar();
-        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
-        ActionBar.TabListener tabListener = new ActionBar.TabListener() {
-
-            @Override
-            public void onTabSelected(ActionBar.Tab tab, android.app.FragmentTransaction fragmentTransaction) {
-                mViewPager.setCurrentItem(tab.getPosition());
-            }
-
-            @Override
-            public void onTabUnselected(ActionBar.Tab tab, android.app.FragmentTransaction fragmentTransaction) {
-
-            }
-
-            @Override
-            public void onTabReselected(ActionBar.Tab tab, android.app.FragmentTransaction fragmentTransaction) {
-
-            }
-        };
-        actionBar.addTab(
-            actionBar.newTab()
-                .setText("Chemia").setTabListener(tabListener)
-        );
-        actionBar.addTab(
-            actionBar.newTab()
-                .setText("Matematyka").setTabListener(tabListener)
-        );
-        actionBar.addTab(
-            actionBar.newTab()
-                .setText("Fizyka").setTabListener(tabListener)
-        );
 
     }
 
+    private void initialiseTabHost(){
+        mTabHost = (TabHost)findViewById(R.id.tabhost);
+        mTabHost.setup();
+        mTabHost.setOnTabChangedListener(this);
+
+        TabHost.TabContentFactory defaultTabCont=new TabHost.TabContentFactory(){
+            @Override
+            public View createTabContent(String s) {
+                View v = new View(BooksActivity.this);
+                v.setMinimumWidth(0);
+                v.setMinimumHeight(0);
+                return v;
+            }
+        };
+
+        mTabHost.addTab(mTabHost.newTabSpec("chemia").setIndicator(getLayoutInflater().inflate(R.layout.tab_chemistry_layout,null)).setContent(defaultTabCont));
+        mTabHost.addTab(mTabHost.newTabSpec("matematyka").setIndicator(getLayoutInflater().inflate(R.layout.tab_mathematics_layout,null)).setContent(defaultTabCont));
+        mTabHost.addTab(mTabHost.newTabSpec("fizyka").setIndicator(getLayoutInflater().inflate(R.layout.tab_physics_layout,null)).setContent(defaultTabCont));
+
+        mTabHost.setOnTabChangedListener(this);
+
+
+    }
     @Override
     protected void onStart() {
         super.onStart();
@@ -126,14 +127,19 @@ public class BooksActivity extends FragmentActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.chooseclass) {
-            /*ChooseClassDialogFragment dialog = new ChooseClassDialogFragment();
-            dialog.show(getFragmentManager(),"TAG");*/
             startActivity(new Intent(this, ChooseClassActivity.class));
             return true;
         }
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onTabChanged(String s) {
+        int pos = mTabHost.getCurrentTab();
+        mViewPager.setCurrentItem(pos);
+
+
+    }
 
     public class DemoCollectionPagerAdapter extends FragmentStatePagerAdapter {
         public DemoCollectionPagerAdapter(FragmentManager fm) {

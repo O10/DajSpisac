@@ -16,6 +16,9 @@
     <string name="wybierzklase">WYBIERZ KLASĘ</string>
     <string name="anuluj">Anuluj</string>
     <string name="zmien">Zmień</string>
+    <string name="chemia">CHEMIA</string>
+    <string name="mathematics">MATEMATYKA</string>
+    <string name="FIZYKA">FIZYKA</string>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
     <color name="actionBarColor">#1d1e33</color>
