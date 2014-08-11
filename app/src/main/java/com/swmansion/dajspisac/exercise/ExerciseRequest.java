@@ -1,4 +1,4 @@
-package com.example.olek.firsttest;
+package com.swmansion.dajspisac.exercise;
 
 import android.util.Log;
 
@@ -9,25 +9,24 @@ import org.springframework.web.client.RestClientException;
 import java.net.URI;
 
 /**
- * Created by olek on 04.08.14.
+ * Created by olek on 06.08.14.
  */
-public class BookRequest extends SpringAndroidSpiceRequest<Book>  {
-
+public class ExerciseRequest  extends SpringAndroidSpiceRequest<Exercise> {
     private String query;
 
-    public BookRequest(String query) {
-        super(Book.class);
+    public ExerciseRequest(String query) {
+        super(Exercise.class);
         this.query = query;
     }
 
     @Override
-    public Book loadDataFromNetwork() throws Exception {
+    public Exercise loadDataFromNetwork() throws Exception {
 
         String url = String.format("http://dajspisac.pl/api/v1/%s", query);
-        Log.d("retro",url);
+        Log.d("retro", url);
 
         try {
-            return getRestTemplate().getForObject(new URI(url),Book.class);
+            return getRestTemplate().getForObject(new URI(url),Exercise.class);
         } catch (RestClientException e) {
             e.printStackTrace();
         }
@@ -40,6 +39,6 @@ public class BookRequest extends SpringAndroidSpiceRequest<Book>  {
      * @return
      */
     public String createCacheKey() {
-        return "book." + query;
+        return "exercises." + query;
     }
 }

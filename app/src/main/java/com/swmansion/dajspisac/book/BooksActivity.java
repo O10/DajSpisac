@@ -1,4 +1,4 @@
-package com.example.olek.firsttest;
+package com.swmansion.dajspisac.book;
 
 import android.app.ActionBar;
 import android.content.Intent;
@@ -16,6 +16,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
+import com.swmansion.dajspisac.settings.ChooseClassActivity;
+import com.example.olek.firsttest.R;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
@@ -24,7 +26,7 @@ import com.octo.android.robospice.SpiceManager;
 /**
  * Created by olek on 04.08.14.
  */
-public class BooksActivity  extends FragmentActivity {
+public class BooksActivity extends FragmentActivity {
     protected SpiceManager spiceManager;
     DemoCollectionPagerAdapter mDemoCollectionPagerAdapter;
     ViewPager mViewPager;
@@ -34,30 +36,30 @@ public class BooksActivity  extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.booksactivitylayout);
+        setContentView(R.layout.books_activity_layout);
         spiceManager = new SpiceManager(com.octo.android.robospice.Jackson2SpringAndroidSpiceService.class);
         mViewPager = (ViewPager) findViewById(R.id.viewPager);
 
         mDemoCollectionPagerAdapter =
-                new DemoCollectionPagerAdapter(
-                        getSupportFragmentManager());
+            new DemoCollectionPagerAdapter(
+                getSupportFragmentManager());
         mViewPager.setAdapter(mDemoCollectionPagerAdapter);
         mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-                                               @Override
-                                               public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
-                                               }
+            }
 
-                                               @Override
-                                               public void onPageSelected(int position) {
-                                                   getActionBar().setSelectedNavigationItem(position);
-                                               }
+            @Override
+            public void onPageSelected(int position) {
+                getActionBar().setSelectedNavigationItem(position);
+            }
 
-                                               @Override
-                                               public void onPageScrollStateChanged(int state) {
+            @Override
+            public void onPageScrollStateChanged(int state) {
 
-                                               }
-                                           });
+            }
+        });
 
 
         DisplayImageOptions displayimageOptions = new DisplayImageOptions.Builder().build();
@@ -86,14 +88,17 @@ public class BooksActivity  extends FragmentActivity {
             }
         };
         actionBar.addTab(
-                actionBar.newTab()
-                        .setText("Chemia").setTabListener(tabListener));
+            actionBar.newTab()
+                .setText("Chemia").setTabListener(tabListener)
+        );
         actionBar.addTab(
-                actionBar.newTab()
-                        .setText("Matematyka").setTabListener(tabListener));
+            actionBar.newTab()
+                .setText("Matematyka").setTabListener(tabListener)
+        );
         actionBar.addTab(
-                actionBar.newTab()
-                        .setText("Fizyka").setTabListener(tabListener));
+            actionBar.newTab()
+                .setText("Fizyka").setTabListener(tabListener)
+        );
 
     }
 
@@ -123,7 +128,7 @@ public class BooksActivity  extends FragmentActivity {
         if (id == R.id.chooseclass) {
             /*ChooseClassDialogFragment dialog = new ChooseClassDialogFragment();
             dialog.show(getFragmentManager(),"TAG");*/
-            startActivity(new Intent(this,ChooseClassActivity.class));
+            startActivity(new Intent(this, ChooseClassActivity.class));
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -140,21 +145,20 @@ public class BooksActivity  extends FragmentActivity {
             BooksFragment fragment = new BooksFragment();
             //fragment.setSpiceManager(spiceManager);
             Bundle args = new Bundle();
-            String queryFinish=new String();
-            switch(i)
-            {
+            String queryFinish = new String();
+            switch (i) {
                 case 0:
-                    queryFinish=new String("&subject=Chemia");
+                    queryFinish = new String("&subject=Chemia");
                     break;
                 case 1:
-                    queryFinish=new String("&subject=Matematyka");
+                    queryFinish = new String("&subject=Matematyka");
                     break;
                 case 2:
-                    queryFinish=new String("&subject=Fizyka");
+                    queryFinish = new String("&subject=Fizyka");
                     break;
 
             }
-            args.putString("QUERY", "ksiazki?class_nr=I+gimnazjum"+queryFinish);
+            args.putString("QUERY", "ksiazki?class_nr=I+gimnazjum" + queryFinish);
             fragment.setArguments(args);
             return fragment;
         }
@@ -176,15 +180,15 @@ public class BooksActivity  extends FragmentActivity {
         private ListView mListView;
         private SpiceManager spiceManager;
         Intent intent;
+
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setRetainInstance(true);
         }
 
-        void setSpiceManager(SpiceManager spiceManager)
-        {
-            this.spiceManager=spiceManager;
+        void setSpiceManager(SpiceManager spiceManager) {
+            this.spiceManager = spiceManager;
         }
 
 
@@ -192,26 +196,25 @@ public class BooksActivity  extends FragmentActivity {
         public View onCreateView(LayoutInflater inflater,
                                  ViewGroup container, Bundle savedInstanceState) {
             View rootView = inflater.inflate(
-                    R.layout.booksfragment, container, false);
-            mListView= (ListView) rootView.findViewById(R.id.listViewBooks);
+                R.layout.books_activity_fragment_layout, container, false);
+            mListView = (ListView) rootView.findViewById(R.id.listViewBooks);
             return rootView;
         }
 
         @Override
         public void onActivityCreated(Bundle savedInstanceState) {
             super.onActivityCreated(savedInstanceState);
-            this.spiceManager=((BooksActivity)getActivity()).spiceManager;
-            mListView.setAdapter(new BooksAdapter(getActivity(),spiceManager));
+            this.spiceManager = ((BooksActivity) getActivity()).spiceManager;
+            mListView.setAdapter(new BooksAdapter(getActivity(), spiceManager));
             query(getArguments().getString("QUERY"));
         }
 
 
-        public void query (String query){
-            ((BooksAdapter)mListView.getAdapter()).query(query);
+        public void query(String query) {
+            ((BooksAdapter) mListView.getAdapter()).query(query);
         }
 
     }
-
 
 
 }

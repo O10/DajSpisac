@@ -1,4 +1,4 @@
-package com.example.olek.firsttest;
+package com.swmansion.dajspisac.settings;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.olek.firsttest.R;
 
 /**
  * Created by olek on 08.08.14.

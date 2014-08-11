@@ -1,4 +1,4 @@
-package com.example.olek.firsttest;
+package com.swmansion.dajspisac.book;
 
 import java.util.ArrayList;
 

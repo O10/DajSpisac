@@ -1,4 +1,4 @@
-package com.example.olek.firsttest;
+package com.swmansion.dajspisac.book;
 
 import android.app.ActionBar;
 import android.content.Intent;
@@ -17,10 +17,15 @@ import android.widget.Button;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 
+import com.example.olek.firsttest.R;
 import com.octo.android.robospice.SpiceManager;
 import com.octo.android.robospice.persistence.DurationInMillis;
 import com.octo.android.robospice.persistence.exception.SpiceException;
 import com.octo.android.robospice.request.listener.RequestListener;
+import com.swmansion.dajspisac.exercise.Exercise;
+import com.swmansion.dajspisac.exercise.ExerciseList;
+import com.swmansion.dajspisac.exercise.ExercisesRequest;
+import com.swmansion.dajspisac.exercise.SingleExerciseActivity;
 
 import java.util.ArrayList;
 
@@ -41,7 +46,7 @@ public class SingleBookActivity extends FragmentActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.singlebookactivitylayout);
+        setContentView(R.layout.single_book_activity_layout);
         viewPager = (ViewPager) findViewById(R.id.viewPagerSingleBook);
 
         //Log.d("retro",Integer.toString(getIntent().getIntArrayExtra("PAGES")[1]));
@@ -137,7 +142,7 @@ public class SingleBookActivity extends FragmentActivity{
         public View onCreateView(LayoutInflater inflater,
                                  ViewGroup container, Bundle savedInstanceState) {
             View rootView = inflater.inflate(
-                    R.layout.singlepagefragment, container, false);
+                    R.layout.single_book_activity_fragment_layout, container, false);
 
             return rootView;
         }
@@ -176,7 +181,7 @@ public class SingleBookActivity extends FragmentActivity{
                 tableParams.setMargins(0,15,0,15);
                 row.setLayoutParams(tableParams);
                 for(int i=0;i<exercises.size();i++){
-                    Button b=(Button)getActivity().getLayoutInflater().inflate(R.layout.buttontemplate, row,false);
+                    Button b=(Button)getActivity().getLayoutInflater().inflate(R.layout.button_exercise_template, row,false);
                     final int exercise_Id=exercises.get(i).getId();
                     b.setText(exercises.get(i).getNumber());
                     b.setOnClickListener(new View.OnClickListener(){

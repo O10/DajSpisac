@@ -1,4 +1,4 @@
-package com.example.olek.firsttest;
+package com.swmansion.dajspisac.tools;
 
 /**
  * Created by olek on 04.08.14.

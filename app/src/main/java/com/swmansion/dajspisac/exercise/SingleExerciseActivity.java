@@ -1,4 +1,4 @@
-package com.example.olek.firsttest;
+package com.swmansion.dajspisac.exercise;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -15,6 +15,8 @@ import android.view.animation.Animation;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.swmansion.dajspisac.tools.ExpandCollapseAnimation;
+import com.example.olek.firsttest.R;
 import com.octo.android.robospice.SpiceManager;
 import com.octo.android.robospice.persistence.DurationInMillis;
 import com.octo.android.robospice.persistence.exception.SpiceException;
@@ -33,7 +35,7 @@ public class SingleExerciseActivity extends FragmentActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.singleexerciselayout);
+        setContentView(R.layout.exercise_activity_layout);
 
 
         spiceManager = new SpiceManager(com.octo.android.robospice.Jackson2SpringAndroidSpiceService.class);
@@ -102,7 +104,7 @@ public class SingleExerciseActivity extends FragmentActivity{
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             View rootView = inflater.inflate(
-                    R.layout.singleexercisefragment, container, false);
+                    R.layout.exercise_activity_fragment_layout, container, false);
             textViewTresc=(TextView)rootView.findViewById(R.id.textViewTresc);
             textViewSolution=(TextView)rootView.findViewById(R.id.textViewSolution);
             buttonTresc=(Button)rootView.findViewById(R.id.buttonTresc);

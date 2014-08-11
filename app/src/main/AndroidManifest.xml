@@ -23,23 +23,23 @@
         </activity>
 
         <activity
-            android:name=".SingleBookActivity"
+            android:name="com.swmansion.dajspisac.book.SingleBookActivity"
             android:label="@string/app_name">
         </activity>
 
         <activity
-            android:name=".SingleExerciseActivity"
+            android:name="com.swmansion.dajspisac.exercise.SingleExerciseActivity"
             android:label="@string/app_name">
 
         </activity>
 
-        <activity android:name=".ChooseClassActivity"
+        <activity android:name="com.swmansion.dajspisac.settings.ChooseClassActivity"
             android:label="Zmień klasę">
 
         </activity>
 
         <activity
-        android:name=".BooksActivity"
+        android:name="com.swmansion.dajspisac.book.BooksActivity"
         android:label="Wybierz Książkę">
 
 

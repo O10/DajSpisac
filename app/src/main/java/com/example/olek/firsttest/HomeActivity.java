@@ -12,21 +12,22 @@ import com.octo.android.robospice.SpiceManager;
 import com.octo.android.robospice.persistence.DurationInMillis;
 import com.octo.android.robospice.persistence.exception.SpiceException;
 import com.octo.android.robospice.request.listener.RequestListener;
+import com.swmansion.dajspisac.book.BookList;
+import com.swmansion.dajspisac.book.BooksRequest;
 
 
 public class HomeActivity extends Activity {
     protected SpiceManager spiceManager = new SpiceManager(com.octo.android.robospice.Jackson2SpringAndroidSpiceService.class);
-    String lastRequestCacheKey=new String();
-    private Button butFinSol,butLoginFb;
-
+    String lastRequestCacheKey = new String();
+    private Button butFinSol, butLoginFb;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.homeactivity);
-        butFinSol=(Button)findViewById(R.id.butfindsolution);
-        butLoginFb= (Button) findViewById(R.id.butlogviafb);
+        butFinSol = (Button) findViewById(R.id.butfindsolution);
+        butLoginFb = (Button) findViewById(R.id.butlogviafb);
 
         butFinSol.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,7 +36,7 @@ public class HomeActivity extends Activity {
             }
         });
 
-        butLoginFb.setOnClickListener(new View.OnClickListener(){
+        butLoginFb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -43,6 +44,7 @@ public class HomeActivity extends Activity {
         });
 
     }
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -86,31 +88,18 @@ public class HomeActivity extends Activity {
     }
 
     //inner class of your spiced Activity
-    private class ListFollowersRequestListener implements RequestListener<FollowerList> {
-
+    private class ListBooksRequestListener implements RequestListener<BookList> {
         @Override
         public void onRequestFailure(SpiceException e) {
-            Log.d("retro","Succes");
-        }
-
-        @Override
-        public void onRequestSuccess(FollowerList listFollowers) {
-            Log.d("retro","Succes"+listFollowers.get(1).getUrl()+"  "+listFollowers.get(1).getLogin());
-        }
-    }
-
-    private class ListBooksRequestListener implements RequestListener<BookList>{
-        @Override
-        public void onRequestFailure(SpiceException e) {
-            Log.d("retro","Failure");
+            Log.d("retro", "Failure");
         }
 
         @Override
         public void onRequestSuccess(BookList books) {
-            if(books!=null)
-                Log.d("retro","Success"+books.get(5).getClass_nr());
+            if (books != null)
+                Log.d("retro", "Success" + books.get(5).getClass_nr());
             else
-                Log.d("retro","Succes");
+                Log.d("retro", "Succes");
 
         }
     }

@@ -1,4 +1,4 @@
-package com.example.olek.firsttest;
+package com.swmansion.dajspisac.book;
 
 import android.app.Activity;
 import android.content.Context;
@@ -15,6 +15,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.swmansion.dajspisac.tools.ImageHelper;
+import com.example.olek.firsttest.R;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.FailReason;
@@ -74,7 +76,7 @@ public class BooksAdapter extends BaseAdapter{
         final ViewHolderItem viewHolder;
         if(view == null){
             LayoutInflater inflater = ((Activity) context).getLayoutInflater();
-            view = inflater.inflate(R.layout.singlebook,viewGroup,false);
+            view = inflater.inflate(R.layout.single_book_listview_layout,viewGroup,false);
             viewHolder=new ViewHolderItem();
             viewHolder.author = (TextView) view.findViewById(R.id.tVAuthor);
             viewHolder.title=(TextView) view.findViewById(R.id.tVtitle);
@@ -166,7 +168,7 @@ public class BooksAdapter extends BaseAdapter{
 
         @Override
         public void onLoadingComplete(String s, View view, Bitmap bitmap) {
-            Bitmap finalbmp=ImageHelper.getRoundedCornerBitmap(bitmap,8);
+            Bitmap finalbmp= ImageHelper.getRoundedCornerBitmap(bitmap, 8);
             bArray[position]=finalbmp;
             imageView.setImageBitmap(finalbmp);
             notifyDataSetChanged();}

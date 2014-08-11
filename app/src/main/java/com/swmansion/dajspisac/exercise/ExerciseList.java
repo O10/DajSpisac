@@ -1,4 +1,4 @@
-package com.example.olek.firsttest;
+package com.swmansion.dajspisac.exercise;
 
 import java.util.ArrayList;
 
