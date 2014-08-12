@@ -10,7 +10,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
     <LinearLayout
@@ -28,7 +28,9 @@
         android:paddingLeft="15dp"
         android:textStyle="bold"
         android:textSize="30sp"
-        android:minHeight="70dp"/>
+        android:minHeight="70dp"
+        android:paddingRight="10dp"
+        android:drawableRight="@drawable/wybrana_ksiazka_dol"/>
 
     </LinearLayout>
     <View
@@ -74,9 +76,12 @@
             android:background="#dbdbdb"
             android:gravity="left|center_vertical"
             android:paddingLeft="15dp"
+            android:paddingRight="10dp"
             android:textStyle="bold"
             android:textSize="30sp"
-            android:minHeight="70dp"/>
+            android:minHeight="70dp"
+            android:drawableRight="@drawable/wybrana_ksiazka_dol"/>
+
 
     </LinearLayout>
     <View
@@ -89,8 +94,16 @@
         android:paddingRight="15dp"
         android:alpha="0.5"/>
 
-
-    <TextView
+    <WebView  xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/webViewSolution"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+    />
+    <!--TextView
         android:id="@+id/textViewSolution"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -101,7 +114,7 @@
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
         android:paddingTop="10dp"
-        android:paddingBottom="10dp"/>
+        android:paddingBottom="10dp"/>-->
 
 
     <View

@@ -11,7 +11,7 @@ import java.net.URI;
 /**
  * Created by olek on 04.08.14.
  */
-public class BooksRequest extends SpringAndroidSpiceRequest<BookList>  {
+public class BooksRequest extends SpringAndroidSpiceRequest<BookList> {
 
     private String query;
 
@@ -24,10 +24,10 @@ public class BooksRequest extends SpringAndroidSpiceRequest<BookList>  {
     public BookList loadDataFromNetwork() throws Exception {
 
         String url = String.format("http://dajspisac.pl/api/v1/%s", query);
-        Log.d("retro",url);
+        Log.d("retro", url);
 
         try {
-            return getRestTemplate().getForObject(new URI(url),BookList.class);
+            return getRestTemplate().getForObject(new URI(url), BookList.class);
         } catch (RestClientException e) {
             e.printStackTrace();
         }
@@ -37,6 +37,7 @@ public class BooksRequest extends SpringAndroidSpiceRequest<BookList>  {
     /**
      * This method generates a unique cache key for this request. In this case
      * our cache key depends just on the keyword.
+     *
      * @return
      */
     public String createCacheKey() {

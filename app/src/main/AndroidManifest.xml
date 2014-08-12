@@ -39,8 +39,7 @@
         </activity>
 
         <activity
-        android:name="com.swmansion.dajspisac.book.BooksActivity"
-        android:label="Wybierz Książkę">
+        android:name="com.swmansion.dajspisac.book.BooksActivity">
 
 
 

@@ -334,24 +334,24 @@
                     msgid="3827284619958211114" >"Помилка мережі"
                 </string>
                 <string
-                    name="common_google_play_services_enable_title"
-                    msgid="529078775174559253" >"Увімкнути Google Play Послуги"
-                </string>
-                <string
                     name="common_google_play_services_update_button"
                     msgid="8932944190611227642" >"Оновити"
+                </string>
+                <string
+                    name="common_google_play_services_enable_title"
+                    msgid="529078775174559253" >"Увімкнути Google Play Послуги"
                 </string>
                 <string
                     name="common_google_play_services_notification_needs_installation_title"
                     msgid="8120534356798772974" >"Щоб додаток працював, потрібно встановити сервіси Google Play."
                 </string>
                 <string
-                    name="common_google_play_services_needs_enabling_title"
-                    msgid="2583358409598976717" >"Щоб додаток працював, потрібно ввімкнути сервіси Google Play."
-                </string>
-                <string
                     name="common_google_play_services_update_title"
                     msgid="6006316683626838685" >"Оновити Google Play Послуги"
+                </string>
+                <string
+                    name="common_google_play_services_needs_enabling_title"
+                    msgid="2583358409598976717" >"Щоб додаток працював, потрібно ввімкнути сервіси Google Play."
                 </string>
                 <string
                     name="common_google_play_services_notification_ticker"
@@ -370,15 +370,15 @@
                     msgid="1589957570365247855" >"Ця програма не запуститься без Google Play Послуг, яких немає на вашому планшетному ПК."
                 </string>
                 <string
-                    name="common_google_play_services_unknown_issue"
-                    msgid="4762332809710093730" >"Google Play Послуги – невідома проблема."
-                </string>
-                <string
                     name="common_google_play_services_error_notification_requested_by_msg"
                     msgid="2443362625939284971" >"Запит від додатка 
 <ns1:g id="APP_NAME" >
 %1$s
                     </ns1:g>"
+                </string>
+                <string
+                    name="common_google_play_services_unknown_issue"
+                    msgid="4762332809710093730" >"Google Play Послуги – невідома проблема."
                 </string>
                 <string
                     name="common_signin_button_text_long"
@@ -2550,12 +2550,12 @@
                 path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-be/common_strings.xml"
                 qualifiers="be" >
                 <string
-                    name="common_google_play_services_unsupported_text"
-                    msgid="3542578567569488671" >"Службы Google Play, да якiх прывязаны некаторыя прыкладаннi, не падтрымлiваюцца на вашай прыладзе. Па дапамогу звярнiцеся да вытворцы."
-                </string>
-                <string
                     name="common_google_play_services_unknown_issue"
                     msgid="4762332809710093730" >"Невядомая праблема са службамі Google Play."
+                </string>
+                <string
+                    name="common_google_play_services_unsupported_text"
+                    msgid="3542578567569488671" >"Службы Google Play, да якiх прывязаны некаторыя прыкладаннi, не падтрымлiваюцца на вашай прыладзе. Па дапамогу звярнiцеся да вытворцы."
                 </string>
                 <string
                     name="common_google_play_services_update_title"
@@ -5067,16 +5067,16 @@ false
                     msgid="1852570676146674985" >"Google Play Services-ის შეცდომა"
                 </string>
                 <string
-                    name="common_google_play_services_install_text_tablet"
-                    msgid="1589957570365247855" >"ეს აპი ვერ გაეშვება Google Play სერვისების გარეშე, რაც თქვენს ტელეფონზე ვერ იძებნება."
+                    name="common_google_play_services_invalid_account_title"
+                    msgid="1066672360770936753" >"ანგარიში არასწორია"
                 </string>
                 <string
                     name="common_google_play_services_notification_needs_installation_title"
                     msgid="8120534356798772974" >"აპლიკაცია საჭიროება Google Play Services-ის ინსტალაციას."
                 </string>
                 <string
-                    name="common_google_play_services_invalid_account_title"
-                    msgid="1066672360770936753" >"ანგარიში არასწორია"
+                    name="common_google_play_services_install_text_tablet"
+                    msgid="1589957570365247855" >"ეს აპი ვერ გაეშვება Google Play სერვისების გარეშე, რაც თქვენს ტელეფონზე ვერ იძებნება."
                 </string>
                 <string
                     name="common_signin_button_text_long"
@@ -5103,20 +5103,20 @@ false
                     msgid="448354684997260580" >"ეს აპი ვერ გაეშვება, თუ Google Play სერვისებს არ განაახლებთ."
                 </string>
                 <string
-                    name="common_google_play_services_network_error_title"
-                    msgid="3827284619958211114" >"ქსელის შეცდომა"
-                </string>
-                <string
                     name="common_google_play_services_update_title"
                     msgid="6006316683626838685" >"Google Play სერვისების განახლება"
                 </string>
                 <string
-                    name="common_google_play_services_invalid_account_text"
-                    msgid="4983316348021735578" >"მითითებული ანგარიში ამ მოწყობილობაზე არ არსებობს. გთხოვთ, აირჩიოთ სხვა ანგარიში."
+                    name="common_google_play_services_network_error_title"
+                    msgid="3827284619958211114" >"ქსელის შეცდომა"
                 </string>
                 <string
                     name="common_google_play_services_notification_needs_update_title"
                     msgid="1388129345631079938" >"აპლიკაცია საჭიროებს Google Play Services-ის განახლებას."
+                </string>
+                <string
+                    name="common_google_play_services_invalid_account_text"
+                    msgid="4983316348021735578" >"მითითებული ანგარიში ამ მოწყობილობაზე არ არსებობს. გთხოვთ, აირჩიოთ სხვა ანგარიში."
                 </string>
                 <string
                     name="common_google_play_services_error_notification_requested_by_msg"
@@ -5419,6 +5419,14 @@ false
                     msgid="2429381841831957106" >"Вход с Google"
                 </string>
                 <string
+                    name="common_google_play_services_network_error_text"
+                    msgid="9038847255613537209" >"За свързване с услугите за Google Play се изисква връзка за данни."
+                </string>
+                <string
+                    name="common_google_play_services_notification_needs_update_title"
+                    msgid="1388129345631079938" >"Приложение изисква актуализирането на услугите за Google Play."
+                </string>
+                <string
                     name="common_google_play_services_error_notification_requested_by_msg"
                     msgid="2443362625939284971" >"Заявено от 
 <ns1:g id="APP_NAME" >
@@ -5428,14 +5436,6 @@ false
                 <string
                     name="common_google_play_services_unsupported_date_text"
                     msgid="4725396522367789365" >"Изглежда, че датата на устройството е неправилна. Моля, проверете я."
-                </string>
-                <string
-                    name="common_google_play_services_network_error_text"
-                    msgid="9038847255613537209" >"За свързване с услугите за Google Play се изисква връзка за данни."
-                </string>
-                <string
-                    name="common_google_play_services_notification_needs_update_title"
-                    msgid="1388129345631079938" >"Приложение изисква актуализирането на услугите за Google Play."
                 </string>
             </file>
             <file
@@ -7693,12 +7693,12 @@ false
                 path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-zh-rHK/common_strings.xml"
                 qualifiers="zh-rHK" >
                 <string
-                    name="common_google_play_services_install_title"
-                    msgid="26645092511305524" >"取得 Google Play 服務"
-                </string>
-                <string
                     name="common_google_play_services_update_button"
                     msgid="8932944190611227642" >"更新"
+                </string>
+                <string
+                    name="common_google_play_services_install_title"
+                    msgid="26645092511305524" >"取得 Google Play 服務"
                 </string>
                 <string
                     name="common_google_play_services_unsupported_date_text"
@@ -7713,12 +7713,12 @@ false
                     msgid="6006316683626838685" >"更新 Google Play 服務"
                 </string>
                 <string
-                    name="common_google_play_services_enable_title"
-                    msgid="529078775174559253" >"啟用 Google Play 服務"
-                </string>
-                <string
                     name="common_google_play_services_unknown_issue"
                     msgid="4762332809710093730" >"Google Play 服務出現不明問題。"
+                </string>
+                <string
+                    name="common_google_play_services_enable_title"
+                    msgid="529078775174559253" >"啟用 Google Play 服務"
                 </string>
                 <string
                     name="common_google_play_services_enable_text"
@@ -7776,12 +7776,12 @@ false
                     msgid="1589957570365247855" >"您的平板電腦未安裝 Google Play 服務，安裝後才能執行這個應用程式。"
                 </string>
                 <string
-                    name="common_google_play_services_notification_ticker"
-                    msgid="1852570676146674985" >"Google Play 服務錯誤"
-                </string>
-                <string
                     name="common_google_play_services_notification_needs_update_title"
                     msgid="1388129345631079938" >"必須更新「Google Play 服務」，才能使用應用程式。"
+                </string>
+                <string
+                    name="common_google_play_services_notification_ticker"
+                    msgid="1852570676146674985" >"Google Play 服務錯誤"
                 </string>
                 <string
                     name="common_google_play_services_notification_needs_installation_title"
@@ -9102,6 +9102,8 @@ true
                 <string name="wybierzklase" >WYBIERZ KLASĘ
                 </string>
 
+                <color name="actionbarTitleOrange" >#fad5c2
+                </color>
                 <color name="darkGreyTransparent" >#80696969
                 </color>
                 <color name="actionBarColor" >#1d1e33
@@ -9129,6 +9131,8 @@ true
 
                 <string name="hello_world" >Hello world!
                 </string>
+                <string name="numerstrony" >NUMER STRONY
+                </string>
 
                 <color name="lightBlueDajSpisac" >#8686a8
                 </color>
@@ -9138,6 +9142,8 @@ true
                 <string name="chemia" >CHEMIA
                 </string>
                 <string name="rozwiazanie" >ROZWIĄZANIE
+                </string>
+                <string name="numerzadania" >NUMER ZADANIA
                 </string>
                 <string name="anuluj" >Anuluj
                 </string>
@@ -9161,7 +9167,7 @@ true
                 <color name="white" >#FFFFFF
                 </color>
 
-                <string name="app_name" >Firsttest
+                <string name="app_name" >DajSpisać
                 </string>
                 <string name="TRESCZADANIA" >TREŚĆ ZADANIA
                 </string>
@@ -9314,6 +9320,71 @@ true
                 path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout/tab_physics_layout.xml"
                 qualifiers=""
                 type="layout" />
+            <file
+                name="tab_page_number_layout"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout/tab_page_number_layout.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="actionbar_layout_singlebook"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout/actionbar_layout_singlebook.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="tab_exercise_number_layout"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout/tab_exercise_number_layout.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="twojeksiazki_fizyka_lososiowa"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/twojeksiazki_fizyka_lososiowa.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="twojeksiazki_matematyka_lososiowa"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/twojeksiazki_matematyka_lososiowa.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="twojeksiazki_chemia_blady"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/twojeksiazki_chemia_blady.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="twojeksiazki_fizyka_blada"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/twojeksiazki_fizyka_blada.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="twojeksiazki_chemia_losos"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/twojeksiazki_chemia_losos.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="twojeksiazki_matematyka_blada"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/twojeksiazki_matematyka_blada.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="back_losos"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/back_losos.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="wybrana_ksiazka_dol"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/wybrana_ksiazka_dol.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="wybrana_ksiazka_gora"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/wybrana_ksiazka_gora.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="add_book_button"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/add_book_button.xml"
+                qualifiers=""
+                type="drawable" />
         </source>
         <source path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/generated/res/rs/debug" />
         <source path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/generated/res/generated/debug" />

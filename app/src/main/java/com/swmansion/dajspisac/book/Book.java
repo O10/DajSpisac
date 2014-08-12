@@ -9,14 +9,14 @@ import java.util.ArrayList;
  */
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Book{
+public class Book {
 
-    private String authors,class_nr,color,cover,cover_small,edition,isbn,name,slug,subject;
+    private String authors, class_nr, color, cover, cover_small, edition, isbn, name, slug, subject;
     private boolean hidden;
-    private int id,popularity;
+    private int id, popularity;
     ArrayList<Integer> pages;
 
-    public String getAuthors(){
+    public String getAuthors() {
         return this.authors;
     }
 
@@ -111,7 +111,8 @@ public class Book{
     public void setHidden(boolean hidden) {
         this.hidden = hidden;
     }
-   public int getId() {
+
+    public int getId() {
         return id;
     }
 

@@ -7,13 +7,15 @@
     android:paddingLeft="10dp"
     android:paddingRight="10dp"
     android:paddingBottom="10dp"
-    android:gravity="center_horizontal">
+    android:gravity="center_horizontal"
+    android:longClickable="false">
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_launcher"
+        android:src="@drawable/twojeksiazki_matematyka_blada"
         android:layout_marginTop="5dp"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/imageViewSubjectIcon" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -22,6 +24,7 @@
         android:textStyle="bold"
         android:layout_marginTop="8dp"
         android:layout_gravity="center_horizontal"
-        android:singleLine="true" android:ellipsize="end" android:lines="1"/>
+        android:singleLine="true" android:ellipsize="end" android:lines="1"
+        android:id="@+id/textViewTab" />
 
 </LinearLayout>

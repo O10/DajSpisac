@@ -11,9 +11,10 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_launcher"
+        android:src="@drawable/twojeksiazki_fizyka_blada"
         android:layout_marginTop="5dp"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/imageViewSubjectIcon" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -21,6 +22,7 @@
         android:textColor="@color/lightBlueDajSpisac"
         android:textStyle="bold"
         android:layout_marginTop="8dp"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/textViewTab"/>
 
 </LinearLayout>

@@ -5,6 +5,7 @@
     <eat-comment />
 
     <color name="actionBarColor">#1d1e33</color>
+    <color name="actionbarTitleOrange">#fad5c2</color>
     <color name="black">#000000</color>
     <color name="buttonClickedBackground">#313250</color>
     <color name="buttonOrangeBorderDajSpisac">#d25819</color>
@@ -190,7 +191,7 @@
     <string name="Wybierzklase">Wybierz klasę</string>
     <string name="action_settings">Settings</string>
     <string name="anuluj">Anuluj</string>
-    <string name="app_name">Firsttest</string>
+    <string name="app_name">DajSpisać</string>
     <string name="chemia">CHEMIA</string>
     <!-- From: file:/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values/common_strings.xml -->
     <eat-comment />
@@ -226,7 +227,9 @@
     <string name="gimnazjum">GIMNAZJUM</string>
     <string name="hello_world">Hello world!</string>
     <string name="mathematics">MATEMATYKA</string>
+    <string name="numerstrony">NUMER STRONY</string>
     <string name="numeryzadan">NUMERY ZADAŃ</string>
+    <string name="numerzadania">NUMER ZADANIA</string>
     <string name="podstawowka">PODSTAWÓWKA</string>
     <string name="rozwiazanie">ROZWIĄZANIE</string>
     <!-- From: file:/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values/wallet_strings.xml -->

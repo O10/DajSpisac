@@ -15,14 +15,6 @@ public class ExpandCollapseAnimation extends Animation {
     private int mEndHeight;
     private int mType;
 
-    /**
-     * Initializes expand collapse animation, has two types, collapse (1) and expand (0).
-     * @param view The view to animate
-     * @param duration
-     * @param type The type of animation: 0 will expand from gone and 0 size to visible and layout size defined in xml.
-     * 1 will collapse view and set to gone
-     */
-
     public ExpandCollapseAnimation()
     {
 
@@ -63,8 +55,10 @@ public class ExpandCollapseAnimation extends Animation {
 
     public static void setHeightForWrapContent(Activity activity, View view) {
         DisplayMetrics metrics = new DisplayMetrics();
+        if(activity==null){
+            return;
+        }
         activity.getWindowManager().getDefaultDisplay().getMetrics(metrics);
-
         int screenWidth = metrics.widthPixels;
 
         int heightMeasureSpec = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);

@@ -1,19 +1,63 @@
-<?xml version="1.0" encoding="utf-8"?>
+<TabHost
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical" >
-    <android.support.v4.view.ViewPager
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/viewPagerSingleExercise"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white">
+        android:background="@color/darkBlueDajSpisac">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/numerzadania"
+            android:textSize="15sp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:textStyle="bold"
+            android:background="@color/darkBlueDajSpisac"
+            android:textColor="@color/lightBlueDajSpisac"
+            android:gravity="center_horizontal" />
 
 
 
+        <HorizontalScrollView
+            android:scrollbars="none"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:id="@+id/horizontalscrollview"
+            android:layout_gravity="center_horizontal">
+            <LinearLayout android:id="@+id/top_buttons"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                >
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/lightBlueDajSpisac"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0" />
+
+        <android.support.v4.view.ViewPager
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/viewPagerSingleExercise"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"/>
 
 
-    </android.support.v4.view.ViewPager>
-</LinearLayout>
+
+    </LinearLayout>
+</TabHost>

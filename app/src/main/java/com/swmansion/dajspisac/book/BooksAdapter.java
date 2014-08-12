@@ -15,6 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.swmansion.dajspisac.tools.BitmapLoadSave;
 import com.swmansion.dajspisac.tools.ImageHelper;
 import com.example.olek.firsttest.R;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
@@ -31,14 +32,14 @@ import java.util.ArrayList;
 /**
  * Created by olek on 04.08.14.
  */
-public class BooksAdapter extends BaseAdapter{
+public class BooksAdapter extends BaseAdapter {
     Context context;
     ArrayList<Book> mBooksArray;
     Bitmap[] bArray;
     SpiceManager spiceManager;
 
     static class ViewHolderItem {
-        TextView author,title;
+        TextView author, title;
         ImageView miniature;
         Button addDeleteButton;
         LinearLayout bookLayout;
@@ -46,11 +47,11 @@ public class BooksAdapter extends BaseAdapter{
         TextView t;
     }
 
-    public BooksAdapter(Context context,SpiceManager spiceManager) {
+    public BooksAdapter(Context context, SpiceManager spiceManager) {
         super();
-        this.context=context;
-        this.mBooksArray=new ArrayList<Book>();
-        this.spiceManager=spiceManager;
+        this.context = context;
+        this.mBooksArray = new ArrayList<Book>();
+        this.spiceManager = spiceManager;
 
         //query("ksiazki?class_nr=I+gimnazjum");
     }
@@ -65,54 +66,56 @@ public class BooksAdapter extends BaseAdapter{
         return mBooksArray.get(i);
     }
 
-    public void query (String query){
+    public void query(String query) {
         BooksRequest request = new BooksRequest(query);
         String lastRequestCacheKey = request.createCacheKey();
         spiceManager.execute(request, lastRequestCacheKey, DurationInMillis.ONE_MINUTE, new ListBooksRequestListener());
     }
 
     @Override
-    public View getView(int position, View view, ViewGroup viewGroup) {
+    public View getView(final int position, View view, ViewGroup viewGroup) {
         final ViewHolderItem viewHolder;
-        if(view == null){
+        if (view == null) {
             LayoutInflater inflater = ((Activity) context).getLayoutInflater();
-            view = inflater.inflate(R.layout.single_book_listview_layout,viewGroup,false);
-            viewHolder=new ViewHolderItem();
+            view = inflater.inflate(R.layout.single_book_listview_layout, viewGroup, false);
+            viewHolder = new ViewHolderItem();
             viewHolder.author = (TextView) view.findViewById(R.id.tVAuthor);
-            viewHolder.title=(TextView) view.findViewById(R.id.tVtitle);
-            viewHolder.miniature=(ImageView)view.findViewById(R.id.iViewMin);
-            viewHolder.id=mBooksArray.get(position).getId();
-            viewHolder.addDeleteButton=(Button)view.findViewById(R.id.buttonAddDeleteBook);
-            viewHolder.bookLayout=(LinearLayout)view.findViewById(R.id.booksLayoutSingleItem);
+            viewHolder.title = (TextView) view.findViewById(R.id.tVtitle);
+            viewHolder.miniature = (ImageView) view.findViewById(R.id.iViewMin);
+            viewHolder.id = mBooksArray.get(position).getId();
+            viewHolder.addDeleteButton = (Button) view.findViewById(R.id.buttonAddDeleteBook);
+            viewHolder.bookLayout = (LinearLayout) view.findViewById(R.id.booksLayoutSingleItem);
             view.setTag(viewHolder);
-        }
-        else{
+        } else {
             viewHolder = (ViewHolderItem) view.getTag();
         }
-        Book book=mBooksArray.get(position);
+        Book book = mBooksArray.get(position);
 
-        if(book!=null){
+        if (book != null) {
             viewHolder.author.setText(book.getAuthors());
             viewHolder.title.setText(book.getName().toUpperCase());
-            if(null==bArray[position]){
+            viewHolder.id = mBooksArray.get(position).getId();
+            if (null == bArray[position]) {
                 DisplayImageOptions options = new DisplayImageOptions.Builder().cacheInMemory(true).build();
-                ImageLoader.getInstance().loadImage(String.format("http://dajspisac.pl%s", book.getCover_small()),new MImageLoadingListener(viewHolder.miniature,position));
-            }
-            else{
+                ImageLoader.getInstance().loadImage(String.format("http://dajspisac.pl%s", book.getCover_small()), new MImageLoadingListener(viewHolder.miniature, position));
+            } else {
                 viewHolder.miniature.setImageBitmap(bArray[position]);
             }
 
-            viewHolder.addDeleteButton.setOnClickListener(new View.OnClickListener(){
+            viewHolder.addDeleteButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Toast.makeText(context,"Worktin",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "Worktin", Toast.LENGTH_SHORT).show();
                 }
             });
-            viewHolder.bookLayout.setOnClickListener(new View.OnClickListener(){
+            viewHolder.bookLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent=new Intent(context,SingleBookActivity.class);
-                    intent.putExtra("QUERY","ksiazki/"+viewHolder.id);
+                    Intent intent = new Intent(context, SingleBookActivity.class);
+                    intent.putExtra("QUERY", "ksiazki/" + viewHolder.id);
+                    if(!BitmapLoadSave.saveImageToExternalStorage(context,bArray[position])){
+                        return;
+                    }
                     context.startActivity(intent);
                 }
             });
@@ -131,31 +134,31 @@ public class BooksAdapter extends BaseAdapter{
         @Override
         public void onRequestFailure(SpiceException e) {
             Log.d("retro", "Failure");
-            Toast.makeText(context,"Błąd połączenia",Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Błąd połączenia", Toast.LENGTH_SHORT).show();
         }
 
         @Override
         public void onRequestSuccess(BookList books) {
-            if(books!=null){
-                BooksAdapter.this.mBooksArray=books;
-                bArray=new Bitmap[mBooksArray.size()];
+            if (books != null) {
+                BooksAdapter.this.mBooksArray = books;
+                bArray = new Bitmap[mBooksArray.size()];
                 notifyDataSetChanged();
-                Log.d("retro","Success"+books.get(5).getClass_nr());
-            }
-            else
-                Log.d("retro","Succes");
+                Log.d("retro", "Success" + books.get(5).getClass_nr());
+            } else
+                Log.d("retro", "Succes");
 
         }
     }
 
-    private class MImageLoadingListener implements ImageLoadingListener{
+    private class MImageLoadingListener implements ImageLoadingListener {
         ImageView imageView;
         int position;
-        public MImageLoadingListener(ImageView imageView,int position)
-        {
-            this.imageView=imageView;
-            this.position=position;
+
+        public MImageLoadingListener(ImageView imageView, int position) {
+            this.imageView = imageView;
+            this.position = position;
         }
+
         @Override
         public void onLoadingStarted(String s, View view) {
 
@@ -168,10 +171,11 @@ public class BooksAdapter extends BaseAdapter{
 
         @Override
         public void onLoadingComplete(String s, View view, Bitmap bitmap) {
-            Bitmap finalbmp= ImageHelper.getRoundedCornerBitmap(bitmap, 8);
-            bArray[position]=finalbmp;
+            Bitmap finalbmp = ImageHelper.getRoundedCornerBitmap(bitmap, 8);
+            bArray[position] = finalbmp;
             imageView.setImageBitmap(finalbmp);
-            notifyDataSetChanged();}
+            notifyDataSetChanged();
+        }
 
         @Override
         public void onLoadingCancelled(String s, View view) {

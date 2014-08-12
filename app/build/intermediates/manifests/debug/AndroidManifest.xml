@@ -35,9 +35,7 @@
             android:name="com.swmansion.dajspisac.settings.ChooseClassActivity"
             android:label="Zmień klasę" >
         </activity>
-        <activity
-            android:name="com.swmansion.dajspisac.book.BooksActivity"
-            android:label="Wybierz Książkę" >
+        <activity android:name="com.swmansion.dajspisac.book.BooksActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

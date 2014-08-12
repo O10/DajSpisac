@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Firsttest</string>
+    <string name="app_name">DajSpisać</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="znajdzrozwiazanie">Znajdź Rozwiązanie</string>
@@ -19,6 +19,8 @@
     <string name="chemia">CHEMIA</string>
     <string name="mathematics">MATEMATYKA</string>
     <string name="FIZYKA">FIZYKA</string>
+    <string name="numerstrony">NUMER STRONY</string>
+    <string name="numerzadania">NUMER ZADANIA</string>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
     <color name="actionBarColor">#1d1e33</color>
@@ -32,4 +34,5 @@
     <color name="buttonTextColorClicked">#f3b18f</color>
     <color name="buttonOrangeMainDajSpisac">#e46828</color>
     <color name="buttonOrangeBorderDajSpisac">#d25819</color>
+    <color name="actionbarTitleOrange">#fad5c2</color>
 </resources>
