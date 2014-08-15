@@ -50,6 +50,7 @@ public class SingleBookActivity extends FragmentActivity implements TabHost.OnTa
     TabHost.TabContentFactory defaultTabCont;
     private int previousTabIndex;
     private HorizontalScrollView horScrollView;
+    private Bundle savedInstanceState;
 
     void setAdapter() {
         viewPager.setAdapter(new PagesForBookAdapter(getSupportFragmentManager()));
@@ -152,8 +153,8 @@ public class SingleBookActivity extends FragmentActivity implements TabHost.OnTa
             String s = String.format("ksiazki/%d/zadania?page=%s", book.getId(), pagesNumbers.get(i));
             args.putInt("PAGENUM", pagesNumbers.get(i));
             args.putString("SUBJECT",book.getSubject());
+            args.putInt("BOOKID",book.getId());
 
-            Log.d("retro", s);
             args.putString("QUERY", s);
             fragment.setArguments(args);
 
@@ -173,13 +174,15 @@ public class SingleBookActivity extends FragmentActivity implements TabHost.OnTa
 
     public static class SinglePageFragment extends Fragment {
         private SpiceManager spiceManager;
-        TableLayout rootContainer;
         int bookId;
+        ExerciseList mExercises;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setRetainInstance(true);
+            bookId=getArguments().getInt("BOOKID");
+            spiceManager=new SpiceManager(com.octo.android.robospice.Jackson2SpringAndroidSpiceService.class);
         }
 
         @Override
@@ -192,76 +195,92 @@ public class SingleBookActivity extends FragmentActivity implements TabHost.OnTa
         }
 
         @Override
-        public void onActivityCreated(Bundle savedInstanceState) {
-            Log.d("retro","Entering onActivityCreated");
-            super.onActivityCreated(savedInstanceState);
-            this.spiceManager = ((SingleBookActivity) getActivity()).spiceManager;
-            if(bookId==0){
-                this.bookId = ((SingleBookActivity) getActivity()).book.getId();
+        public void onStart() {
+            super.onStart();
+            spiceManager.start(getActivity());
+        }
+
+        @Override
+        public void onStop() {
+            super.onStop();
+            if(spiceManager.isStarted()){
+                spiceManager.shouldStop();
             }
-            ExercisesRequest request = new ExercisesRequest(getArguments().getString("QUERY"));
-            String lastRequestCacheKey = request.createCacheKey();
-            spiceManager.execute(request, lastRequestCacheKey, DurationInMillis.ONE_MINUTE, new ExercisesRequestListener());
+        }
 
+        @Override
+        public void onActivityCreated(Bundle savedInstanceState) {
+            super.onActivityCreated(savedInstanceState);
 
+            if(mExercises==null){
+                ExercisesRequest request = new ExercisesRequest(getArguments().getString("QUERY"));
+                String lastRequestCacheKey = request.createCacheKey();
+                spiceManager.execute(request, lastRequestCacheKey, DurationInMillis.ONE_MINUTE, new ExercisesRequestListener());
+            }
+            else{
+                updateButtonViews();
+            }
+        }
+
+        void updateButtonViews(){
+            TableLayout rootContainer;
+            rootContainer = (TableLayout) getView().findViewById(R.id.allButtonsContainer);
+
+            TableRow row = new TableRow(getActivity());
+            TableLayout.LayoutParams tableParams = new TableLayout.LayoutParams(TableLayout.LayoutParams.WRAP_CONTENT, TableLayout.LayoutParams.WRAP_CONTENT);
+            TableRow.LayoutParams rowParams = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT);
+            rowParams.gravity = Gravity.CENTER_HORIZONTAL;
+
+            tableParams.setMargins(0, 15, 0, 15);
+            row.setLayoutParams(tableParams);
+            for (int i = 0; i < mExercises.size(); i++) {
+                Button b = (Button) getActivity().getLayoutInflater().inflate(R.layout.button_exercise_template, row, false);
+                final int exercise_Id = mExercises.get(i).getId();
+                b.setText(mExercises.get(i).getNumber());
+                b.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getActivity(), SingleExerciseActivity.class);
+                        intent.putExtra("BOOK_ID", bookId);
+                        Log.d("retro","Putting extra "+Integer.toString(bookId));
+                        intent.putExtra("EXERCISE_ID", exercise_Id);
+                        int [] pageIds=new int[mExercises.size()];
+                        String [] pageNums=new String[mExercises.size()];
+                        for(int i=0;i<mExercises.size();i++){
+                            pageIds[i]=mExercises.get(i).getId();
+                            pageNums[i]=mExercises.get(i).getNumber();
+                        }
+                        intent.putExtra("IDS",pageIds);
+                        intent.putExtra("NUMS",pageNums);
+                        intent.putExtra("SUBJECT",getArguments().getString("SUBJECT"));
+                        intent.putExtra("PAGENUM",getArguments().getInt("PAGENUM"));
+                        startActivity(intent);
+                    }
+                });
+                row.addView(b);
+                if ((i + 1) % 3 == 0) {
+                    rootContainer.addView(row);
+                    row = new TableRow(getActivity());
+                    tableParams.setMargins(0, 15, 0, 15);
+                    row.setLayoutParams(tableParams);
+                }
+            }
+            if (row.getChildCount() != 0)
+                rootContainer.addView(row);
         }
 
         private class ExercisesRequestListener implements RequestListener<ExerciseList> {
             @Override
             public void onRequestFailure(SpiceException e) {
-                Log.d("retro", "FAILURE Ex list");
 
             }
 
             @Override
             public void onRequestSuccess(final ExerciseList exercises) {
-                Log.d("retro", "EList " + exercises.size());
-                if(getView()==null){
-                    return;
+                mExercises=exercises;
+                if(isAdded()){
+                    updateButtonViews();
                 }
-                rootContainer = (TableLayout) getView().findViewById(R.id.allButtonsContainer);
-
-                TableRow row = new TableRow(getActivity());
-                TableLayout.LayoutParams tableParams = new TableLayout.LayoutParams(TableLayout.LayoutParams.WRAP_CONTENT, TableLayout.LayoutParams.WRAP_CONTENT);
-                TableRow.LayoutParams rowParams = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT);
-                //rowParams.setMargins(10,10,10,10);
-                rowParams.gravity = Gravity.CENTER_HORIZONTAL;
-
-                tableParams.setMargins(0, 15, 0, 15);
-                row.setLayoutParams(tableParams);
-                for (int i = 0; i < exercises.size(); i++) {
-                    Button b = (Button) getActivity().getLayoutInflater().inflate(R.layout.button_exercise_template, row, false);
-                    final int exercise_Id = exercises.get(i).getId();
-                    b.setText(exercises.get(i).getNumber());
-                    b.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            Intent intent = new Intent(getActivity(), SingleExerciseActivity.class);
-                            intent.putExtra("BOOK_ID", bookId);
-                            intent.putExtra("EXERCISE_ID", exercise_Id);
-                            int [] pageIds=new int[exercises.size()];
-                            String [] pageNums=new String[exercises.size()];
-                            for(int i=0;i<exercises.size();i++){
-                                pageIds[i]=exercises.get(i).getId();
-                                pageNums[i]=exercises.get(i).getNumber();
-                            }
-                            intent.putExtra("IDS",pageIds);
-                            intent.putExtra("NUMS",pageNums);
-                            intent.putExtra("SUBJECT",getArguments().getString("SUBJECT"));
-                            intent.putExtra("PAGENUM",getArguments().getInt("PAGENUM"));
-                            startActivity(intent);
-                        }
-                    });
-                    row.addView(b);
-                    if ((i + 1) % 3 == 0) {
-                        rootContainer.addView(row);
-                        row = new TableRow(getActivity());
-                        tableParams.setMargins(0, 15, 0, 15);
-                        row.setLayoutParams(tableParams);
-                    }
-                }
-                if (row.getChildCount() != 0)
-                    rootContainer.addView(row);
             }
         }
 

@@ -38,15 +38,21 @@
 
         </activity>
 
+        <activity android:name="com.swmansion.dajspisac.book.MyBooksActivity"
+            android:label="Zmień klasę">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
         <activity
-        android:name="com.swmansion.dajspisac.book.BooksActivity">
+        android:name="com.swmansion.dajspisac.book.BooksChooserActivity">
 
 
 
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+
         </activity>
 
         <service

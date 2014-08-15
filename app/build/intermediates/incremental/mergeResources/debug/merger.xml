@@ -985,16 +985,16 @@
                     msgid="3827284619958211114" >"May Error sa Network"
                 </string>
                 <string
-                    name="common_google_play_services_notification_needs_update_title"
-                    msgid="1388129345631079938" >"Kailangan ng application ng update sa Mga Serbisyo ng Google Play."
-                </string>
-                <string
                     name="common_google_play_services_unsupported_title"
                     msgid="6334768798839376943" >"Mga serbisyo ng Google Play"
                 </string>
                 <string
                     name="common_google_play_services_install_button"
                     msgid="8515591849428043265" >"Kumuha ng Google Play services"
+                </string>
+                <string
+                    name="common_google_play_services_notification_needs_update_title"
+                    msgid="1388129345631079938" >"Kailangan ng application ng update sa Mga Serbisyo ng Google Play."
                 </string>
             </file>
             <file
@@ -6916,16 +6916,16 @@ false
                     msgid="3542578567569488671" >"La piattaforma Google Play Services, su cui sono basate alcune delle tue applicazioni, non è supportata dal dispositivo in uso. Per assistenza, contatta il produttore."
                 </string>
                 <string
-                    name="common_google_play_services_install_text_phone"
-                    msgid="8685301130651051380" >"L\'app non funzionerà senza Google Play Services, non presente sul tuo telefono."
-                </string>
-                <string
                     name="common_google_play_services_network_error_text"
                     msgid="9038847255613537209" >"È necessaria una connessione dati per connettersi a Google Play Services."
                 </string>
                 <string
                     name="common_google_play_services_needs_enabling_title"
                     msgid="2583358409598976717" >"Un\'applicazione richiede l\'attivazione di Google Play Services."
+                </string>
+                <string
+                    name="common_google_play_services_install_text_phone"
+                    msgid="8685301130651051380" >"L\'app non funzionerà senza Google Play Services, non presente sul tuo telefono."
                 </string>
                 <string
                     name="common_google_play_services_install_text_tablet"
@@ -8991,7 +8991,7 @@ false
 @style/ActionBarTabStyle
                     </item>
                     <item name="android:actionBarSize">
-70dip
+55dip
                     </item>
                     <item name="android:actionBarStyle">
 @style/DajSpisacTheme.ActionBarDajSpisac
@@ -9097,6 +9097,8 @@ true
             <file
                 path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/values/strings.xml"
                 qualifiers="" >
+                <string name="dodajkolejnaksiazke" >DODAJ KOLEJNĄ KSIĄŻKĘ
+                </string>
                 <string name="action_settings" >Settings
                 </string>
                 <string name="wybierzklase" >WYBIERZ KLASĘ
@@ -9385,6 +9387,66 @@ true
                 path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/add_book_button.xml"
                 qualifiers=""
                 type="drawable" />
+            <file
+                name="twojeksiazki_plus_lightblue"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/twojeksiazki_plus_lightblue.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="twojeksiazki_plus_lososiowy"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/twojeksiazki_plus_lososiowy.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="choose_class_fragment_layout"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout/choose_class_fragment_layout.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="mybooksactivitylayout"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout/mybooksactivitylayout.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="twojeksiazki_iks_losiowy"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/twojeksiazki_iks_losiowy.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="twojeksiazki_iks_lightblue"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/twojeksiazki_iks_lightblue.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="mybook_single_listview_layout"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout/mybook_single_listview_layout.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="delete_book_buuton"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/delete_book_buuton.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="footer_mybooks_layout"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout/footer_mybooks_layout.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="twojeksiazki_plus_bialy"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/twojeksiazki_plus_bialy.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="backgorund_footer_mybooks"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/backgorund_footer_mybooks.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="tab_clicked_animation"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/anim/tab_clicked_animation.xml"
+                qualifiers=""
+                type="anim" />
         </source>
         <source path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/generated/res/rs/debug" />
         <source path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/generated/res/generated/debug" />

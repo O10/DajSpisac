@@ -27,7 +27,7 @@
 
     <style name="DajSpisacTheme" parent="android:Theme.Holo.Light">
         <item name="android:actionBarTabStyle">@style/ActionBarTabStyle</item>
-        <item name="android:actionBarSize">70dip</item>
+        <item name="android:actionBarSize">55dip</item>
         <item name="android:actionBarStyle">@style/DajSpisacTheme.ActionBarDajSpisac</item>
         <item name="android:panelFullBackground">@color/actionBarColor</item>
         <item name="android:panelBackground">@color/actionBarColor</item>

@@ -21,6 +21,7 @@
     <string name="FIZYKA">FIZYKA</string>
     <string name="numerstrony">NUMER STRONY</string>
     <string name="numerzadania">NUMER ZADANIA</string>
+    <string name="dodajkolejnaksiazke">DODAJ KOLEJNĄ KSIĄŻKĘ</string>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
     <color name="actionBarColor">#1d1e33</color>

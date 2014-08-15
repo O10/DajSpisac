@@ -224,6 +224,7 @@
     <!-- From: file:/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/values/strings.xml -->
     <eat-comment />
 
+    <string name="dodajkolejnaksiazke">DODAJ KOLEJNĄ KSIĄŻKĘ</string>
     <string name="gimnazjum">GIMNAZJUM</string>
     <string name="hello_world">Hello world!</string>
     <string name="mathematics">MATEMATYKA</string>
@@ -257,7 +258,7 @@
 
     <style name="DajSpisacTheme" parent="android:Theme.Holo.Light">
         <item name="android:actionBarTabStyle">@style/ActionBarTabStyle</item>
-        <item name="android:actionBarSize">70dip</item>
+        <item name="android:actionBarSize">55dip</item>
         <item name="android:actionBarStyle">@style/DajSpisacTheme.ActionBarDajSpisac</item>
         <item name="android:panelFullBackground">@color/actionBarColor</item>
         <item name="android:panelBackground">@color/actionBarColor</item>

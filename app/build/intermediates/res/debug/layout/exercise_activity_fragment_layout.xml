@@ -102,6 +102,7 @@
                 android:paddingRight="15dp"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
+                android:visibility="gone"
     />
     <!--TextView
         android:id="@+id/textViewSolution"

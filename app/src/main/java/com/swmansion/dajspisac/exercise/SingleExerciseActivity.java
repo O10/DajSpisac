@@ -16,6 +16,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.HorizontalScrollView;
@@ -37,7 +38,6 @@ import com.swmansion.dajspisac.tools.ExpandCollapseAnimation;
  */
 public class SingleExerciseActivity extends FragmentActivity implements TabHost.OnTabChangeListener{
     private ViewPager viewPager;
-    private SpiceManager spiceManager;
     private TabHost mTabHost;
     private int book_id,exercise_id,previousTabIndex;
     private TabHost.TabContentFactory defaultTabCont;
@@ -61,11 +61,9 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
 
         setActionBar(b.getString("SUBJECT"),b.getInt("PAGENUM"));
 
-        for(int i=0;i<exerciseIds.length;i++){
-            Log.d("retro",Integer.toString(exerciseIds[i]));
+        for(int i=0;i<exerciseIds.length;i++) {
+            Log.d("retro", Integer.toString(exerciseIds[i]));
         }
-
-        spiceManager = new SpiceManager(com.octo.android.robospice.Jackson2SpringAndroidSpiceService.class);
 
         viewPager=(ViewPager)findViewById(R.id.viewPagerSingleExercise);
         viewPager.setAdapter(new ExerciseFragmentsAdapter(getSupportFragmentManager()));
@@ -113,7 +111,6 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
             textViewTab.setText(exerciseNumbers[i]);
             mTabHost.addTab(mTabHost.newTabSpec(Integer.toString(i)).setIndicator(tabIndicatorView).setContent(defaultTabCont));
             if(exerciseIds[i]==exercise_id){
-                //textViewTab.setTextColor(getResources().getColor(R.color.orangeDajSpisac));
                 mTabHost.setCurrentTab(i);
             }
         }
@@ -143,13 +140,11 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
     @Override
     protected void onStart() {
         super.onStart();
-        spiceManager.start(this);
     }
 
 
     @Override
     protected void onStop() {
-        spiceManager.shouldStop();
         super.onStop();
     }
 
@@ -186,7 +181,6 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
             SingleExerciseFragment fragment = new SingleExerciseFragment();
             Bundle args = new Bundle();
             String s=String.format("ksiazki/%d/zadania/%d",book_id,exerciseIds[i]);
-            Log.d("retro", s);
             args.putString("QUERY",s);
 
             fragment.setArguments(args);
@@ -213,7 +207,29 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
         private TextView textViewTresc,textViewSolution;
         private View seperatorAfterTresc,seperatorAfterSolution;
         private WebView mWebWievSolution;
+        Exercise mExercise;
 
+
+        @Override
+        public void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setRetainInstance(true);
+            spiceManager = new SpiceManager(com.octo.android.robospice.Jackson2SpringAndroidSpiceService.class);
+        }
+
+        @Override
+        public void onStart() {
+            super.onStart();
+            spiceManager.start(getActivity());
+        }
+
+        @Override
+        public void onStop() {
+            super.onStop();
+            if(spiceManager.isStarted()){
+                spiceManager.shouldStop();
+            }
+        }
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -234,11 +250,14 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
         @Override
         public void onActivityCreated(Bundle savedInstanceState) {
             super.onActivityCreated(savedInstanceState);
-
-            this.spiceManager=((SingleExerciseActivity)getActivity()).spiceManager;
-            ExerciseRequest request=new ExerciseRequest(getArguments().getString("QUERY"));
-            String lastRequestCacheKey = request.createCacheKey();
-            spiceManager.execute(request, lastRequestCacheKey, DurationInMillis.ONE_MINUTE, new ExerciseRequestListener());
+            if(mExercise==null){
+                ExerciseRequest request=new ExerciseRequest(getArguments().getString("QUERY"));
+                String lastRequestCacheKey = request.createCacheKey();
+                spiceManager.execute(request, lastRequestCacheKey, DurationInMillis.ONE_MINUTE, new ExerciseRequestListener());
+            }
+            else{
+                updateViews();
+            }
         }
 
         public void showSolution(){
@@ -247,65 +266,84 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
             }
         }
 
-        public void hideSolution(){
-            if(isSolActive){
+        public void hideSolution() {
+            if (isSolActive) {
                 buttonSolution.callOnClick();
-            }        }
+            }
+        }
+        private void updateViews(){
+            textViewTresc.setText(Html.fromHtml(mExercise.getContent()));
+            WebSettings settings = mWebWievSolution.getSettings();
+            settings.setJavaScriptEnabled(true);
+
+            mWebWievSolution.loadData(mExercise.getSolution(), "text/html; charset=UTF-8", "UTF-8");
+            mWebWievSolution.setVisibility(View.VISIBLE);
+
+            buttonTresc.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View view) {
+                    if(isTrescActive){
+                        buttonTresc.setCompoundDrawablesWithIntrinsicBounds(null,null,getResources().getDrawable(R.drawable.wybrana_ksiazka_dol),null);
+                    }
+                    else{
+                        buttonTresc.setCompoundDrawablesWithIntrinsicBounds(null,null,getResources().getDrawable(R.drawable.wybrana_ksiazka_gora),null);
+
+                    }
+                    ExpandCollapseAnimation.setHeightForWrapContent(getActivity(), textViewTresc);
+                    ExpandCollapseAnimation animation = null;
+                    if(isTrescActive) {
+                        animation = new ExpandCollapseAnimation(textViewTresc, 500, 1);
+                        animation.setAnimationListener(new ViewVisibilityListener(seperatorAfterTresc));
+                        isTrescActive = false;
+                    } else {
+                        animation = new ExpandCollapseAnimation(textViewTresc, 500, 0);
+                        isTrescActive = true;
+                        seperatorAfterTresc.setVisibility(View.VISIBLE);
+                    }
+                    textViewTresc.startAnimation(animation);
+                }
+            });
+
+            buttonSolution.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (isSolActive) {
+                        buttonSolution.setCompoundDrawablesWithIntrinsicBounds(null, null, getResources().getDrawable(R.drawable.wybrana_ksiazka_dol), null);
+                    } else {
+                        buttonSolution.setCompoundDrawablesWithIntrinsicBounds(null, null, getResources().getDrawable(R.drawable.wybrana_ksiazka_gora), null);
+
+                    }
+
+                    ExpandCollapseAnimation.setHeightForWrapContent(getActivity(), mWebWievSolution);
+                    ExpandCollapseAnimation animation = null;
+                    if (isSolActive) {
+                        animation = new ExpandCollapseAnimation(mWebWievSolution, 500, 1);
+                        isSolActive = false;
+                        animation.setAnimationListener(new ViewVisibilityListener(mWebWievSolution));
+                    } else {
+                        animation = new ExpandCollapseAnimation(mWebWievSolution, 500, 0);
+                        isSolActive = true;
+                        seperatorAfterSolution.setVisibility(android.view.View.VISIBLE);
+                    }
+                    mWebWievSolution.startAnimation(animation);
+                }
+            });
+
+
+        }
 
         private class ExerciseRequestListener implements RequestListener<Exercise> {
             @Override
             public void onRequestFailure(SpiceException e) {
-                Log.d("retro","FAILURE Ex list");
 
             }
 
             @Override
             public void onRequestSuccess(Exercise exercise) {
-                Log.d("retro","Reqqqq");
-                textViewTresc.setText(Html.fromHtml(exercise.getContent()));
-                //textViewSolution.setText(Html.fromHtml(exercise.getSolution()));
-                String summary = "<html><body>You scored <b>192</b> points.</body></html>";
-                mWebWievSolution.loadData(summary, "text/html", null);
-                mWebWievSolution.reload();
-
-                buttonTresc.setOnClickListener(new View.OnClickListener(){
-                    @Override
-                    public void onClick(View view) {
-                        ExpandCollapseAnimation.setHeightForWrapContent(getActivity(), textViewTresc);
-                        ExpandCollapseAnimation animation = null;
-                        if(isTrescActive) {
-                            animation = new ExpandCollapseAnimation(textViewTresc, 500, 1);
-                            animation.setAnimationListener(new ViewVisibilityListener(seperatorAfterTresc));
-                            isTrescActive = false;
-                        } else {
-                            animation = new ExpandCollapseAnimation(textViewTresc, 500, 0);
-                            isTrescActive = true;
-                            seperatorAfterTresc.setVisibility(View.VISIBLE);
-                        }
-                        textViewTresc.startAnimation(animation);
-                    }
-                });
-
-                buttonSolution.setOnClickListener(new View.OnClickListener(){
-                    @Override
-                    public void onClick(View view) {
-                        ExpandCollapseAnimation.setHeightForWrapContent(getActivity(), mWebWievSolution);
-                        ExpandCollapseAnimation animation = null;
-                        if(isSolActive) {
-                            animation = new ExpandCollapseAnimation(mWebWievSolution, 500, 1);
-                            isSolActive = false;
-                            animation.setAnimationListener(new ViewVisibilityListener(mWebWievSolution));
-                        } else {
-                            animation = new ExpandCollapseAnimation(mWebWievSolution, 500, 0);
-                            isSolActive = true;
-                            seperatorAfterSolution.setVisibility(android.view.View.VISIBLE);
-                        }
-                        mWebWievSolution.startAnimation(animation);
-                    }
-                });
-
-                showSolution();
-
+                mExercise=exercise;
+                if(isAdded()){
+                    updateViews();
+                }
             }
 
 
@@ -333,22 +371,4 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
         }
 
     }
-
-
-
-    private class SingleExerciseRequestListener implements RequestListener<Exercise>{
-        @Override
-        public void onRequestFailure(SpiceException e) {
-
-        }
-
-        @Override
-        public void onRequestSuccess(Exercise exercise) {
-
-        }
-    }
-
-
-
-
 }
