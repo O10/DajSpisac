@@ -65,14 +65,6 @@ public class BooksChooserActivity extends FragmentActivity implements TabHost.On
 
             }
         });
-
-
-        DisplayImageOptions displayimageOptions = new DisplayImageOptions.Builder().build();
-
-        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(getApplicationContext()).build();
-        ImageLoader.getInstance().init(config);
-
-
     }
 
     private void initialiseTabHost() {

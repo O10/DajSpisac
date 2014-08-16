@@ -29,6 +29,7 @@ import com.octo.android.robospice.SpiceManager;
 import com.octo.android.robospice.persistence.DurationInMillis;
 import com.octo.android.robospice.persistence.exception.SpiceException;
 import com.octo.android.robospice.request.listener.RequestListener;
+import com.swmansion.dajspisac.tools.DajSpisacUtilities;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -73,9 +74,6 @@ public class MyBooksActivity extends FragmentActivity implements TabHost.OnTabCh
 
         mMyBooksCollectionPagerAdapter=new MyBooksCollectionPagerAdapter(getSupportFragmentManager());
         mViewPager.setAdapter(mMyBooksCollectionPagerAdapter);
-        if(savedInstanceState==null){
-            mMyBooksCollectionPagerAdapter.makeRequest();
-        }
 
         initialiseTabHost();
         mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -95,14 +93,6 @@ public class MyBooksActivity extends FragmentActivity implements TabHost.OnTabCh
 
             }
         });
-
-
-        DisplayImageOptions displayimageOptions = new DisplayImageOptions.Builder().build();
-
-        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(getApplicationContext()).build();
-        ImageLoader.getInstance().init(config);
-
-
     }
 
 
@@ -162,6 +152,7 @@ public class MyBooksActivity extends FragmentActivity implements TabHost.OnTabCh
     protected void onStart() {
         super.onStart();
         spiceManager.start(this);
+        mMyBooksCollectionPagerAdapter.makeRequest();
     }
 
     @Override
@@ -185,19 +176,13 @@ public class MyBooksActivity extends FragmentActivity implements TabHost.OnTabCh
 
         }
         void makeRequest(){
-            getBooksIds();
+            myBooksIds= DajSpisacUtilities.getMyBookIds(MyBooksActivity.this);
             for(String s:myBooksIds){
                 BookRequest request = new BookRequest(String.format("ksiazki/%s",s));
                 String lastRequestCacheKey = request.createCacheKey();
-                spiceManager.execute(request, lastRequestCacheKey, DurationInMillis.ONE_MINUTE,new BookListener());
+                spiceManager.execute(request, lastRequestCacheKey, DurationInMillis.ONE_WEEK,new BookListener());
             }
-        }
-        void getBooksIds(){
-            SharedPreferences preferences=getSharedPreferences("BOOKIDS",0);
-            String initialString=preferences.getString("BOOKIDS","");
-            Log.d("retro","Initial String "+initialString);
-            myBooksIds=new ArrayList<String>(Arrays.asList(initialString.split(",")));
-            myBooksIds.remove(0);
+            Log.d("retro","Requests made");
         }
 
         @Override
@@ -240,6 +225,7 @@ public class MyBooksActivity extends FragmentActivity implements TabHost.OnTabCh
             @Override
             public void onRequestSuccess(Book book) {
                 mPageReferenceMap.get(subjectIndexMap.get(book.getSubject())).addBook(book);
+                Log.d("retro","Request succesfull for book: "+book.getName());
             }
         }
     }

@@ -22,6 +22,7 @@ import com.nostra13.universalimageloader.core.assist.FailReason;
 import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
 import com.octo.android.robospice.SpiceManager;
 import com.swmansion.dajspisac.tools.BitmapLoadSave;
+import com.swmansion.dajspisac.tools.DajSpisacUtilities;
 import com.swmansion.dajspisac.tools.ImageHelper;
 
 import java.util.ArrayList;
@@ -89,7 +90,6 @@ public class BooksChooseAdapter extends BaseAdapter {
             viewHolder.title.setText(book.getName().toUpperCase());
             viewHolder.id = mBooksArray.get(position).getId();
             if (null == bArray[position]) {
-                DisplayImageOptions options = new DisplayImageOptions.Builder().cacheInMemory(true).build();
                 ImageLoader.getInstance().loadImage(String.format("http://dajspisac.pl%s", book.getCover_small()), new MImageLoadingListener(viewHolder.miniature, position));
             } else {
                 viewHolder.miniature.setImageBitmap(bArray[position]);
@@ -105,29 +105,18 @@ public class BooksChooseAdapter extends BaseAdapter {
             viewHolder.addDeleteButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    SharedPreferences preferences=context.getSharedPreferences("BOOKIDS",0);
-                    SharedPreferences.Editor editor=preferences.edit();
 
                     if(positionsMarked[position]){
                         viewHolder.addDeleteButton.setBackgroundResource(R.drawable.twojeksiazki_plus_lightblue);
-                        if(bookIDS.remove(Integer.toString(viewHolder.id))){
-                            Log.d("retro","removing succesful");
-                        }
+                        DajSpisacUtilities.removeBookById(context,viewHolder.id);
                         positionsMarked[position]=false;
                     }
                     else{
                         bookIDS.add(Integer.toString(viewHolder.id));
+                        DajSpisacUtilities.addBookById(context,viewHolder.id);
                         viewHolder.addDeleteButton.setBackgroundResource(R.drawable.twojeksiazki_plus_lososiowy);
                         positionsMarked[position]=true;
                     }
-                    StringBuilder result = new StringBuilder();
-                    for(String string : bookIDS) {
-                        result.append(string);
-                        result.append(",");
-                    }
-                    String res= result.length() > 0 ? result.substring(0, result.length() - 1): "";
-                    editor.putString("BOOKIDS",res);
-                    editor.commit();
                 }
             });
             viewHolder.bookLayout.setOnClickListener(new View.OnClickListener() {
@@ -138,7 +127,8 @@ public class BooksChooseAdapter extends BaseAdapter {
                     }
                     Intent intent = new Intent(context, SingleBookActivity.class);
                     intent.putExtra("QUERY", "ksiazki/" + viewHolder.id);
-                    if(!BitmapLoadSave.saveImageToExternalStorage(context,bArray[position])){
+                    if(!BitmapLoadSave.saveBitmapToInternal(context,bArray[position],"lastminiature.png")){
+                        Log.d("retro","Saving miniature failed");
                         return;
                     }
                     context.startActivity(intent);
@@ -150,10 +140,8 @@ public class BooksChooseAdapter extends BaseAdapter {
     }
 
     private void fillMarkedTable(){
-        SharedPreferences preferences=context.getSharedPreferences("BOOKIDS",0);
-        currentUserBooksIDS=preferences.getString("BOOKIDS","");
 
-        bookIDS=new ArrayList<String>(Arrays.asList(currentUserBooksIDS.split(",")));
+        bookIDS= DajSpisacUtilities.getMyBookIds(context);
 
         for(int i=0;i<positionsMarked.length;i++){
             if(bookIDS.contains(Integer.toString(mBooksArray.get(i).getId()))){

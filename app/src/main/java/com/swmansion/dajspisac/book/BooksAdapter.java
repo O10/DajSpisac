@@ -96,7 +96,6 @@ public class BooksAdapter extends BaseAdapter {
             viewHolder.title.setText(book.getName().toUpperCase());
             viewHolder.id = mBooksArray.get(position).getId();
             if (null == bArray[position]) {
-                DisplayImageOptions options = new DisplayImageOptions.Builder().cacheInMemory(true).build();
                 ImageLoader.getInstance().loadImage(String.format("http://dajspisac.pl%s", book.getCover_small()), new MImageLoadingListener(viewHolder.miniature, position));
             } else {
                 viewHolder.miniature.setImageBitmap(bArray[position]);
@@ -113,7 +112,7 @@ public class BooksAdapter extends BaseAdapter {
                 public void onClick(View view) {
                     Intent intent = new Intent(context, SingleBookActivity.class);
                     intent.putExtra("QUERY", "ksiazki/" + viewHolder.id);
-                    if(!BitmapLoadSave.saveImageToExternalStorage(context,bArray[position])){
+                    if(!BitmapLoadSave.saveBitmapToInternal(context,bArray[position],"lastminiature.png")){
                         return;
                     }
                     context.startActivity(intent);

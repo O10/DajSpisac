@@ -99,16 +99,15 @@ public class SingleBookActivity extends FragmentActivity implements TabHost.OnTa
 
 
         Log.d("retro","Starting with string: "+getIntent().getStringExtra("QUERY"));
-        BookRequest request = new BookRequest(getIntent().getStringExtra("QUERY"));
-        String lastRequestCacheKey = request.createCacheKey();
-        spiceManager.execute(request, lastRequestCacheKey, DurationInMillis.ONE_MINUTE, new BookRequestListener());
-
     }
 
     @Override
     protected void onStart() {
         super.onStart();
         spiceManager.start(this);
+        BookRequest request = new BookRequest(getIntent().getStringExtra("QUERY"));
+        String lastRequestCacheKey = request.createCacheKey();
+        spiceManager.execute(request, lastRequestCacheKey, DurationInMillis.ONE_WEEK, new BookRequestListener());
 
     }
 
@@ -314,7 +313,8 @@ public class SingleBookActivity extends FragmentActivity implements TabHost.OnTa
                     finish();
                 }
             });
-            Bitmap miniature= BitmapLoadSave.getThumbnail(SingleBookActivity.this,"lastmin.png");
+            Bitmap miniature= BitmapLoadSave.loadBitmapFromInternal(SingleBookActivity.this,"lastminiature.png");
+
             bookMiniature.setImageBitmap(miniature);
             actionBar.setCustomView(rootView);
 

@@ -20,6 +20,7 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.FailReason;
 import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
 import com.swmansion.dajspisac.tools.BitmapLoadSave;
+import com.swmansion.dajspisac.tools.DajSpisacUtilities;
 import com.swmansion.dajspisac.tools.ImageHelper;
 
 import java.util.ArrayList;
@@ -43,6 +44,11 @@ public class MyBooksAdapter extends BaseAdapter {
     }
 
     void addBook(Book book){
+        for(Book tempBook:mBooksArray){
+            if(book.getId()==tempBook.getId()){
+                return;
+            }
+        }
         mBooksArray.add(book);
         notifyDataSetChanged();
     }
@@ -100,7 +106,7 @@ public class MyBooksAdapter extends BaseAdapter {
             viewHolder.addDeleteButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    removeIdFromPreferences(viewHolder.id);
+                    DajSpisacUtilities.removeBookById(context,viewHolder.id);
                     mBooksArray.remove(position);
                     notifyDataSetChanged();
                 }
@@ -110,7 +116,7 @@ public class MyBooksAdapter extends BaseAdapter {
                 public void onClick(View view) {
                     Intent intent = new Intent(context, SingleBookActivity.class);
                     intent.putExtra("QUERY", "ksiazki/" + viewHolder.id);
-                    if(!BitmapLoadSave.saveImageToExternalStorage(context,bitmapMap.get(position))){
+                    if(!BitmapLoadSave.saveBitmapToInternal(context,bitmapMap.get(position),"lastminiature.png")){
                         return;
                     }
                     context.startActivity(intent);
@@ -120,24 +126,6 @@ public class MyBooksAdapter extends BaseAdapter {
 
         return view;
     }
-
-    private void removeIdFromPreferences(int id){
-        SharedPreferences preferences=context.getSharedPreferences("BOOKIDS", 0);
-        String initialString=preferences.getString("BOOKIDS","");
-        ArrayList<String> myBooksIds=new ArrayList<String>(Arrays.asList(initialString.split(",")));
-        myBooksIds.remove(Integer.toString(id));
-
-        SharedPreferences.Editor editor=preferences.edit();
-        StringBuilder result = new StringBuilder();
-        for(String string : myBooksIds) {
-            result.append(string);
-            result.append(",");
-        }
-        String res= result.length() > 0 ? result.substring(0, result.length() - 1): "";
-        editor.putString("BOOKIDS",res);
-        editor.commit();
-    }
-
 
     private class MImageLoadingListener implements ImageLoadingListener {
         ImageView imageView;
