@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
 
+    <!-- From: file:/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/values/styles.xml -->
+    <eat-comment />
+
+    <attr name="exerciseAttrButton" format="reference" />
     <!-- From: file:/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/values/strings.xml -->
     <eat-comment />
 
@@ -33,6 +37,7 @@
     <color name="lightBlueDajSpisac">#8686a8</color>
     <color name="lightGrey">#d3d3d3</color>
     <color name="orangeDajSpisac">#f2b08d</color>
+    <color name="toastredbackground">#c45156</color>
     <!-- From: file:/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values/wallet_colors.xml -->
     <eat-comment />
 
@@ -227,6 +232,10 @@
     <string name="dodajkolejnaksiazke">DODAJ KOLEJNĄ KSIĄŻKĘ</string>
     <string name="gimnazjum">GIMNAZJUM</string>
     <string name="hello_world">Hello world!</string>
+    <string name="htmlend">&lt;/body> &lt;/html></string>
+    <string name="htmlstart">&lt;html>     &lt;head>       &lt;script src="file:///android_asset/asciimath.js" type="text/javascript">&lt;/script> &lt;script>     var AScgiloc = \'http://www.imathas.com/imathas/filter/graph/svgimg.php\';     var AMTcgiloc = \'http://www.imathas.com/cgi-bin/mimetex.cgi\';   &lt;/script>   &lt;script src="file:///android_asset/asciisvg.js" type="text/javascript">&lt;/script> &lt;/head>     &lt;body></string>
+    <string name="imgsrc">&lt;img src=\"%s\"  /></string>
+    <string name="interner_error">Błąd połączenia z Internetem!</string>
     <string name="mathematics">MATEMATYKA</string>
     <string name="numerstrony">NUMER STRONY</string>
     <string name="numeryzadan">NUMERY ZADAŃ</string>
@@ -292,6 +301,10 @@
         <item name="android:maxHeight">100dp</item>
         <item name="android:adjustViewBounds">true</item>
         <item name="android:textSize">40dp</item>
+    </style>
+
+    <style name="SingleExsButton">
+        <item name="@attr/exerciseAttrButton">@style/SingleExerciseButton</item>
     </style>
 
     <style name="SingleItem">

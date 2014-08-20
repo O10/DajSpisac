@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/darkBlueDajSpisac"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp"
+    android:gravity="center_horizontal"
+    android:longClickable="false">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/twojeksiazki_matematyka_blada"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/imageViewSubjectIcon" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mathematics"
+        android:textColor="@color/lightBlueDajSpisac"
+        android:textStyle="bold"
+        android:layout_gravity="center_vertical"
+        android:singleLine="true" android:ellipsize="end" android:lines="1"
+        android:id="@+id/textViewTab" />
+
+</LinearLayout>

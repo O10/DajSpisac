@@ -1,130 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <ScrollView
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-    <Button
-        android:id="@+id/buttonTresc"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/TRESCZADANIA"
-        android:textColor="@color/lightBlueDajSpisac"
-        android:background="@color/white"
-        android:gravity="left|center_vertical"
-        android:paddingLeft="15dp"
-        android:textStyle="bold"
-        android:textSize="30sp"
-        android:minHeight="70dp"
-        android:paddingRight="10dp"
-        android:drawableRight="@drawable/wybrana_ksiazka_dol"/>
-
-    </LinearLayout>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:alpha="0.5"
-        android:id="@+id/sepAfterTresc"
-        android:visibility="gone"
-        android:background="@color/darkGrey"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"/>
-
-    <TextView
-        android:id="@+id/textViewTresc"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="hello"
-        android:visibility="gone"
-        android:textColor="#19172c"
-        android:background="@color/white"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"/>
-
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="2.5dp"
-        android:visibility="visible"
-        android:alpha="0.5"
-        android:background="@color/darkGrey"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <Button
-            android:id="@+id/buttonSolution"
-            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/rozwiazanie"
-            android:textColor="@color/lightBlueDajSpisac"
-            android:background="#dbdbdb"
-            android:gravity="left|center_vertical"
-            android:paddingLeft="15dp"
-            android:paddingRight="10dp"
-            android:textStyle="bold"
-            android:textSize="30sp"
-            android:minHeight="70dp"
-            android:drawableRight="@drawable/wybrana_ksiazka_dol"/>
+            android:orientation="horizontal">
 
-
-    </LinearLayout>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:id="@+id/sepAfteSolution"
-        android:visibility="gone"
-        android:background="@color/darkGrey"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"
-        android:alpha="0.5"/>
-
-    <WebView  xmlns:android="http://schemas.android.com/apk/res/android"
-                android:id="@+id/webViewSolution"
+            <Button
+                android:id="@+id/buttonTresc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:drawableRight="@drawable/wybrana_ksiazka_dol"
+                android:gravity="left|center_vertical"
+                android:minHeight="70dp"
                 android:paddingLeft="15dp"
-                android:paddingRight="15dp"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:visibility="gone"
-    />
-    <!--TextView
-        android:id="@+id/textViewSolution"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="hello"
-        android:visibility="gone"
-        android:textColor="#19172c"
-        android:background="#dbdbdb"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"/>-->
+                android:paddingRight="10dp"
+                android:text="@string/TRESCZADANIA"
+                android:textColor="@color/lightBlueDajSpisac"
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2.5dp"
-        android:alpha="0.5"
-        android:visibility="visible"
-        android:background="@color/darkGrey"/>
         </LinearLayout>
-    </ScrollView>
+
+        <View
+            android:id="@+id/sepAfterTresc"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:alpha="0.5"
+            android:background="@color/darkGrey"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:visibility="gone" />
+
+        <!--   <WebView  xmlns:android="http://schemas.android.com/apk/res/android"
+               android:id="@+id/webViewTresc"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:paddingLeft="15dp"
+               android:paddingRight="15dp"
+               android:paddingTop="10dp"
+               android:paddingBottom="10dp"
+               android:visibility="gone"/>-->
+
+        <TextView
+            android:id="@+id/textViewTresc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:text="hello"
+            android:textColor="#19172c"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2.5dp"
+            android:alpha="0.5"
+            android:background="@color/darkGrey"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonSolution"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#dbdbdb"
+                android:drawableRight="@drawable/wybrana_ksiazka_gora"
+                android:gravity="left|center_vertical"
+                android:minHeight="70dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"
+                android:text="@string/rozwiazanie"
+                android:textColor="@color/lightBlueDajSpisac"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/sepAfteSolution"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:alpha="0.5"
+            android:background="@color/darkGrey"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:visibility="visible" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/progressBar"
+            android:minHeight="100dp"/>
+
+        <WebView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/webViewSolution"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:visibility="gone" />
+        <!--TextView
+            android:id="@+id/textViewSolution"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="hello"
+            android:visibility="gone"
+            android:textColor="#19172c"
+            android:background="#dbdbdb"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"/>-->
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2.5dp"
+            android:alpha="0.5"
+            android:background="@color/darkGrey"
+            android:visibility="visible" />
+    </LinearLayout>
+
 
 </LinearLayout>

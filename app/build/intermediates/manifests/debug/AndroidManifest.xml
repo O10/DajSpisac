@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.olek.firsttest"
+    package="com.swmansion.dajspisac"
     android:versionCode="1"
     android:versionName="1.0" >
 
     <uses-sdk
         android:maxSdkVersion="19"
-        android:minSdkVersion="15"
+        android:minSdkVersion="11"
         android:targetSdkVersion="19" />
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -14,30 +14,20 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
+        android:name="com.swmansion.dajspisac.application.DajSpisacApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/DajSpisacTheme" >
-        <activity
-            android:name="com.example.olek.firsttest.HomeActivity"
-            android:label="@string/app_name"
-            android:theme="@android:style/Theme.Holo.NoActionBar" >
+        <activity android:name="com.swmansion.dajspisac.book.SingleBookActivity" >
         </activity>
-        <activity
-            android:name="com.swmansion.dajspisac.book.SingleBookActivity"
-            android:label="@string/app_name" >
-        </activity>
-        <activity
-            android:name="com.swmansion.dajspisac.exercise.SingleExerciseActivity"
-            android:label="@string/app_name" >
+        <activity android:name="com.swmansion.dajspisac.exercise.SingleExerciseActivity" >
         </activity>
         <activity
             android:name="com.swmansion.dajspisac.settings.ChooseClassActivity"
             android:label="Zmień klasę" >
         </activity>
-        <activity
-            android:name="com.swmansion.dajspisac.book.MyBooksActivity"
-            android:label="Zmień klasę" >
+        <activity android:name="com.swmansion.dajspisac.book.MyBooksActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

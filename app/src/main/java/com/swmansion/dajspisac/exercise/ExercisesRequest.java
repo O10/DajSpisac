@@ -11,7 +11,7 @@ import java.net.URI;
 /**
  * Created by olek on 06.08.14.
  */
-public class ExercisesRequest  extends SpringAndroidSpiceRequest<ExerciseList> {
+public class ExercisesRequest extends SpringAndroidSpiceRequest<ExerciseList> {
     private String query;
 
     public ExercisesRequest(String query) {
@@ -26,7 +26,7 @@ public class ExercisesRequest  extends SpringAndroidSpiceRequest<ExerciseList> {
         Log.d("retro", url);
 
         try {
-            return getRestTemplate().getForObject(new URI(url),ExerciseList.class);
+            return getRestTemplate().getForObject(new URI(url), ExerciseList.class);
         } catch (RestClientException e) {
             e.printStackTrace();
         }
@@ -36,6 +36,7 @@ public class ExercisesRequest  extends SpringAndroidSpiceRequest<ExerciseList> {
     /**
      * This method generates a unique cache key for this request. In this case
      * our cache key depends just on the keyword.
+     *
      * @return
      */
     public String createCacheKey() {

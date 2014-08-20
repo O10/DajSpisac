@@ -21,7 +21,7 @@ public class BitmapLoadSave {
     public final static String APP_PATH_SD_CARD = "/DesiredSubfolderName/";
     public final static String APP_THUMBNAIL_PATH_SD_CARD = "thumbnails";
 
-    public static boolean saveImageToExternalStorage(Context context,Bitmap image) {
+    public static boolean saveImageToExternalStorage(Context context, Bitmap image) {
         String fullPath = Environment.getExternalStorageDirectory().getAbsolutePath() + APP_PATH_SD_CARD + APP_THUMBNAIL_PATH_SD_CARD;
 
         try {
@@ -35,7 +35,6 @@ public class BitmapLoadSave {
             file.createNewFile();
             fOut = new FileOutputStream(file);
 
-// 100 means no compression, the lower you go, the stronger the compression
             image.compress(Bitmap.CompressFormat.PNG, 100, fOut);
             fOut.flush();
             fOut.close();
@@ -45,19 +44,18 @@ public class BitmapLoadSave {
             return true;
 
         } catch (Exception e) {
-            //Log.e("saveToExternalStorage()", e.getMessage());
             return false;
         }
     }
 
-    public static boolean saveBitmapToInternal(Context context,Bitmap image,String filename){
+    public static boolean saveBitmapToInternal(Context context, Bitmap image, String filename) {
         FileOutputStream out = null;
-        boolean result=true;
+        boolean result = true;
         try {
             out = context.openFileOutput(filename, Context.MODE_PRIVATE);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-            Log.d("retro","File not found exception");
+            Log.d("retro", "File not found exception");
             return false;
         }
 
@@ -65,7 +63,7 @@ public class BitmapLoadSave {
             image.compress(Bitmap.CompressFormat.PNG, 90, out);
         } catch (Exception e) {
             e.printStackTrace();
-            result=false;
+            result = false;
         } finally {
             try {
                 if (out != null) {
@@ -73,20 +71,20 @@ public class BitmapLoadSave {
                 }
             } catch (IOException e) {
                 e.printStackTrace();
-                result=false;
+                result = false;
             }
         }
-        Log.d("retro","Returning "+Boolean.toString(result)+ " filename "+filename);
+        Log.d("retro", "Returning " + Boolean.toString(result) + " filename " + filename);
         return result;
     }
 
-    public static Bitmap loadBitmapFromInternal(Context context,String filename){
+    public static Bitmap loadBitmapFromInternal(Context context, String filename) {
         try {
-            Bitmap tmp = BitmapFactory.decodeFile(context.getFilesDir().getAbsolutePath()+"/"+filename);
-            Log.d("retro","returning bitmap "+filename);
+            Bitmap tmp = BitmapFactory.decodeFile(context.getFilesDir().getAbsolutePath() + "/" + filename);
+            Log.d("retro", "returning bitmap " + filename);
             return tmp;
         } catch (Exception e) {
-            Log.d("retro","Loading null "+filename);
+            Log.d("retro", "Loading null " + filename);
             return null;
         }
     }
@@ -97,16 +95,12 @@ public class BitmapLoadSave {
         String state = Environment.getExternalStorageState();
 
         if (Environment.MEDIA_MOUNTED.equals(state)) {
-// We can read and write the media
             mExternalStorageAvailable = true;
             Log.i("isSdReadable", "External storage card is readable.");
         } else if (Environment.MEDIA_MOUNTED_READ_ONLY.equals(state)) {
-// We can only read the media
             Log.i("isSdReadable", "External storage card is readable.");
             mExternalStorageAvailable = true;
         } else {
-// Something else is wrong. It may be one of many other
-// states, but all we need to know is we can neither read nor write
             mExternalStorageAvailable = false;
         }
 
@@ -114,13 +108,10 @@ public class BitmapLoadSave {
     }
 
 
-
-    public static Bitmap getThumbnail(Context context,String filename) {
+    public static Bitmap getThumbnail(Context context, String filename) {
 
         String fullPath = Environment.getExternalStorageDirectory().getAbsolutePath() + APP_PATH_SD_CARD + APP_THUMBNAIL_PATH_SD_CARD;
         Bitmap thumbnail = null;
-
-// Look for the file on the external storage
         try {
             if (isSdReadable() == true) {
                 thumbnail = BitmapFactory.decodeFile(fullPath + "/" + filename);
@@ -129,7 +120,6 @@ public class BitmapLoadSave {
             Log.e("getThumbnail() on external storage", e.getMessage());
         }
 
-// If no file on external storage, look in internal storage
         if (thumbnail == null) {
             try {
                 File filePath = context.getFileStreamPath(filename);

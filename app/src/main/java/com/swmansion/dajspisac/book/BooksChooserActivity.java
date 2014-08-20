@@ -14,17 +14,14 @@ import android.widget.ListView;
 import android.widget.TabHost;
 import android.widget.TabWidget;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.olek.firsttest.R;
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.octo.android.robospice.SpiceManager;
 import com.octo.android.robospice.persistence.DurationInMillis;
 import com.octo.android.robospice.persistence.exception.SpiceException;
 import com.octo.android.robospice.request.listener.RequestListener;
 import com.swmansion.dajspisac.settings.FragmentChooseClass;
+import com.swmansion.dajspisac.tools.DajSpisacUtilities;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
@@ -32,11 +29,11 @@ import java.net.URLEncoder;
 /**
  * Created by olek on 04.08.14.
  */
-public class BooksChooserActivity extends FragmentActivity implements TabHost.OnTabChangeListener,FragmentChooseClass.ClassChangeListener {
+public class BooksChooserActivity extends FragmentActivity implements TabHost.OnTabChangeListener, FragmentChooseClass.ClassChangeListener {
     DemoCollectionPagerAdapter mDemoCollectionPagerAdapter;
     ViewPager mViewPager;
     private TabHost mTabHost;
-    private int previousTabIndex = 0;
+    private int previousTabIndex = -1;
     private String currentClass;
 
     @Override
@@ -101,41 +98,47 @@ public class BooksChooserActivity extends FragmentActivity implements TabHost.On
 
     @Override
     public void onTabChanged(String s) {
-        int []RDrawableCoverBlada={R.drawable.twojeksiazki_chemia_blady,R.drawable.twojeksiazki_matematyka_blada,R.drawable.twojeksiazki_fizyka_blada};
-        int []RDrawableCoverLosos={R.drawable.twojeksiazki_chemia_losos,R.drawable.twojeksiazki_matematyka_lososiowa,R.drawable.twojeksiazki_fizyka_lososiowa};
+        int[] RDrawableCoverBlada = {R.drawable.twojeksiazki_chemia_blady, R.drawable.twojeksiazki_matematyka_blada, R.drawable.twojeksiazki_fizyka_blada};
+        int[] RDrawableCoverLosos = {R.drawable.twojeksiazki_chemia_losos, R.drawable.twojeksiazki_matematyka_lososiowa, R.drawable.twojeksiazki_fizyka_lososiowa};
 
-        TabWidget mTabWidget=mTabHost.getTabWidget();
-        View previousView = mTabWidget.getChildTabViewAt(previousTabIndex);
-        TextView previousTextView=(TextView)previousView.findViewById(R.id.textViewTab);
-        ImageView previousImageView=(ImageView)previousView.findViewById(R.id.imageViewSubjectIcon);
+        TabWidget mTabWidget = mTabHost.getTabWidget();
+        View previousView;
+        TextView previousTextView;
+        ImageView previousImageView;
+        if(previousTabIndex!=-1){
+            previousView = mTabWidget.getChildTabViewAt(previousTabIndex);
+            previousTextView = (TextView) previousView.findViewById(R.id.textViewTab);
+             previousImageView = (ImageView) previousView.findViewById(R.id.imageViewSubjectIcon);
+            previousImageView.setImageResource(RDrawableCoverBlada[previousTabIndex]);
+            previousTextView.setTextColor(getResources().getColor(R.color.lightBlueDajSpisac));
+            DajSpisacUtilities.startTabUnChoosedAnimation(previousView, mViewPager);
+        }
 
-
-        previousImageView.setImageResource(RDrawableCoverBlada[previousTabIndex]);
-        previousTextView.setTextColor(getResources().getColor(R.color.lightBlueDajSpisac));
         int pos = mTabHost.getCurrentTab();
         previousTabIndex = pos;
 
         previousView = mTabWidget.getChildTabViewAt(previousTabIndex);
-        previousTextView=(TextView)previousView.findViewById(R.id.textViewTab);
-        previousImageView=(ImageView)previousView.findViewById(R.id.imageViewSubjectIcon);
+        previousTextView = (TextView) previousView.findViewById(R.id.textViewTab);
+        previousImageView = (ImageView) previousView.findViewById(R.id.imageViewSubjectIcon);
         previousImageView.setImageResource(RDrawableCoverLosos[previousTabIndex]);
         previousTextView.setTextColor(getResources().getColor(R.color.orangeDajSpisac));
 
         mViewPager.setCurrentItem(pos);
 
+        DajSpisacUtilities.startTabChoosedAnimation(previousView,mViewPager);
 
     }
 
     @Override
     public void onClassChanged(String newClass) {
-        if(mDemoCollectionPagerAdapter==null){
+        if (mDemoCollectionPagerAdapter == null) {
             mDemoCollectionPagerAdapter =
                     new DemoCollectionPagerAdapter(
                             getSupportFragmentManager());
             mViewPager.setAdapter(mDemoCollectionPagerAdapter);
         }
         try {
-            currentClass= URLEncoder.encode(newClass,"UTF-8");
+            currentClass = URLEncoder.encode(newClass, "UTF-8");
         } catch (UnsupportedEncodingException e) {
             throw new RuntimeException(e);
         }
@@ -145,7 +148,7 @@ public class BooksChooserActivity extends FragmentActivity implements TabHost.On
 
     public class DemoCollectionPagerAdapter extends FragmentStatePagerAdapter {
 
-        String qFinish[]={"&subject=Chemia","&subject=Matematyka","&subject=Fizyka"};
+        String qFinish[] = {"&subject=Chemia", "&subject=Matematyka", "&subject=Fizyka"};
 
         public DemoCollectionPagerAdapter(FragmentManager fm) {
             super(fm);
@@ -157,7 +160,7 @@ public class BooksChooserActivity extends FragmentActivity implements TabHost.On
             Bundle args = new Bundle();
             String queryFinish = qFinish[i];
 
-            args.putString("QUERY", "ksiazki?class_nr="+currentClass+ queryFinish);
+            args.putString("QUERY", "ksiazki?class_nr=" + currentClass + queryFinish);
             fragment.setArguments(args);
             return fragment;
         }
@@ -179,36 +182,36 @@ public class BooksChooserActivity extends FragmentActivity implements TabHost.On
     }
 
 
-
     ////////////////////////FRAGMENT
 
 
     public static class BooksFragment extends Fragment {
         private ListView mListView;
-        private SpiceManager spiceManager=new SpiceManager(com.octo.android.robospice.Jackson2SpringAndroidSpiceService.class);
+        private SpiceManager spiceManager = new SpiceManager(com.octo.android.robospice.Jackson2SpringAndroidSpiceService.class);
         BooksChooseAdapter mBooksChooserAdapter;
+        private static boolean isToastShown=false;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setRetainInstance(true);
-            mBooksChooserAdapter=new BooksChooseAdapter(getActivity(), spiceManager);
-
-            BooksRequest request = new BooksRequest(getArguments().getString("QUERY"));
-            String lastRequestCacheKey = request.createCacheKey();
-            spiceManager.execute(request, lastRequestCacheKey, DurationInMillis.ONE_MINUTE, new ListBooksRequestListener());
+            mBooksChooserAdapter = new BooksChooseAdapter(getActivity(), spiceManager);
         }
 
         @Override
         public void onStart() {
             super.onStart();
+            BooksRequest request = new BooksRequest(getArguments().getString("QUERY"));
+            String lastRequestCacheKey = request.createCacheKey();
+            spiceManager.execute(request, lastRequestCacheKey, DurationInMillis.ONE_WEEK, new ListBooksRequestListener());
+
             spiceManager.start(getActivity());
         }
 
         @Override
         public void onStop() {
             super.onStop();
-            if(spiceManager.isStarted()){
+            if (spiceManager.isStarted()) {
                 spiceManager.shouldStop();
             }
         }
@@ -231,7 +234,10 @@ public class BooksChooserActivity extends FragmentActivity implements TabHost.On
         private class ListBooksRequestListener implements RequestListener<BookList> {
             @Override
             public void onRequestFailure(SpiceException e) {
-                Toast.makeText(getActivity(), "Błąd połączenia", Toast.LENGTH_SHORT).show();
+                if(!isToastShown){
+                    DajSpisacUtilities.showInternetErrorToast(getActivity());
+                    isToastShown=true;
+                }
             }
 
             @Override
@@ -239,11 +245,9 @@ public class BooksChooserActivity extends FragmentActivity implements TabHost.On
                 if (books != null) {
                     mBooksChooserAdapter.setBooksArray(books);
                 }
+                isToastShown=false;
             }
         }
-
-
-
 
 
     }

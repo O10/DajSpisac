@@ -10,6 +10,7 @@ package com.example.olek.firsttest;
 public final class R {
     public static final class anim {
         public static final int tab_clicked_animation=0x7f040000;
+        public static final int tab_clicked_animation_back=0x7f040001;
     }
     public static final class attr {
         /** 
@@ -24,7 +25,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int adSize=0x7f010000;
+        public static final int adSize=0x7f010001;
         /** 
     A comma-separated list of the supported ad sizes. The sizes must be one of
     BANNER, FULL_BANNER, LEADERBOARD, MEDIUM_RECTANGLE, SMART_BANNER,
@@ -37,7 +38,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int adSizes=0x7f010001;
+        public static final int adSizes=0x7f010002;
         /**  The ad unit ID. 
          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
 <p>This may also be a reference to a resource (in the form
@@ -46,7 +47,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int adUnitId=0x7f010002;
+        public static final int adUnitId=0x7f010003;
         /**  Appearance of the buy button. Must be one of "classic", "grayscale" and "monochrome" 
          <p>Must be one of the following constant values.</p>
 <table>
@@ -59,7 +60,7 @@ containing a value of this type.
 <tr><td><code>monochrome</code></td><td>3</td><td></td></tr>
 </table>
          */
-        public static final int buyButtonAppearance=0x7f010018;
+        public static final int buyButtonAppearance=0x7f010019;
         /** 
              Height of the buy button. This includes an 8dp padding (4dp on each side) used for
              pressed and focused states of the button. The value can be a specific height, e.g.
@@ -83,7 +84,7 @@ containing a value of this type.
 <tr><td><code>wrap_content</code></td><td>-2</td><td></td></tr>
 </table>
          */
-        public static final int buyButtonHeight=0x7f010015;
+        public static final int buyButtonHeight=0x7f010016;
         /**  Text on the buy button. Must be one of "buy_with_google", "buy_now" and "book_now" 
          <p>Must be one of the following constant values.</p>
 <table>
@@ -96,7 +97,7 @@ containing a value of this type.
 <tr><td><code>book_now</code></td><td>3</td><td></td></tr>
 </table>
          */
-        public static final int buyButtonText=0x7f010017;
+        public static final int buyButtonText=0x7f010018;
         /** 
              Width of the buy button. This includes an 8dp padding (4dp on each side) used for
              pressed and focused states of the button. The value can be a specific width, e.g.
@@ -120,7 +121,7 @@ containing a value of this type.
 <tr><td><code>wrap_content</code></td><td>-2</td><td></td></tr>
 </table>
          */
-        public static final int buyButtonWidth=0x7f010016;
+        public static final int buyButtonWidth=0x7f010017;
         /** <p>Must be a floating point value, such as "<code>1.2</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -128,7 +129,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int cameraBearing=0x7f010004;
+        public static final int cameraBearing=0x7f010005;
         /** <p>Must be a floating point value, such as "<code>1.2</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -136,7 +137,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int cameraTargetLat=0x7f010005;
+        public static final int cameraTargetLat=0x7f010006;
         /** <p>Must be a floating point value, such as "<code>1.2</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -144,7 +145,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int cameraTargetLng=0x7f010006;
+        public static final int cameraTargetLng=0x7f010007;
         /** <p>Must be a floating point value, such as "<code>1.2</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -152,7 +153,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int cameraTilt=0x7f010007;
+        public static final int cameraTilt=0x7f010008;
         /** <p>Must be a floating point value, such as "<code>1.2</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -160,7 +161,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int cameraZoom=0x7f010008;
+        public static final int cameraZoom=0x7f010009;
         /**  Google Wallet environment to use 
          <p>Must be one of the following constant values.</p>
 <table>
@@ -173,7 +174,11 @@ containing a value of this type.
 <tr><td><code>strict_sandbox</code></td><td>2</td><td></td></tr>
 </table>
          */
-        public static final int environment=0x7f010012;
+        public static final int environment=0x7f010013;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int exerciseAttrButton=0x7f010000;
         /**  Fragment mode 
          <p>Must be one of the following constant values.</p>
 <table>
@@ -185,12 +190,12 @@ containing a value of this type.
 <tr><td><code>selectionDetails</code></td><td>2</td><td></td></tr>
 </table>
          */
-        public static final int fragmentMode=0x7f010014;
+        public static final int fragmentMode=0x7f010015;
         /**  A style resource specifing attributes to customize the look and feel of WalletFragment 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int fragmentStyle=0x7f010013;
+        public static final int fragmentStyle=0x7f010014;
         /** <p>Must be one of the following constant values.</p>
 <table>
 <colgroup align="left" />
@@ -204,31 +209,31 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>hybrid</code></td><td>4</td><td></td></tr>
 </table>
          */
-        public static final int mapType=0x7f010003;
+        public static final int mapType=0x7f010004;
         /**  Masked wallet details background 
          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
          */
-        public static final int maskedWalletDetailsBackground=0x7f01001b;
+        public static final int maskedWalletDetailsBackground=0x7f01001c;
         /**  "Change" button background in masked wallet details view 
          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
          */
-        public static final int maskedWalletDetailsButtonBackground=0x7f01001d;
+        public static final int maskedWalletDetailsButtonBackground=0x7f01001e;
         /**  TextAppearance for the "Change" button in masked wallet details view 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int maskedWalletDetailsButtonTextAppearance=0x7f01001c;
+        public static final int maskedWalletDetailsButtonTextAppearance=0x7f01001d;
         /**  TextAppearance for headers describing masked wallet details 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int maskedWalletDetailsHeaderTextAppearance=0x7f01001a;
+        public static final int maskedWalletDetailsHeaderTextAppearance=0x7f01001b;
         /**  Type of the wallet logo image in masked wallet details view 
          <p>Must be one of the following constant values.</p>
 <table>
@@ -240,7 +245,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>monochrome</code></td><td>2</td><td></td></tr>
 </table>
          */
-        public static final int maskedWalletDetailsLogoImageType=0x7f01001f;
+        public static final int maskedWalletDetailsLogoImageType=0x7f010020;
         /**  Color of the Google Wallet logo text in masked wallet details view 
          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
@@ -250,12 +255,12 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int maskedWalletDetailsLogoTextColor=0x7f01001e;
+        public static final int maskedWalletDetailsLogoTextColor=0x7f01001f;
         /**  TextAppearance for masked wallet details 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int maskedWalletDetailsTextAppearance=0x7f010019;
+        public static final int maskedWalletDetailsTextAppearance=0x7f01001a;
         /**  Theme to be used for the Wallet selector 
          <p>Must be one of the following constant values.</p>
 <table>
@@ -267,7 +272,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>holo_light</code></td><td>1</td><td></td></tr>
 </table>
          */
-        public static final int theme=0x7f010011;
+        public static final int theme=0x7f010012;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -275,7 +280,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int uiCompass=0x7f010009;
+        public static final int uiCompass=0x7f01000a;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -283,7 +288,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int uiRotateGestures=0x7f01000a;
+        public static final int uiRotateGestures=0x7f01000b;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -291,7 +296,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int uiScrollGestures=0x7f01000b;
+        public static final int uiScrollGestures=0x7f01000c;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -299,7 +304,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int uiTiltGestures=0x7f01000c;
+        public static final int uiTiltGestures=0x7f01000d;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -307,7 +312,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int uiZoomControls=0x7f01000d;
+        public static final int uiZoomControls=0x7f01000e;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -315,7 +320,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int uiZoomGestures=0x7f01000e;
+        public static final int uiZoomGestures=0x7f01000f;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -323,7 +328,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int useViewLifecycle=0x7f01000f;
+        public static final int useViewLifecycle=0x7f010010;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -331,7 +336,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int zOrderOnTop=0x7f010010;
+        public static final int zOrderOnTop=0x7f010011;
     }
     public static final class color {
         public static final int actionBarColor=0x7f050000;
@@ -351,31 +356,32 @@ containing a value of this type.
         public static final int common_signin_btn_light_text_disabled=0x7f05000e;
         public static final int common_signin_btn_light_text_focused=0x7f05000f;
         public static final int common_signin_btn_light_text_pressed=0x7f050010;
-        public static final int common_signin_btn_text_dark=0x7f050025;
-        public static final int common_signin_btn_text_light=0x7f050026;
+        public static final int common_signin_btn_text_dark=0x7f050026;
+        public static final int common_signin_btn_text_light=0x7f050027;
         public static final int darkBlueDajSpisac=0x7f050011;
         public static final int darkGrey=0x7f050012;
         public static final int darkGreyTransparent=0x7f050013;
         public static final int lightBlueDajSpisac=0x7f050014;
         public static final int lightGrey=0x7f050015;
         public static final int orangeDajSpisac=0x7f050016;
-        public static final int singleexercisetext=0x7f050027;
-        public static final int wallet_bright_foreground_disabled_holo_light=0x7f050017;
-        public static final int wallet_bright_foreground_holo_dark=0x7f050018;
-        public static final int wallet_bright_foreground_holo_light=0x7f050019;
-        public static final int wallet_dim_foreground_disabled_holo_dark=0x7f05001a;
-        public static final int wallet_dim_foreground_holo_dark=0x7f05001b;
-        public static final int wallet_dim_foreground_inverse_disabled_holo_dark=0x7f05001c;
-        public static final int wallet_dim_foreground_inverse_holo_dark=0x7f05001d;
-        public static final int wallet_highlighted_text_holo_dark=0x7f05001e;
-        public static final int wallet_highlighted_text_holo_light=0x7f05001f;
-        public static final int wallet_hint_foreground_holo_dark=0x7f050020;
-        public static final int wallet_hint_foreground_holo_light=0x7f050021;
-        public static final int wallet_holo_blue_light=0x7f050022;
-        public static final int wallet_link_text_light=0x7f050023;
-        public static final int wallet_primary_text_holo_light=0x7f050028;
-        public static final int wallet_secondary_text_holo_dark=0x7f050029;
-        public static final int white=0x7f050024;
+        public static final int singleexercisetext=0x7f050028;
+        public static final int toastredbackground=0x7f050017;
+        public static final int wallet_bright_foreground_disabled_holo_light=0x7f050018;
+        public static final int wallet_bright_foreground_holo_dark=0x7f050019;
+        public static final int wallet_bright_foreground_holo_light=0x7f05001a;
+        public static final int wallet_dim_foreground_disabled_holo_dark=0x7f05001b;
+        public static final int wallet_dim_foreground_holo_dark=0x7f05001c;
+        public static final int wallet_dim_foreground_inverse_disabled_holo_dark=0x7f05001d;
+        public static final int wallet_dim_foreground_inverse_holo_dark=0x7f05001e;
+        public static final int wallet_highlighted_text_holo_dark=0x7f05001f;
+        public static final int wallet_highlighted_text_holo_light=0x7f050020;
+        public static final int wallet_hint_foreground_holo_dark=0x7f050021;
+        public static final int wallet_hint_foreground_holo_light=0x7f050022;
+        public static final int wallet_holo_blue_light=0x7f050023;
+        public static final int wallet_link_text_light=0x7f050024;
+        public static final int wallet_primary_text_holo_light=0x7f050029;
+        public static final int wallet_secondary_text_holo_dark=0x7f05002a;
+        public static final int white=0x7f050025;
     }
     public static final class dimen {
         public static final int activity_horizontal_margin=0x7f070000;
@@ -431,55 +437,58 @@ containing a value of this type.
         public static final int powered_by_google_light=0x7f02002e;
         public static final int singleexercisebutton=0x7f02002f;
         public static final int singleexercisebuttontext=0x7f020030;
-        public static final int twojeksiazki_chemia_blady=0x7f020031;
-        public static final int twojeksiazki_chemia_losos=0x7f020032;
-        public static final int twojeksiazki_fizyka_blada=0x7f020033;
-        public static final int twojeksiazki_fizyka_lososiowa=0x7f020034;
-        public static final int twojeksiazki_iks_lightblue=0x7f020035;
-        public static final int twojeksiazki_iks_losiowy=0x7f020036;
-        public static final int twojeksiazki_matematyka_blada=0x7f020037;
-        public static final int twojeksiazki_matematyka_lososiowa=0x7f020038;
-        public static final int twojeksiazki_plus_bialy=0x7f020039;
-        public static final int twojeksiazki_plus_lightblue=0x7f02003a;
-        public static final int twojeksiazki_plus_lososiowy=0x7f02003b;
-        public static final int wybrana_ksiazka_dol=0x7f02003c;
-        public static final int wybrana_ksiazka_gora=0x7f02003d;
+        public static final int tab_background_default=0x7f020031;
+        public static final int tab_widget_backgorund=0x7f020032;
+        public static final int toast_internet_error_drawable=0x7f020033;
+        public static final int twojeksiazki_chemia_blady=0x7f020034;
+        public static final int twojeksiazki_chemia_losos=0x7f020035;
+        public static final int twojeksiazki_fizyka_blada=0x7f020036;
+        public static final int twojeksiazki_fizyka_lososiowa=0x7f020037;
+        public static final int twojeksiazki_iks_lightblue=0x7f020038;
+        public static final int twojeksiazki_iks_losiowy=0x7f020039;
+        public static final int twojeksiazki_matematyka_blada=0x7f02003a;
+        public static final int twojeksiazki_matematyka_lososiowa=0x7f02003b;
+        public static final int twojeksiazki_plus_bialy=0x7f02003c;
+        public static final int twojeksiazki_plus_lightblue=0x7f02003d;
+        public static final int twojeksiazki_plus_lososiowy=0x7f02003e;
+        public static final int wybrana_ksiazka_dol=0x7f02003f;
+        public static final int wybrana_ksiazka_gora=0x7f020040;
     }
     public static final class id {
-        public static final int addBookLayout=0x7f060038;
-        public static final int allButtonsContainer=0x7f06003a;
+        public static final int addBookLayout=0x7f060039;
+        public static final int allButtonsContainer=0x7f06003b;
         public static final int book_now=0x7f060010;
-        public static final int booksLayoutSingleItem=0x7f060032;
+        public static final int booksLayoutSingleItem=0x7f060033;
         public static final int butfindsolution=0x7f060030;
         public static final int butlogviafb=0x7f060031;
-        public static final int button=0x7f06001d;
-        public static final int buttonAddDeleteBook=0x7f060037;
-        public static final int buttonAnuluj=0x7f060023;
-        public static final int buttonKl1=0x7f060020;
-        public static final int buttonKl2=0x7f060021;
-        public static final int buttonKl3=0x7f060022;
-        public static final int buttonSchoolPrimary=0x7f06001e;
-        public static final int buttonSchoolSecondary=0x7f06001f;
-        public static final int buttonSolution=0x7f060028;
-        public static final int buttonTresc=0x7f060025;
-        public static final int buttonZmien=0x7f060024;
+        public static final int button=0x7f06001c;
+        public static final int buttonAddDeleteBook=0x7f060038;
+        public static final int buttonAnuluj=0x7f060022;
+        public static final int buttonKl1=0x7f06001f;
+        public static final int buttonKl2=0x7f060020;
+        public static final int buttonKl3=0x7f060021;
+        public static final int buttonSchoolPrimary=0x7f06001d;
+        public static final int buttonSchoolSecondary=0x7f06001e;
+        public static final int buttonSolution=0x7f060027;
+        public static final int buttonTresc=0x7f060024;
+        public static final int buttonZmien=0x7f060023;
         public static final int buyButton=0x7f06000a;
         public static final int buy_now=0x7f06000f;
         public static final int buy_with_google=0x7f06000e;
-        public static final int chooseclass=0x7f060040;
+        public static final int chooseclass=0x7f060041;
         public static final int classic=0x7f060011;
-        public static final int gradientDivider=0x7f060036;
+        public static final int gradientDivider=0x7f060037;
         public static final int grayscale=0x7f060012;
-        public static final int help=0x7f060041;
+        public static final int help=0x7f060042;
         public static final int holo_dark=0x7f060005;
         public static final int holo_light=0x7f060006;
         public static final int horizontalscrollview=0x7f06002b;
         public static final int hybrid=0x7f060004;
         public static final int iVdajspisac=0x7f06002f;
-        public static final int iViewMin=0x7f060033;
+        public static final int iViewMin=0x7f060034;
         public static final int imageViewBack=0x7f060014;
         public static final int imageViewCoverMin=0x7f060015;
-        public static final int imageViewSubjectIcon=0x7f06003c;
+        public static final int imageViewSubjectIcon=0x7f06003d;
         public static final int list=0x7f060019;
         public static final int listViewBooks=0x7f060017;
         public static final int match_parent=0x7f06000c;
@@ -487,29 +496,30 @@ containing a value of this type.
         public static final int none=0x7f060000;
         public static final int normal=0x7f060001;
         public static final int production=0x7f060007;
-        public static final int rootView=0x7f060039;
+        public static final int progressBar=0x7f060029;
+        public static final int rootView=0x7f06003a;
         public static final int sandbox=0x7f060008;
         public static final int satellite=0x7f060002;
         public static final int selectionDetails=0x7f06000b;
-        public static final int sepAfteSolution=0x7f060029;
-        public static final int sepAfterTresc=0x7f060026;
+        public static final int sepAfteSolution=0x7f060028;
+        public static final int sepAfterTresc=0x7f060025;
         public static final int separator=0x7f06001a;
-        public static final int separator2=0x7f06001b;
         public static final int strict_sandbox=0x7f060009;
-        public static final int tVAuthor=0x7f060035;
-        public static final int tVtitle=0x7f060034;
+        public static final int tVAuthor=0x7f060036;
+        public static final int tVtitle=0x7f060035;
         public static final int tabhost=0x7f060018;
         public static final int terrain=0x7f060003;
         public static final int textView=0x7f06002e;
-        public static final int textViewExerciseNumber=0x7f06003e;
-        public static final int textViewPageNumber=0x7f06003f;
+        public static final int textViewExerciseNumber=0x7f06003f;
+        public static final int textViewPageNumber=0x7f060040;
         public static final int textViewSubjectName=0x7f060016;
-        public static final int textViewTab=0x7f06003d;
-        public static final int textViewTresc=0x7f060027;
+        public static final int textViewTab=0x7f06003e;
+        public static final int textViewTresc=0x7f060026;
+        public static final int toastlayout=0x7f060032;
         public static final int top_buttons=0x7f06002c;
-        public static final int viewPagerSingleBook=0x7f06003b;
+        public static final int viewPagerSingleBook=0x7f06003c;
         public static final int viewPagerSingleExercise=0x7f06002d;
-        public static final int viewpager=0x7f06001c;
+        public static final int viewpager=0x7f06001b;
         public static final int webViewSolution=0x7f06002a;
         public static final int wrap_content=0x7f06000d;
     }
@@ -527,16 +537,17 @@ containing a value of this type.
         public static final int exercise_activity_layout=0x7f030007;
         public static final int footer_mybooks_layout=0x7f030008;
         public static final int homeactivity=0x7f030009;
-        public static final int mybook_single_listview_layout=0x7f03000a;
-        public static final int mybooksactivitylayout=0x7f03000b;
-        public static final int single_book_activity_fragment_layout=0x7f03000c;
-        public static final int single_book_activity_layout=0x7f03000d;
-        public static final int single_book_listview_layout=0x7f03000e;
-        public static final int tab_chemistry_layout=0x7f03000f;
-        public static final int tab_exercise_number_layout=0x7f030010;
-        public static final int tab_mathematics_layout=0x7f030011;
-        public static final int tab_page_number_layout=0x7f030012;
-        public static final int tab_physics_layout=0x7f030013;
+        public static final int internet_error_toast_layout=0x7f03000a;
+        public static final int mybook_single_listview_layout=0x7f03000b;
+        public static final int mybooksactivitylayout=0x7f03000c;
+        public static final int single_book_activity_fragment_layout=0x7f03000d;
+        public static final int single_book_activity_layout=0x7f03000e;
+        public static final int single_book_listview_layout=0x7f03000f;
+        public static final int tab_chemistry_layout=0x7f030010;
+        public static final int tab_exercise_number_layout=0x7f030011;
+        public static final int tab_mathematics_layout=0x7f030012;
+        public static final int tab_page_number_layout=0x7f030013;
+        public static final int tab_physics_layout=0x7f030014;
     }
     public static final class menu {
         public static final int my=0x7f0b0000;
@@ -548,12 +559,12 @@ containing a value of this type.
         public static final int action_settings=0x7f090003;
         public static final int anuluj=0x7f090004;
         public static final int app_name=0x7f090005;
-        public static final int auth_client_needs_enabling_title=0x7f09002f;
-        public static final int auth_client_needs_installation_title=0x7f090030;
-        public static final int auth_client_needs_update_title=0x7f090031;
-        public static final int auth_client_play_services_err_notification_msg=0x7f090032;
-        public static final int auth_client_requested_by_msg=0x7f090033;
-        public static final int auth_client_using_bad_version_title=0x7f090034;
+        public static final int auth_client_needs_enabling_title=0x7f090033;
+        public static final int auth_client_needs_installation_title=0x7f090034;
+        public static final int auth_client_needs_update_title=0x7f090035;
+        public static final int auth_client_play_services_err_notification_msg=0x7f090036;
+        public static final int auth_client_requested_by_msg=0x7f090037;
+        public static final int auth_client_using_bad_version_title=0x7f090038;
         public static final int chemia=0x7f090006;
         public static final int common_google_play_services_enable_button=0x7f090007;
         public static final int common_google_play_services_enable_text=0x7f090008;
@@ -583,18 +594,22 @@ containing a value of this type.
         public static final int dodajkolejnaksiazke=0x7f090020;
         public static final int gimnazjum=0x7f090021;
         public static final int hello_world=0x7f090022;
-        public static final int mathematics=0x7f090023;
-        public static final int numerstrony=0x7f090024;
-        public static final int numeryzadan=0x7f090025;
-        public static final int numerzadania=0x7f090026;
-        public static final int podstawowka=0x7f090027;
-        public static final int rozwiazanie=0x7f090028;
-        public static final int wallet_buy_button_place_holder=0x7f090029;
-        public static final int wybierzklase=0x7f09002a;
-        public static final int wybierzszkole=0x7f09002b;
-        public static final int zalogujsieprzezfb=0x7f09002c;
-        public static final int zmien=0x7f09002d;
-        public static final int znajdzrozwiazanie=0x7f09002e;
+        public static final int htmlend=0x7f090023;
+        public static final int htmlstart=0x7f090024;
+        public static final int imgsrc=0x7f090025;
+        public static final int interner_error=0x7f090026;
+        public static final int mathematics=0x7f090027;
+        public static final int numerstrony=0x7f090028;
+        public static final int numeryzadan=0x7f090029;
+        public static final int numerzadania=0x7f09002a;
+        public static final int podstawowka=0x7f09002b;
+        public static final int rozwiazanie=0x7f09002c;
+        public static final int wallet_buy_button_place_holder=0x7f09002d;
+        public static final int wybierzklase=0x7f09002e;
+        public static final int wybierzszkole=0x7f09002f;
+        public static final int zalogujsieprzezfb=0x7f090030;
+        public static final int zmien=0x7f090031;
+        public static final int znajdzrozwiazanie=0x7f090032;
     }
     public static final class style {
         public static final int ActionBarTabStyle=0x7f0a0000;
@@ -606,15 +621,16 @@ containing a value of this type.
         public static final int DajSpisacTheme_ActionBarDajSpisac_Overflow=0x7f0a0004;
         public static final int DajSpisacTheme_ActionBarDajSpisac_TitleTextStyle=0x7f0a0005;
         public static final int SingleExerciseButton=0x7f0a0006;
-        public static final int SingleItem=0x7f0a0007;
-        public static final int TextAppearance=0x7f0a0008;
-        public static final int Theme_IAPTheme=0x7f0a0009;
-        public static final int WalletFragmentDefaultButtonTextAppearance=0x7f0a000a;
-        public static final int WalletFragmentDefaultDetailsHeaderTextAppearance=0x7f0a000b;
-        public static final int WalletFragmentDefaultDetailsTextAppearance=0x7f0a000c;
-        public static final int WalletFragmentDefaultStyle=0x7f0a000d;
-        public static final int cust_dialog=0x7f0a000e;
-        public static final int dialog_title_style=0x7f0a000f;
+        public static final int SingleExsButton=0x7f0a0007;
+        public static final int SingleItem=0x7f0a0008;
+        public static final int TextAppearance=0x7f0a0009;
+        public static final int Theme_IAPTheme=0x7f0a000a;
+        public static final int WalletFragmentDefaultButtonTextAppearance=0x7f0a000b;
+        public static final int WalletFragmentDefaultDetailsHeaderTextAppearance=0x7f0a000c;
+        public static final int WalletFragmentDefaultDetailsTextAppearance=0x7f0a000d;
+        public static final int WalletFragmentDefaultStyle=0x7f0a000e;
+        public static final int cust_dialog=0x7f0a000f;
+        public static final int dialog_title_style=0x7f0a0010;
     }
     public static final class styleable {
         /** Attributes that can be used with a AdsAttrs.
@@ -623,18 +639,18 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #AdsAttrs_adSize com.example.olek.firsttest:adSize}</code></td><td>
+           <tr><td><code>{@link #AdsAttrs_adSize com.swmansion.dajspisac:adSize}</code></td><td>
     The size of the ad.</td></tr>
-           <tr><td><code>{@link #AdsAttrs_adSizes com.example.olek.firsttest:adSizes}</code></td><td>
+           <tr><td><code>{@link #AdsAttrs_adSizes com.swmansion.dajspisac:adSizes}</code></td><td>
     A comma-separated list of the supported ad sizes.</td></tr>
-           <tr><td><code>{@link #AdsAttrs_adUnitId com.example.olek.firsttest:adUnitId}</code></td><td> The ad unit ID.</td></tr>
+           <tr><td><code>{@link #AdsAttrs_adUnitId com.swmansion.dajspisac:adUnitId}</code></td><td> The ad unit ID.</td></tr>
            </table>
            @see #AdsAttrs_adSize
            @see #AdsAttrs_adSizes
            @see #AdsAttrs_adUnitId
          */
         public static final int[] AdsAttrs = {
-            0x7f010000, 0x7f010001, 0x7f010002
+            0x7f010001, 0x7f010002, 0x7f010003
         };
         /**
           <p>
@@ -653,7 +669,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.olek.firsttest:adSize
+          @attr name com.swmansion.dajspisac:adSize
         */
         public static final int AdsAttrs_adSize = 0;
         /**
@@ -673,7 +689,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.olek.firsttest:adSizes
+          @attr name com.swmansion.dajspisac:adSizes
         */
         public static final int AdsAttrs_adSizes = 1;
         /**
@@ -689,7 +705,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.olek.firsttest:adUnitId
+          @attr name com.swmansion.dajspisac:adUnitId
         */
         public static final int AdsAttrs_adUnitId = 2;
         /** Attributes that can be used with a MapAttrs.
@@ -698,20 +714,20 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #MapAttrs_cameraBearing com.example.olek.firsttest:cameraBearing}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraTargetLat com.example.olek.firsttest:cameraTargetLat}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraTargetLng com.example.olek.firsttest:cameraTargetLng}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraTilt com.example.olek.firsttest:cameraTilt}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraZoom com.example.olek.firsttest:cameraZoom}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_mapType com.example.olek.firsttest:mapType}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiCompass com.example.olek.firsttest:uiCompass}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiRotateGestures com.example.olek.firsttest:uiRotateGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiScrollGestures com.example.olek.firsttest:uiScrollGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiTiltGestures com.example.olek.firsttest:uiTiltGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiZoomControls com.example.olek.firsttest:uiZoomControls}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiZoomGestures com.example.olek.firsttest:uiZoomGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_useViewLifecycle com.example.olek.firsttest:useViewLifecycle}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_zOrderOnTop com.example.olek.firsttest:zOrderOnTop}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraBearing com.swmansion.dajspisac:cameraBearing}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraTargetLat com.swmansion.dajspisac:cameraTargetLat}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraTargetLng com.swmansion.dajspisac:cameraTargetLng}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraTilt com.swmansion.dajspisac:cameraTilt}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraZoom com.swmansion.dajspisac:cameraZoom}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_mapType com.swmansion.dajspisac:mapType}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiCompass com.swmansion.dajspisac:uiCompass}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiRotateGestures com.swmansion.dajspisac:uiRotateGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiScrollGestures com.swmansion.dajspisac:uiScrollGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiTiltGestures com.swmansion.dajspisac:uiTiltGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiZoomControls com.swmansion.dajspisac:uiZoomControls}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiZoomGestures com.swmansion.dajspisac:uiZoomGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_useViewLifecycle com.swmansion.dajspisac:useViewLifecycle}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_zOrderOnTop com.swmansion.dajspisac:zOrderOnTop}</code></td><td></td></tr>
            </table>
            @see #MapAttrs_cameraBearing
            @see #MapAttrs_cameraTargetLat
@@ -729,13 +745,13 @@ containing a value of this type.
            @see #MapAttrs_zOrderOnTop
          */
         public static final int[] MapAttrs = {
-            0x7f010003, 0x7f010004, 0x7f010005, 0x7f010006,
-            0x7f010007, 0x7f010008, 0x7f010009, 0x7f01000a,
-            0x7f01000b, 0x7f01000c, 0x7f01000d, 0x7f01000e,
-            0x7f01000f, 0x7f010010
+            0x7f010004, 0x7f010005, 0x7f010006, 0x7f010007,
+            0x7f010008, 0x7f010009, 0x7f01000a, 0x7f01000b,
+            0x7f01000c, 0x7f01000d, 0x7f01000e, 0x7f01000f,
+            0x7f010010, 0x7f010011
         };
         /**
-          <p>This symbol is the offset where the {@link com.example.olek.firsttest.R.attr#cameraBearing}
+          <p>This symbol is the offset where the {@link com.swmansion.dajspisac.R.attr#cameraBearing}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -745,11 +761,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.olek.firsttest:cameraBearing
+          @attr name com.swmansion.dajspisac:cameraBearing
         */
         public static final int MapAttrs_cameraBearing = 1;
         /**
-          <p>This symbol is the offset where the {@link com.example.olek.firsttest.R.attr#cameraTargetLat}
+          <p>This symbol is the offset where the {@link com.swmansion.dajspisac.R.attr#cameraTargetLat}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -759,11 +775,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.olek.firsttest:cameraTargetLat
+          @attr name com.swmansion.dajspisac:cameraTargetLat
         */
         public static final int MapAttrs_cameraTargetLat = 2;
         /**
-          <p>This symbol is the offset where the {@link com.example.olek.firsttest.R.attr#cameraTargetLng}
+          <p>This symbol is the offset where the {@link com.swmansion.dajspisac.R.attr#cameraTargetLng}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -773,11 +789,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.olek.firsttest:cameraTargetLng
+          @attr name com.swmansion.dajspisac:cameraTargetLng
         */
         public static final int MapAttrs_cameraTargetLng = 3;
         /**
-          <p>This symbol is the offset where the {@link com.example.olek.firsttest.R.attr#cameraTilt}
+          <p>This symbol is the offset where the {@link com.swmansion.dajspisac.R.attr#cameraTilt}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -787,11 +803,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.olek.firsttest:cameraTilt
+          @attr name com.swmansion.dajspisac:cameraTilt
         */
         public static final int MapAttrs_cameraTilt = 4;
         /**
-          <p>This symbol is the offset where the {@link com.example.olek.firsttest.R.attr#cameraZoom}
+          <p>This symbol is the offset where the {@link com.swmansion.dajspisac.R.attr#cameraZoom}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -801,11 +817,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.olek.firsttest:cameraZoom
+          @attr name com.swmansion.dajspisac:cameraZoom
         */
         public static final int MapAttrs_cameraZoom = 5;
         /**
-          <p>This symbol is the offset where the {@link com.example.olek.firsttest.R.attr#mapType}
+          <p>This symbol is the offset where the {@link com.swmansion.dajspisac.R.attr#mapType}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -821,11 +837,11 @@ containing a value of this type.
 <tr><td><code>terrain</code></td><td>3</td><td></td></tr>
 <tr><td><code>hybrid</code></td><td>4</td><td></td></tr>
 </table>
-          @attr name com.example.olek.firsttest:mapType
+          @attr name com.swmansion.dajspisac:mapType
         */
         public static final int MapAttrs_mapType = 0;
         /**
-          <p>This symbol is the offset where the {@link com.example.olek.firsttest.R.attr#uiCompass}
+          <p>This symbol is the offset where the {@link com.swmansion.dajspisac.R.attr#uiCompass}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -835,11 +851,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.olek.firsttest:uiCompass
+          @attr name com.swmansion.dajspisac:uiCompass
         */
         public static final int MapAttrs_uiCompass = 6;
         /**
-          <p>This symbol is the offset where the {@link com.example.olek.firsttest.R.attr#uiRotateGestures}
+          <p>This symbol is the offset where the {@link com.swmansion.dajspisac.R.attr#uiRotateGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -849,11 +865,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.olek.firsttest:uiRotateGestures
+          @attr name com.swmansion.dajspisac:uiRotateGestures
         */
         public static final int MapAttrs_uiRotateGestures = 7;
         /**
-          <p>This symbol is the offset where the {@link com.example.olek.firsttest.R.attr#uiScrollGestures}
+          <p>This symbol is the offset where the {@link com.swmansion.dajspisac.R.attr#uiScrollGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -863,11 +879,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.olek.firsttest:uiScrollGestures
+          @attr name com.swmansion.dajspisac:uiScrollGestures
         */
         public static final int MapAttrs_uiScrollGestures = 8;
         /**
-          <p>This symbol is the offset where the {@link com.example.olek.firsttest.R.attr#uiTiltGestures}
+          <p>This symbol is the offset where the {@link com.swmansion.dajspisac.R.attr#uiTiltGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -877,11 +893,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.olek.firsttest:uiTiltGestures
+          @attr name com.swmansion.dajspisac:uiTiltGestures
         */
         public static final int MapAttrs_uiTiltGestures = 9;
         /**
-          <p>This symbol is the offset where the {@link com.example.olek.firsttest.R.attr#uiZoomControls}
+          <p>This symbol is the offset where the {@link com.swmansion.dajspisac.R.attr#uiZoomControls}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -891,11 +907,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.olek.firsttest:uiZoomControls
+          @attr name com.swmansion.dajspisac:uiZoomControls
         */
         public static final int MapAttrs_uiZoomControls = 10;
         /**
-          <p>This symbol is the offset where the {@link com.example.olek.firsttest.R.attr#uiZoomGestures}
+          <p>This symbol is the offset where the {@link com.swmansion.dajspisac.R.attr#uiZoomGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -905,11 +921,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.olek.firsttest:uiZoomGestures
+          @attr name com.swmansion.dajspisac:uiZoomGestures
         */
         public static final int MapAttrs_uiZoomGestures = 11;
         /**
-          <p>This symbol is the offset where the {@link com.example.olek.firsttest.R.attr#useViewLifecycle}
+          <p>This symbol is the offset where the {@link com.swmansion.dajspisac.R.attr#useViewLifecycle}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -919,11 +935,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.olek.firsttest:useViewLifecycle
+          @attr name com.swmansion.dajspisac:useViewLifecycle
         */
         public static final int MapAttrs_useViewLifecycle = 12;
         /**
-          <p>This symbol is the offset where the {@link com.example.olek.firsttest.R.attr#zOrderOnTop}
+          <p>This symbol is the offset where the {@link com.swmansion.dajspisac.R.attr#zOrderOnTop}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -933,7 +949,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.olek.firsttest:zOrderOnTop
+          @attr name com.swmansion.dajspisac:zOrderOnTop
         */
         public static final int MapAttrs_zOrderOnTop = 13;
         /** Attributes that can be used with a WalletFragmentOptions.
@@ -942,10 +958,10 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #WalletFragmentOptions_environment com.example.olek.firsttest:environment}</code></td><td> Google Wallet environment to use </td></tr>
-           <tr><td><code>{@link #WalletFragmentOptions_fragmentMode com.example.olek.firsttest:fragmentMode}</code></td><td> Fragment mode </td></tr>
-           <tr><td><code>{@link #WalletFragmentOptions_fragmentStyle com.example.olek.firsttest:fragmentStyle}</code></td><td> A style resource specifing attributes to customize the look and feel of WalletFragment </td></tr>
-           <tr><td><code>{@link #WalletFragmentOptions_theme com.example.olek.firsttest:theme}</code></td><td> Theme to be used for the Wallet selector </td></tr>
+           <tr><td><code>{@link #WalletFragmentOptions_environment com.swmansion.dajspisac:environment}</code></td><td> Google Wallet environment to use </td></tr>
+           <tr><td><code>{@link #WalletFragmentOptions_fragmentMode com.swmansion.dajspisac:fragmentMode}</code></td><td> Fragment mode </td></tr>
+           <tr><td><code>{@link #WalletFragmentOptions_fragmentStyle com.swmansion.dajspisac:fragmentStyle}</code></td><td> A style resource specifing attributes to customize the look and feel of WalletFragment </td></tr>
+           <tr><td><code>{@link #WalletFragmentOptions_theme com.swmansion.dajspisac:theme}</code></td><td> Theme to be used for the Wallet selector </td></tr>
            </table>
            @see #WalletFragmentOptions_environment
            @see #WalletFragmentOptions_fragmentMode
@@ -953,7 +969,7 @@ containing a value of this type.
            @see #WalletFragmentOptions_theme
          */
         public static final int[] WalletFragmentOptions = {
-            0x7f010011, 0x7f010012, 0x7f010013, 0x7f010014
+            0x7f010012, 0x7f010013, 0x7f010014, 0x7f010015
         };
         /**
           <p>
@@ -972,7 +988,7 @@ containing a value of this type.
 <tr><td><code>strict_sandbox</code></td><td>2</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.example.olek.firsttest:environment
+          @attr name com.swmansion.dajspisac:environment
         */
         public static final int WalletFragmentOptions_environment = 1;
         /**
@@ -991,7 +1007,7 @@ containing a value of this type.
 <tr><td><code>selectionDetails</code></td><td>2</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.example.olek.firsttest:fragmentMode
+          @attr name com.swmansion.dajspisac:fragmentMode
         */
         public static final int WalletFragmentOptions_fragmentMode = 3;
         /**
@@ -1003,7 +1019,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.olek.firsttest:fragmentStyle
+          @attr name com.swmansion.dajspisac:fragmentStyle
         */
         public static final int WalletFragmentOptions_fragmentStyle = 2;
         /**
@@ -1022,7 +1038,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>holo_light</code></td><td>1</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.example.olek.firsttest:theme
+          @attr name com.swmansion.dajspisac:theme
         */
         public static final int WalletFragmentOptions_theme = 0;
         /** Attributes that can be used with a WalletFragmentStyle.
@@ -1031,19 +1047,19 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_buyButtonAppearance com.example.olek.firsttest:buyButtonAppearance}</code></td><td> Appearance of the buy button.</td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_buyButtonHeight com.example.olek.firsttest:buyButtonHeight}</code></td><td>
+           <tr><td><code>{@link #WalletFragmentStyle_buyButtonAppearance com.swmansion.dajspisac:buyButtonAppearance}</code></td><td> Appearance of the buy button.</td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_buyButtonHeight com.swmansion.dajspisac:buyButtonHeight}</code></td><td>
              Height of the buy button.</td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_buyButtonText com.example.olek.firsttest:buyButtonText}</code></td><td> Text on the buy button.</td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_buyButtonWidth com.example.olek.firsttest:buyButtonWidth}</code></td><td>
+           <tr><td><code>{@link #WalletFragmentStyle_buyButtonText com.swmansion.dajspisac:buyButtonText}</code></td><td> Text on the buy button.</td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_buyButtonWidth com.swmansion.dajspisac:buyButtonWidth}</code></td><td>
              Width of the buy button.</td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsBackground com.example.olek.firsttest:maskedWalletDetailsBackground}</code></td><td> Masked wallet details background </td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsButtonBackground com.example.olek.firsttest:maskedWalletDetailsButtonBackground}</code></td><td> "Change" button background in masked wallet details view </td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsButtonTextAppearance com.example.olek.firsttest:maskedWalletDetailsButtonTextAppearance}</code></td><td> TextAppearance for the "Change" button in masked wallet details view </td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsHeaderTextAppearance com.example.olek.firsttest:maskedWalletDetailsHeaderTextAppearance}</code></td><td> TextAppearance for headers describing masked wallet details </td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsLogoImageType com.example.olek.firsttest:maskedWalletDetailsLogoImageType}</code></td><td> Type of the wallet logo image in masked wallet details view </td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsLogoTextColor com.example.olek.firsttest:maskedWalletDetailsLogoTextColor}</code></td><td> Color of the Google Wallet logo text in masked wallet details view </td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsTextAppearance com.example.olek.firsttest:maskedWalletDetailsTextAppearance}</code></td><td> TextAppearance for masked wallet details </td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsBackground com.swmansion.dajspisac:maskedWalletDetailsBackground}</code></td><td> Masked wallet details background </td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsButtonBackground com.swmansion.dajspisac:maskedWalletDetailsButtonBackground}</code></td><td> "Change" button background in masked wallet details view </td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsButtonTextAppearance com.swmansion.dajspisac:maskedWalletDetailsButtonTextAppearance}</code></td><td> TextAppearance for the "Change" button in masked wallet details view </td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsHeaderTextAppearance com.swmansion.dajspisac:maskedWalletDetailsHeaderTextAppearance}</code></td><td> TextAppearance for headers describing masked wallet details </td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsLogoImageType com.swmansion.dajspisac:maskedWalletDetailsLogoImageType}</code></td><td> Type of the wallet logo image in masked wallet details view </td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsLogoTextColor com.swmansion.dajspisac:maskedWalletDetailsLogoTextColor}</code></td><td> Color of the Google Wallet logo text in masked wallet details view </td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsTextAppearance com.swmansion.dajspisac:maskedWalletDetailsTextAppearance}</code></td><td> TextAppearance for masked wallet details </td></tr>
            </table>
            @see #WalletFragmentStyle_buyButtonAppearance
            @see #WalletFragmentStyle_buyButtonHeight
@@ -1058,9 +1074,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            @see #WalletFragmentStyle_maskedWalletDetailsTextAppearance
          */
         public static final int[] WalletFragmentStyle = {
-            0x7f010015, 0x7f010016, 0x7f010017, 0x7f010018,
-            0x7f010019, 0x7f01001a, 0x7f01001b, 0x7f01001c,
-            0x7f01001d, 0x7f01001e, 0x7f01001f
+            0x7f010016, 0x7f010017, 0x7f010018, 0x7f010019,
+            0x7f01001a, 0x7f01001b, 0x7f01001c, 0x7f01001d,
+            0x7f01001e, 0x7f01001f, 0x7f010020
         };
         /**
           <p>
@@ -1079,7 +1095,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>monochrome</code></td><td>3</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.example.olek.firsttest:buyButtonAppearance
+          @attr name com.swmansion.dajspisac:buyButtonAppearance
         */
         public static final int WalletFragmentStyle_buyButtonAppearance = 3;
         /**
@@ -1110,7 +1126,7 @@ containing a value of this type.
 <tr><td><code>wrap_content</code></td><td>-2</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.example.olek.firsttest:buyButtonHeight
+          @attr name com.swmansion.dajspisac:buyButtonHeight
         */
         public static final int WalletFragmentStyle_buyButtonHeight = 0;
         /**
@@ -1130,7 +1146,7 @@ containing a value of this type.
 <tr><td><code>book_now</code></td><td>3</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.example.olek.firsttest:buyButtonText
+          @attr name com.swmansion.dajspisac:buyButtonText
         */
         public static final int WalletFragmentStyle_buyButtonText = 2;
         /**
@@ -1161,7 +1177,7 @@ containing a value of this type.
 <tr><td><code>wrap_content</code></td><td>-2</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.example.olek.firsttest:buyButtonWidth
+          @attr name com.swmansion.dajspisac:buyButtonWidth
         */
         public static final int WalletFragmentStyle_buyButtonWidth = 1;
         /**
@@ -1175,7 +1191,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.olek.firsttest:maskedWalletDetailsBackground
+          @attr name com.swmansion.dajspisac:maskedWalletDetailsBackground
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsBackground = 6;
         /**
@@ -1189,7 +1205,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.olek.firsttest:maskedWalletDetailsButtonBackground
+          @attr name com.swmansion.dajspisac:maskedWalletDetailsButtonBackground
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsButtonBackground = 8;
         /**
@@ -1201,7 +1217,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.olek.firsttest:maskedWalletDetailsButtonTextAppearance
+          @attr name com.swmansion.dajspisac:maskedWalletDetailsButtonTextAppearance
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsButtonTextAppearance = 7;
         /**
@@ -1213,7 +1229,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.olek.firsttest:maskedWalletDetailsHeaderTextAppearance
+          @attr name com.swmansion.dajspisac:maskedWalletDetailsHeaderTextAppearance
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsHeaderTextAppearance = 5;
         /**
@@ -1232,7 +1248,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>monochrome</code></td><td>2</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.example.olek.firsttest:maskedWalletDetailsLogoImageType
+          @attr name com.swmansion.dajspisac:maskedWalletDetailsLogoImageType
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsLogoImageType = 10;
         /**
@@ -1249,7 +1265,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.olek.firsttest:maskedWalletDetailsLogoTextColor
+          @attr name com.swmansion.dajspisac:maskedWalletDetailsLogoTextColor
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsLogoTextColor = 9;
         /**
@@ -1261,7 +1277,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.olek.firsttest:maskedWalletDetailsTextAppearance
+          @attr name com.swmansion.dajspisac:maskedWalletDetailsTextAppearance
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsTextAppearance = 4;
     };

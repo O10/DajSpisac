@@ -8,9 +8,18 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Exercise {
-    private boolean accepted,hidden;
-    private String answer,content,created_at,name,slug,solution,updated_at,number;
-    private int book_id,dislikes,id,likes,page,user_id;
+    private boolean accepted, hidden;
+    private String answer, content, created_at, name, slug, solution, updated_at, number;
+    private int book_id, dislikes, id, likes, page, user_id;
+    private Attachments attachments;
+
+    public Attachments getAttachments() {
+        return attachments;
+    }
+
+    public void setAttachments(Attachments attachments) {
+        this.attachments = attachments;
+    }
 
     public boolean isHidden() {
         return hidden;

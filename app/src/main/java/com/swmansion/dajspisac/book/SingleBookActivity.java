@@ -3,7 +3,6 @@ package com.swmansion.dajspisac.book;
 import android.app.ActionBar;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.Point;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -11,7 +10,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
-import android.view.Display;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -35,13 +33,14 @@ import com.swmansion.dajspisac.exercise.ExerciseList;
 import com.swmansion.dajspisac.exercise.ExercisesRequest;
 import com.swmansion.dajspisac.exercise.SingleExerciseActivity;
 import com.swmansion.dajspisac.tools.BitmapLoadSave;
+import com.swmansion.dajspisac.tools.DajSpisacUtilities;
 
 import java.util.ArrayList;
 
 /**
  * Created by olek on 05.08.14.
  */
-public class SingleBookActivity extends FragmentActivity implements TabHost.OnTabChangeListener{
+public class SingleBookActivity extends FragmentActivity implements TabHost.OnTabChangeListener {
     Book book;
     ViewPager viewPager;
     SpiceManager spiceManager;
@@ -51,6 +50,7 @@ public class SingleBookActivity extends FragmentActivity implements TabHost.OnTa
     private int previousTabIndex;
     private HorizontalScrollView horScrollView;
     private Bundle savedInstanceState;
+    int lastTabNum=-1;
 
     void setAdapter() {
         viewPager.setAdapter(new PagesForBookAdapter(getSupportFragmentManager()));
@@ -63,7 +63,7 @@ public class SingleBookActivity extends FragmentActivity implements TabHost.OnTa
         getActionBar().hide();
         setContentView(R.layout.single_book_activity_layout);
         spiceManager = new SpiceManager(com.octo.android.robospice.Jackson2SpringAndroidSpiceService.class);
-        horScrollView=(HorizontalScrollView)findViewById(R.id.horizontalscrollview);
+        horScrollView = (HorizontalScrollView) findViewById(R.id.horizontalscrollview);
 
         viewPager = (ViewPager) findViewById(R.id.viewPagerSingleBook);
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -96,46 +96,54 @@ public class SingleBookActivity extends FragmentActivity implements TabHost.OnTa
                 return v;
             }
         };
-
-
-        Log.d("retro","Starting with string: "+getIntent().getStringExtra("QUERY"));
     }
 
     @Override
     protected void onStart() {
         super.onStart();
         spiceManager.start(this);
+
+        if(lastTabNum!=-1){
+            Log.d("retro","Setting last tab "+Integer.toString(lastTabNum));
+            viewPager.setCurrentItem(lastTabNum);
+        }
+
+
         BookRequest request = new BookRequest(getIntent().getStringExtra("QUERY"));
         String lastRequestCacheKey = request.createCacheKey();
         spiceManager.execute(request, lastRequestCacheKey, DurationInMillis.ONE_WEEK, new BookRequestListener());
-
     }
 
 
     @Override
     protected void onStop() {
         spiceManager.shouldStop();
+        lastTabNum=mTabHost.getCurrentTab();
         super.onStop();
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+
+    }
+
+    @Override
     public void onTabChanged(String s) {
-        TabWidget mTabWidget=mTabHost.getTabWidget();
+        TabWidget mTabWidget = mTabHost.getTabWidget();
         View previousView = mTabWidget.getChildTabViewAt(previousTabIndex);
 
-        TextView previousTextView=(TextView)previousView.findViewById(R.id.textViewPageNumber);
+        TextView previousTextView = (TextView) previousView.findViewById(R.id.textViewPageNumber);
         previousTextView.setTextColor(getResources().getColor(R.color.lightBlueDajSpisac));
         int pos = mTabHost.getCurrentTab();
         previousTabIndex = pos;
 
         previousView = mTabWidget.getChildTabViewAt(previousTabIndex);
-        previousTextView=(TextView)previousView.findViewById(R.id.textViewPageNumber);
+        previousTextView = (TextView) previousView.findViewById(R.id.textViewPageNumber);
         previousTextView.setTextColor(getResources().getColor(R.color.orangeDajSpisac));
-        Display display = getWindowManager().getDefaultDisplay();
-        Point size = new Point();
-        display.getSize(size);
-        int width = size.x;
-        horScrollView.smoothScrollTo(previousView.getLeft()-(width/2)+(previousView.getWidth()/2),previousView.getTop());
+
+        int width = DajSpisacUtilities.getScreenWidth(this);
+        horScrollView.smoothScrollTo(previousView.getLeft() - (width / 2) + (previousView.getWidth() / 2), previousView.getTop());
 
         viewPager.setCurrentItem(pos);
     }
@@ -151,8 +159,8 @@ public class SingleBookActivity extends FragmentActivity implements TabHost.OnTa
             Bundle args = new Bundle();
             String s = String.format("ksiazki/%d/zadania?page=%s", book.getId(), pagesNumbers.get(i));
             args.putInt("PAGENUM", pagesNumbers.get(i));
-            args.putString("SUBJECT",book.getSubject());
-            args.putInt("BOOKID",book.getId());
+            args.putString("SUBJECT", book.getSubject());
+            args.putInt("BOOKID", book.getId());
 
             args.putString("QUERY", s);
             fragment.setArguments(args);
@@ -173,15 +181,17 @@ public class SingleBookActivity extends FragmentActivity implements TabHost.OnTa
 
     public static class SinglePageFragment extends Fragment {
         private SpiceManager spiceManager;
-        int bookId;
-        ExerciseList mExercises;
+        private int bookId;
+        private boolean hasButtons=false;
+        private ExerciseList mExercises;
+        private static boolean isToastShown=false;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setRetainInstance(true);
-            bookId=getArguments().getInt("BOOKID");
-            spiceManager=new SpiceManager(com.octo.android.robospice.Jackson2SpringAndroidSpiceService.class);
+            bookId = getArguments().getInt("BOOKID");
+            spiceManager = new SpiceManager(com.octo.android.robospice.Jackson2SpringAndroidSpiceService.class);
         }
 
         @Override
@@ -197,31 +207,38 @@ public class SingleBookActivity extends FragmentActivity implements TabHost.OnTa
         public void onStart() {
             super.onStart();
             spiceManager.start(getActivity());
+            if (mExercises == null) {
+                ExercisesRequestListener listener=new ExercisesRequestListener();
+                ExercisesRequest request = new ExercisesRequest(getArguments().getString("QUERY"));
+                String lastRequestCacheKey = request.createCacheKey();
+                spiceManager.execute(request, lastRequestCacheKey, DurationInMillis.ONE_WEEK, listener);
+            } else if(!hasButtons) {
+                updateButtonViews();
+            }
+
         }
 
         @Override
         public void onStop() {
             super.onStop();
-            if(spiceManager.isStarted()){
+            if (spiceManager.isStarted()) {
                 spiceManager.shouldStop();
             }
+        }
+        @Override
+        public void onDestroyView() {
+            super.onDestroyView();
+            hasButtons=false;
         }
 
         @Override
         public void onActivityCreated(Bundle savedInstanceState) {
             super.onActivityCreated(savedInstanceState);
 
-            if(mExercises==null){
-                ExercisesRequest request = new ExercisesRequest(getArguments().getString("QUERY"));
-                String lastRequestCacheKey = request.createCacheKey();
-                spiceManager.execute(request, lastRequestCacheKey, DurationInMillis.ONE_MINUTE, new ExercisesRequestListener());
-            }
-            else{
-                updateButtonViews();
-            }
         }
 
-        void updateButtonViews(){
+        void updateButtonViews() {
+            hasButtons=true;
             TableLayout rootContainer;
             rootContainer = (TableLayout) getView().findViewById(R.id.allButtonsContainer);
 
@@ -241,18 +258,18 @@ public class SingleBookActivity extends FragmentActivity implements TabHost.OnTa
                     public void onClick(View view) {
                         Intent intent = new Intent(getActivity(), SingleExerciseActivity.class);
                         intent.putExtra("BOOK_ID", bookId);
-                        Log.d("retro","Putting extra "+Integer.toString(bookId));
+                        Log.d("retro", "Putting extra " + Integer.toString(bookId));
                         intent.putExtra("EXERCISE_ID", exercise_Id);
-                        int [] pageIds=new int[mExercises.size()];
-                        String [] pageNums=new String[mExercises.size()];
-                        for(int i=0;i<mExercises.size();i++){
-                            pageIds[i]=mExercises.get(i).getId();
-                            pageNums[i]=mExercises.get(i).getNumber();
+                        int[] pageIds = new int[mExercises.size()];
+                        String[] pageNums = new String[mExercises.size()];
+                        for (int i = 0; i < mExercises.size(); i++) {
+                            pageIds[i] = mExercises.get(i).getId();
+                            pageNums[i] = mExercises.get(i).getNumber();
                         }
-                        intent.putExtra("IDS",pageIds);
-                        intent.putExtra("NUMS",pageNums);
-                        intent.putExtra("SUBJECT",getArguments().getString("SUBJECT"));
-                        intent.putExtra("PAGENUM",getArguments().getInt("PAGENUM"));
+                        intent.putExtra("IDS", pageIds);
+                        intent.putExtra("NUMS", pageNums);
+                        intent.putExtra("SUBJECT", getArguments().getString("SUBJECT"));
+                        intent.putExtra("PAGENUM", getArguments().getInt("PAGENUM"));
                         startActivity(intent);
                     }
                 });
@@ -269,17 +286,22 @@ public class SingleBookActivity extends FragmentActivity implements TabHost.OnTa
         }
 
         private class ExercisesRequestListener implements RequestListener<ExerciseList> {
+
             @Override
             public void onRequestFailure(SpiceException e) {
-
+                if(!isToastShown){
+                    DajSpisacUtilities.showInternetErrorToast(getActivity());
+                    isToastShown=true;
+                }
             }
 
             @Override
             public void onRequestSuccess(final ExerciseList exercises) {
-                mExercises=exercises;
-                if(isAdded()){
+                mExercises = exercises;
+                if (isAdded()) {
                     updateButtonViews();
                 }
+                isToastShown=false;
             }
         }
 
@@ -290,46 +312,49 @@ public class SingleBookActivity extends FragmentActivity implements TabHost.OnTa
     private class BookRequestListener implements RequestListener<Book> {
         @Override
         public void onRequestFailure(SpiceException e) {
-            Log.d("retro", "Failure");
-
+            DajSpisacUtilities.showInternetErrorToast(SingleBookActivity.this);
         }
 
         @Override
         public void onRequestSuccess(Book dBook) {
+            if(book!=null){
+                return;
+            }
             book = dBook;
 
             ActionBar actionBar = getActionBar();
             actionBar.show();
             actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
 
-            View rootView=getLayoutInflater().inflate(R.layout.actionbar_layout_singlebook,null);
-            TextView textViewSubject=(TextView)rootView.findViewById(R.id.textViewSubjectName);
+            View rootView = getLayoutInflater().inflate(R.layout.actionbar_layout_singlebook, null);
+            TextView textViewSubject = (TextView) rootView.findViewById(R.id.textViewSubjectName);
             textViewSubject.setText(book.getSubject());
-            ImageView bookMiniature=(ImageView)rootView.findViewById(R.id.imageViewCoverMin);
-            ImageView imageBack=(ImageView)rootView.findViewById(R.id.imageViewBack);
+            ImageView bookMiniature = (ImageView) rootView.findViewById(R.id.imageViewCoverMin);
+            ImageView imageBack = (ImageView) rootView.findViewById(R.id.imageViewBack);
             imageBack.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     finish();
                 }
             });
-            Bitmap miniature= BitmapLoadSave.loadBitmapFromInternal(SingleBookActivity.this,"lastminiature.png");
+            Bitmap miniature = BitmapLoadSave.loadBitmapFromInternal(SingleBookActivity.this, "lastminiature.png");
 
             bookMiniature.setImageBitmap(miniature);
             actionBar.setCustomView(rootView);
 
             if (dBook != null) {
                 pagesNumbers = new ArrayList<Integer>();
-                LinearLayout ll=(LinearLayout)findViewById(R.id.top_buttons);
+                LinearLayout ll = (LinearLayout) findViewById(R.id.top_buttons);
                 for (int i = 0; i < dBook.getPages().size(); i++) {
-                    View tabIndicatorView=getLayoutInflater().inflate(R.layout.tab_page_number_layout,null);
-                    TextView textViewTab=(TextView)tabIndicatorView.findViewById(R.id.textViewPageNumber);
+                    View tabIndicatorView = getLayoutInflater().inflate(R.layout.tab_page_number_layout, null);
+                    TextView textViewTab = (TextView) tabIndicatorView.findViewById(R.id.textViewPageNumber);
                     textViewTab.setText(Integer.toString(dBook.getPages().get(i)));
                     mTabHost.addTab(mTabHost.newTabSpec(Integer.toString(i)).setIndicator(tabIndicatorView).setContent(defaultTabCont));
                     pagesNumbers.add(dBook.getPages().get(i));
                 }
                 setAdapter();
             }
+
         }
     }
 }

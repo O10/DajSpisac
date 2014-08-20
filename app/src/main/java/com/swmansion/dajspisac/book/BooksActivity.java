@@ -20,9 +20,6 @@ import android.widget.TabWidget;
 import android.widget.TextView;
 
 import com.example.olek.firsttest.R;
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.octo.android.robospice.SpiceManager;
 import com.swmansion.dajspisac.settings.ChooseClassActivity;
 
@@ -55,8 +52,6 @@ public class BooksActivity extends FragmentActivity implements TabHost.OnTabChan
         mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-
             }
 
             @Override
@@ -124,13 +119,13 @@ public class BooksActivity extends FragmentActivity implements TabHost.OnTabChan
 
     @Override
     public void onTabChanged(String s) {
-        int []RDrawableCoverBlada={R.drawable.twojeksiazki_chemia_blady,R.drawable.twojeksiazki_matematyka_blada,R.drawable.twojeksiazki_fizyka_blada};
-        int []RDrawableCoverLosos={R.drawable.twojeksiazki_chemia_losos,R.drawable.twojeksiazki_matematyka_lososiowa,R.drawable.twojeksiazki_fizyka_lososiowa};
+        int[] RDrawableCoverBlada = {R.drawable.twojeksiazki_chemia_blady, R.drawable.twojeksiazki_matematyka_blada, R.drawable.twojeksiazki_fizyka_blada};
+        int[] RDrawableCoverLosos = {R.drawable.twojeksiazki_chemia_losos, R.drawable.twojeksiazki_matematyka_lososiowa, R.drawable.twojeksiazki_fizyka_lososiowa};
 
-        TabWidget mTabWidget=mTabHost.getTabWidget();
+        TabWidget mTabWidget = mTabHost.getTabWidget();
         View previousView = mTabWidget.getChildTabViewAt(previousTabIndex);
-        TextView previousTextView=(TextView)previousView.findViewById(R.id.textViewTab);
-        ImageView previousImageView=(ImageView)previousView.findViewById(R.id.imageViewSubjectIcon);
+        TextView previousTextView = (TextView) previousView.findViewById(R.id.textViewTab);
+        ImageView previousImageView = (ImageView) previousView.findViewById(R.id.imageViewSubjectIcon);
 
 
         previousImageView.setImageResource(RDrawableCoverBlada[previousTabIndex]);
@@ -139,8 +134,8 @@ public class BooksActivity extends FragmentActivity implements TabHost.OnTabChan
         previousTabIndex = pos;
 
         previousView = mTabWidget.getChildTabViewAt(previousTabIndex);
-        previousTextView=(TextView)previousView.findViewById(R.id.textViewTab);
-        previousImageView=(ImageView)previousView.findViewById(R.id.imageViewSubjectIcon);
+        previousTextView = (TextView) previousView.findViewById(R.id.textViewTab);
+        previousImageView = (ImageView) previousView.findViewById(R.id.imageViewSubjectIcon);
         previousImageView.setImageResource(RDrawableCoverLosos[previousTabIndex]);
         previousTextView.setTextColor(getResources().getColor(R.color.orangeDajSpisac));
 
@@ -151,7 +146,7 @@ public class BooksActivity extends FragmentActivity implements TabHost.OnTabChan
 
     public class DemoCollectionPagerAdapter extends FragmentStatePagerAdapter {
 
-        String qFinish[]={"&subject=Chemia","&subject=Matematyka","&subject=Fizyka"};
+        String qFinish[] = {"&subject=Chemia", "&subject=Matematyka", "&subject=Fizyka"};
 
         public DemoCollectionPagerAdapter(FragmentManager fm) {
             super(fm);

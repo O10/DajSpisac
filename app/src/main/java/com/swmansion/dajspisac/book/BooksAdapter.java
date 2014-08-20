@@ -112,7 +112,7 @@ public class BooksAdapter extends BaseAdapter {
                 public void onClick(View view) {
                     Intent intent = new Intent(context, SingleBookActivity.class);
                     intent.putExtra("QUERY", "ksiazki/" + viewHolder.id);
-                    if(!BitmapLoadSave.saveBitmapToInternal(context,bArray[position],"lastminiature.png")){
+                    if (!BitmapLoadSave.saveBitmapToInternal(context, bArray[position], "lastminiature.png")) {
                         return;
                     }
                     context.startActivity(intent);

@@ -11,6 +11,13 @@
        <item name="android:textColor">@color/black</item>
     </style>
 
+
+    <style name="SingleExsButton">
+        <item name="@attr/exerciseAttrButton">@style/SingleExerciseButton</item>
+    </style>
+
+    <attr name="exerciseAttrButton" format="reference" />
+
     <style name="SingleExerciseButton">
         <item name="android:background">@drawable/singleexercisebutton</item>
         <item name="android:textColor">@drawable/singleexercisebuttontext</item>

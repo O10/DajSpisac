@@ -74,10 +74,10 @@ public class FragmentChooseClass extends Fragment {
             @Override
             public void onClick(View view) {
                 int nowClickedIndex = (Integer) view.getTag();
-                if (nowClickedIndex == previousSchoolClickedIndex&&isInitial) {
+                if (nowClickedIndex == previousSchoolClickedIndex && isInitial) {
                     return;
                 }
-                isInitial=true;
+                isInitial = true;
                 if (nowClickedIndex == 0) {
                     changeTextsOnClassButtons(4);
                 } else {

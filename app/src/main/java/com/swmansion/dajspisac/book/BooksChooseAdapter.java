@@ -43,7 +43,7 @@ public class BooksChooseAdapter extends BaseAdapter {
 
     static class ViewHolderItem {
         TextView author, title;
-        ImageView miniature,sign;
+        ImageView miniature, sign;
         Button addDeleteButton;
         LinearLayout bookLayout;
         int id;
@@ -95,10 +95,9 @@ public class BooksChooseAdapter extends BaseAdapter {
                 viewHolder.miniature.setImageBitmap(bArray[position]);
             }
 
-            if(positionsMarked[position]){
+            if (positionsMarked[position]) {
                 viewHolder.addDeleteButton.setBackgroundResource(R.drawable.twojeksiazki_plus_lososiowy);
-            }
-            else{
+            } else {
                 viewHolder.addDeleteButton.setBackgroundResource(R.drawable.twojeksiazki_plus_lightblue);
             }
 
@@ -106,29 +105,28 @@ public class BooksChooseAdapter extends BaseAdapter {
                 @Override
                 public void onClick(View view) {
 
-                    if(positionsMarked[position]){
+                    if (positionsMarked[position]) {
                         viewHolder.addDeleteButton.setBackgroundResource(R.drawable.twojeksiazki_plus_lightblue);
-                        DajSpisacUtilities.removeBookById(context,viewHolder.id);
-                        positionsMarked[position]=false;
-                    }
-                    else{
+                        DajSpisacUtilities.removeBookById(context, viewHolder.id);
+                        positionsMarked[position] = false;
+                    } else {
                         bookIDS.add(Integer.toString(viewHolder.id));
-                        DajSpisacUtilities.addBookById(context,viewHolder.id);
+                        DajSpisacUtilities.addBookById(context, viewHolder.id);
                         viewHolder.addDeleteButton.setBackgroundResource(R.drawable.twojeksiazki_plus_lososiowy);
-                        positionsMarked[position]=true;
+                        positionsMarked[position] = true;
                     }
                 }
             });
             viewHolder.bookLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if(!positionsMarked[position]){
+                    if (!positionsMarked[position]) {
                         viewHolder.addDeleteButton.callOnClick();
                     }
                     Intent intent = new Intent(context, SingleBookActivity.class);
                     intent.putExtra("QUERY", "ksiazki/" + viewHolder.id);
-                    if(!BitmapLoadSave.saveBitmapToInternal(context,bArray[position],"lastminiature.png")){
-                        Log.d("retro","Saving miniature failed");
+                    if (!BitmapLoadSave.saveBitmapToInternal(context, bArray[position], "lastminiature.png")) {
+                        Log.d("retro", "Saving miniature failed");
                         return;
                     }
                     context.startActivity(intent);
@@ -139,16 +137,15 @@ public class BooksChooseAdapter extends BaseAdapter {
         return view;
     }
 
-    private void fillMarkedTable(){
+    private void fillMarkedTable() {
 
-        bookIDS= DajSpisacUtilities.getMyBookIds(context);
+        bookIDS = DajSpisacUtilities.getMyBookIds(context);
 
-        for(int i=0;i<positionsMarked.length;i++){
-            if(bookIDS.contains(Integer.toString(mBooksArray.get(i).getId()))){
-                positionsMarked[i]=true;
-            }
-            else {
-                positionsMarked[i]=false;
+        for (int i = 0; i < positionsMarked.length; i++) {
+            if (bookIDS.contains(Integer.toString(mBooksArray.get(i).getId()))) {
+                positionsMarked[i] = true;
+            } else {
+                positionsMarked[i] = false;
             }
         }
 
@@ -160,11 +157,10 @@ public class BooksChooseAdapter extends BaseAdapter {
     }
 
 
-
-    void setBooksArray(BookList bookList ){
-        this.mBooksArray=bookList;
+    void setBooksArray(BookList bookList) {
+        this.mBooksArray = bookList;
         bArray = new Bitmap[mBooksArray.size()];
-        positionsMarked=new boolean[mBooksArray.size()];
+        positionsMarked = new boolean[mBooksArray.size()];
         fillMarkedTable();
         notifyDataSetChanged();
     }

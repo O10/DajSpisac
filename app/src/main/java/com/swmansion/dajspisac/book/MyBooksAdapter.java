@@ -3,7 +3,6 @@ package com.swmansion.dajspisac.book;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,7 +23,6 @@ import com.swmansion.dajspisac.tools.DajSpisacUtilities;
 import com.swmansion.dajspisac.tools.ImageHelper;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 
 /**
@@ -33,19 +31,19 @@ import java.util.HashMap;
 public class MyBooksAdapter extends BaseAdapter {
     private Context context;
     ArrayList<Book> mBooksArray = new ArrayList<Book>();
-    HashMap<Integer,Bitmap> bitmapMap=new HashMap<Integer,Bitmap>();
+    HashMap<Integer, Bitmap> bitmapMap = new HashMap<Integer, Bitmap>();
 
     static class ViewHolderItem {
         TextView author, title;
-        ImageView miniature,sign;
+        ImageView miniature, sign;
         Button addDeleteButton;
         LinearLayout bookLayout;
         int id;
     }
 
-    void addBook(Book book){
-        for(Book tempBook:mBooksArray){
-            if(book.getId()==tempBook.getId()){
+    void addBook(Book book) {
+        for (Book tempBook : mBooksArray) {
+            if (book.getId() == tempBook.getId()) {
                 return;
             }
         }
@@ -93,7 +91,7 @@ public class MyBooksAdapter extends BaseAdapter {
         }
         Book book = mBooksArray.get(position);
 
-        if(book!=null){
+        if (book != null) {
             viewHolder.author.setText(book.getAuthors());
             viewHolder.title.setText(book.getName().toUpperCase());
             viewHolder.id = mBooksArray.get(position).getId();
@@ -106,8 +104,9 @@ public class MyBooksAdapter extends BaseAdapter {
             viewHolder.addDeleteButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    DajSpisacUtilities.removeBookById(context,viewHolder.id);
+                    DajSpisacUtilities.removeBookById(context, viewHolder.id);
                     mBooksArray.remove(position);
+                    bitmapMap.clear();
                     notifyDataSetChanged();
                 }
             });
@@ -116,7 +115,7 @@ public class MyBooksAdapter extends BaseAdapter {
                 public void onClick(View view) {
                     Intent intent = new Intent(context, SingleBookActivity.class);
                     intent.putExtra("QUERY", "ksiazki/" + viewHolder.id);
-                    if(!BitmapLoadSave.saveBitmapToInternal(context,bitmapMap.get(position),"lastminiature.png")){
+                    if (!BitmapLoadSave.saveBitmapToInternal(context, bitmapMap.get(position), "lastminiature.png")) {
                         return;
                     }
                     context.startActivity(intent);
@@ -149,7 +148,7 @@ public class MyBooksAdapter extends BaseAdapter {
         @Override
         public void onLoadingComplete(String s, View view, Bitmap bitmap) {
             Bitmap finalbmp = ImageHelper.getRoundedCornerBitmap(bitmap, 8);
-            bitmapMap.put(position,finalbmp);
+            bitmapMap.put(position, finalbmp);
             imageView.setImageBitmap(finalbmp);
             notifyDataSetChanged();
         }

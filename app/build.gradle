@@ -5,8 +5,8 @@ android {
     buildToolsVersion '20.0.0'
 
     defaultConfig {
-        applicationId "com.example.olek.firsttest"
-        minSdkVersion 15
+        applicationId "com.swmansion.dajspisac"
+        minSdkVersion 11
         targetSdkVersion 19
         versionCode 1
         versionName "1.0"

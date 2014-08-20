@@ -2,7 +2,6 @@ package com.swmansion.dajspisac.exercise;
 
 import android.app.ActionBar;
 import android.graphics.Bitmap;
-import android.graphics.Point;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -11,16 +10,17 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.text.Html;
 import android.util.Log;
-import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TabHost;
 import android.widget.TabWidget;
 import android.widget.TextView;
@@ -31,19 +31,20 @@ import com.octo.android.robospice.persistence.DurationInMillis;
 import com.octo.android.robospice.persistence.exception.SpiceException;
 import com.octo.android.robospice.request.listener.RequestListener;
 import com.swmansion.dajspisac.tools.BitmapLoadSave;
+import com.swmansion.dajspisac.tools.DajSpisacUtilities;
 import com.swmansion.dajspisac.tools.ExpandCollapseAnimation;
 
 /**
  * Created by olek on 06.08.14.
  */
-public class SingleExerciseActivity extends FragmentActivity implements TabHost.OnTabChangeListener{
+public class SingleExerciseActivity extends FragmentActivity implements TabHost.OnTabChangeListener {
     private ViewPager viewPager;
     private TabHost mTabHost;
-    private int book_id,exercise_id,previousTabIndex;
+    private int book_id, exercise_id, previousTabIndex;
     private TabHost.TabContentFactory defaultTabCont;
     private boolean mActive = false;
     private int[] exerciseIds;
-    private String[]exerciseNumbers;
+    private String[] exerciseNumbers;
     private HorizontalScrollView horScrollView;
 
     @Override
@@ -51,21 +52,17 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.exercise_activity_layout);
 
-        Bundle b=getIntent().getExtras();
-        if(b==null)
+        Bundle b = getIntent().getExtras();
+        if (b == null)
             finish();
-        book_id=b.getInt("BOOK_ID");
-        exercise_id=b.getInt("EXERCISE_ID");
-        exerciseIds=b.getIntArray("IDS");
-        exerciseNumbers=b.getStringArray("NUMS");
+        book_id = b.getInt("BOOK_ID");
+        exercise_id = b.getInt("EXERCISE_ID");
+        exerciseIds = b.getIntArray("IDS");
+        exerciseNumbers = b.getStringArray("NUMS");
 
-        setActionBar(b.getString("SUBJECT"),b.getInt("PAGENUM"));
+        setActionBar(b.getString("SUBJECT"), b.getInt("PAGENUM"));
 
-        for(int i=0;i<exerciseIds.length;i++) {
-            Log.d("retro", Integer.toString(exerciseIds[i]));
-        }
-
-        viewPager=(ViewPager)findViewById(R.id.viewPagerSingleExercise);
+        viewPager = (ViewPager) findViewById(R.id.viewPagerSingleExercise);
         viewPager.setAdapter(new ExerciseFragmentsAdapter(getSupportFragmentManager()));
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -85,14 +82,12 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
             }
         });
 
-        horScrollView=(HorizontalScrollView)findViewById(R.id.horizontalscrollview);
-
+        horScrollView = (HorizontalScrollView) findViewById(R.id.horizontalscrollview);
         initializeTabHost();
-
     }
 
-    private void initializeTabHost(){
-        mTabHost=(TabHost)findViewById(R.id.tabhost);
+    private void initializeTabHost() {
+        mTabHost = (TabHost) findViewById(R.id.tabhost);
         mTabHost.setup();
         mTabHost.setOnTabChangedListener(this);
 
@@ -105,29 +100,29 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
                 return v;
             }
         };
-        for(int i=0;i<exerciseIds.length;i++){
-            View tabIndicatorView=getLayoutInflater().inflate(R.layout.tab_exercise_number_layout,null);
-            TextView textViewTab=(TextView)tabIndicatorView.findViewById(R.id.textViewExerciseNumber);
+        for (int i = 0; i < exerciseIds.length; i++) {
+            View tabIndicatorView = getLayoutInflater().inflate(R.layout.tab_exercise_number_layout, null);
+            TextView textViewTab = (TextView) tabIndicatorView.findViewById(R.id.textViewExerciseNumber);
             textViewTab.setText(exerciseNumbers[i]);
             mTabHost.addTab(mTabHost.newTabSpec(Integer.toString(i)).setIndicator(tabIndicatorView).setContent(defaultTabCont));
-            if(exerciseIds[i]==exercise_id){
+            if (exerciseIds[i] == exercise_id) {
                 mTabHost.setCurrentTab(i);
             }
         }
     }
 
-    private void setActionBar(String subjectName, int pageNum){
+    private void setActionBar(String subjectName, int pageNum) {
         ActionBar actionBar = getActionBar();
         actionBar.show();
         actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
 
-        View rootView=getLayoutInflater().inflate(R.layout.actionbar_layout_singlebook,null);
-        TextView textViewSubject=(TextView)rootView.findViewById(R.id.textViewSubjectName);
-        textViewSubject.setText(subjectName+", str. "+Integer.toString(pageNum));
-        ImageView bookMiniature=(ImageView)rootView.findViewById(R.id.imageViewCoverMin);
-        Bitmap miniature= BitmapLoadSave.getThumbnail(SingleExerciseActivity.this, "lastmin.png");
+        View rootView = getLayoutInflater().inflate(R.layout.actionbar_layout_singlebook, null);
+        TextView textViewSubject = (TextView) rootView.findViewById(R.id.textViewSubjectName);
+        textViewSubject.setText(subjectName + ", str. " + Integer.toString(pageNum));
+        ImageView bookMiniature = (ImageView) rootView.findViewById(R.id.imageViewCoverMin);
+        Bitmap miniature = BitmapLoadSave.loadBitmapFromInternal(SingleExerciseActivity.this, "lastminiature.png");
         bookMiniature.setImageBitmap(miniature);
-        ImageView imageBack=(ImageView)rootView.findViewById(R.id.imageViewBack);
+        ImageView imageBack = (ImageView) rootView.findViewById(R.id.imageViewBack);
         imageBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -150,23 +145,21 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
 
     @Override
     public void onTabChanged(String s) {
-        TabWidget mTabWidget=mTabHost.getTabWidget();
+        Log.d("retro","On tab changedinvoked");
+        TabWidget mTabWidget = mTabHost.getTabWidget();
         View previousView = mTabWidget.getChildTabViewAt(previousTabIndex);
 
-        TextView previousTextView=(TextView)previousView.findViewById(R.id.textViewExerciseNumber);
+        TextView previousTextView = (TextView) previousView.findViewById(R.id.textViewExerciseNumber);
         previousTextView.setTextColor(getResources().getColor(R.color.lightBlueDajSpisac));
         int pos = mTabHost.getCurrentTab();
 
-        previousTabIndex=pos;
+        previousTabIndex = pos;
 
         previousView = mTabWidget.getChildTabViewAt(previousTabIndex);
-        previousTextView=(TextView)previousView.findViewById(R.id.textViewExerciseNumber);
+        previousTextView = (TextView) previousView.findViewById(R.id.textViewExerciseNumber);
         previousTextView.setTextColor(getResources().getColor(R.color.orangeDajSpisac));
-        Display display = getWindowManager().getDefaultDisplay();
-        Point size = new Point();
-        display.getSize(size);
-        int width = size.x;
-        horScrollView.smoothScrollTo(previousView.getLeft()-(width/2)+(previousView.getWidth()/2),previousView.getTop());
+        int width = DajSpisacUtilities.getScreenWidth(this);
+        horScrollView.smoothScrollTo(previousView.getLeft() - (width / 2) + (previousView.getWidth() / 2), previousView.getTop());
 
         viewPager.setCurrentItem(pos);
     }
@@ -180,8 +173,8 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
         public Fragment getItem(int i) {
             SingleExerciseFragment fragment = new SingleExerciseFragment();
             Bundle args = new Bundle();
-            String s=String.format("ksiazki/%d/zadania/%d",book_id,exerciseIds[i]);
-            args.putString("QUERY",s);
+            String s = String.format("ksiazki/%d/zadania/%d", book_id, exerciseIds[i]);
+            args.putString("QUERY", s);
 
             fragment.setArguments(args);
 
@@ -202,12 +195,14 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
 
     public static class SingleExerciseFragment extends Fragment {
         private SpiceManager spiceManager;
-        private boolean isSolActive,isTrescActive;
-        private Button buttonTresc,buttonSolution;
-        private TextView textViewTresc,textViewSolution;
-        private View seperatorAfterTresc,seperatorAfterSolution;
-        private WebView mWebWievSolution;
+        private boolean isSolActive, isTrescActive;
+        private Button buttonTresc, buttonSolution;
+        private TextView textViewTresc, textViewSolution;
+        private View seperatorAfterTresc, seperatorAfterSolution;
+        private WebView mWebWievSolution,mWebViewTresc;
+        private ProgressBar mProgressBar;
         Exercise mExercise;
+        private static boolean isToastShown=false;
 
 
         @Override
@@ -221,12 +216,19 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
         public void onStart() {
             super.onStart();
             spiceManager.start(getActivity());
+            if (mExercise == null) {
+                ExerciseRequest request = new ExerciseRequest(getArguments().getString("QUERY"));
+                String lastRequestCacheKey = request.createCacheKey();
+                spiceManager.execute(request, lastRequestCacheKey, DurationInMillis.ONE_SECOND, new ExerciseRequestListener());
+            } else {
+                updateViews();
+            }
         }
 
         @Override
         public void onStop() {
             super.onStop();
-            if(spiceManager.isStarted()){
+            if (spiceManager.isStarted()) {
                 spiceManager.shouldStop();
             }
         }
@@ -235,14 +237,16 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             View rootView = inflater.inflate(
                     R.layout.exercise_activity_fragment_layout, container, false);
-            textViewTresc=(TextView)rootView.findViewById(R.id.textViewTresc);
+            textViewTresc = (TextView) rootView.findViewById(R.id.textViewTresc);
             //textViewSolution=(TextView)rootView.findViewById(R.id.textViewSolution);
-            buttonTresc=(Button)rootView.findViewById(R.id.buttonTresc);
-            buttonSolution=(Button)rootView.findViewById(R.id.buttonSolution);
-            seperatorAfterTresc=rootView.findViewById(R.id.sepAfterTresc);
-            seperatorAfterSolution=rootView.findViewById(R.id.sepAfteSolution);
-            mWebWievSolution=(WebView)rootView.findViewById(R.id.webViewSolution);
+            buttonTresc = (Button) rootView.findViewById(R.id.buttonTresc);
+            buttonSolution = (Button) rootView.findViewById(R.id.buttonSolution);
+            seperatorAfterTresc = rootView.findViewById(R.id.sepAfterTresc);
+            seperatorAfterSolution = rootView.findViewById(R.id.sepAfteSolution);
+            mWebWievSolution = (WebView) rootView.findViewById(R.id.webViewSolution);
+            mProgressBar=(ProgressBar)rootView.findViewById(R.id.progressBar);
 
+            //mWebViewTresc=(WebView)rootView.findViewById(R.id.webViewTresc);
             return rootView;
 
         }
@@ -250,48 +254,62 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
         @Override
         public void onActivityCreated(Bundle savedInstanceState) {
             super.onActivityCreated(savedInstanceState);
-            if(mExercise==null){
-                ExerciseRequest request=new ExerciseRequest(getArguments().getString("QUERY"));
-                String lastRequestCacheKey = request.createCacheKey();
-                spiceManager.execute(request, lastRequestCacheKey, DurationInMillis.ONE_MINUTE, new ExerciseRequestListener());
+        }
+
+        private void updateViews() {
+            Log.d("retro","null checkinggg   "+mExercise.getContent());
+            textViewTresc.setText(Html.fromHtml(mExercise.getContent()));
+            mProgressBar.setMax(100);
+
+
+            WebSettings settings = mWebWievSolution.getSettings();
+            settings.setBuiltInZoomControls(true);
+            settings.setSupportZoom(true);
+            settings.setJavaScriptEnabled(true);
+            isSolActive = true;
+
+
+            mWebWievSolution.setWebViewClient(new WebViewClient(){
+                @Override
+                public void onPageStarted(WebView view, String url, Bitmap favicon) {
+                    mProgressBar.setVisibility(View.VISIBLE);
+                    mProgressBar.setProgress(0);
+                    super.onPageStarted(view, url, favicon);
+                }
+
+                @Override
+                public void onPageFinished(WebView view, String url) {
+                    mProgressBar.setVisibility(View.GONE);
+                    mWebWievSolution.setVisibility(View.VISIBLE);
+                    mProgressBar.setProgress(100);
+                    super.onPageFinished(view, url);
+                }
+            });
+
+
+            String htmlString;
+            if(mExercise.getAttachments()!=null&&mExercise.getAttachments().size()!=0){
+                String imgSrcString=String.format(getResources().getString(R.string.imgsrc),mExercise.getAttachments().get(0).getImage().getImage().getUrl());
+                htmlString=getResources().getString(R.string.htmlstart)+"\n"+mExercise.getSolution()+"\n"+imgSrcString+getResources().getString(R.string.htmlend);
             }
             else{
-                updateViews();
+                htmlString=getResources().getString(R.string.htmlstart)+"\n"+mExercise.getSolution()+"\n"+getResources().getString(R.string.htmlend);
             }
-        }
 
-        public void showSolution(){
-            if(!isSolActive){
-                buttonSolution.callOnClick();
-            }
-        }
+            mWebWievSolution.loadDataWithBaseURL("http://dajspisac.pl/",htmlString,"text/html","UTF-8","");
 
-        public void hideSolution() {
-            if (isSolActive) {
-                buttonSolution.callOnClick();
-            }
-        }
-        private void updateViews(){
-            textViewTresc.setText(Html.fromHtml(mExercise.getContent()));
-            WebSettings settings = mWebWievSolution.getSettings();
-            settings.setJavaScriptEnabled(true);
-
-            mWebWievSolution.loadData(mExercise.getSolution(), "text/html; charset=UTF-8", "UTF-8");
-            mWebWievSolution.setVisibility(View.VISIBLE);
-
-            buttonTresc.setOnClickListener(new View.OnClickListener(){
+            buttonTresc.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if(isTrescActive){
-                        buttonTresc.setCompoundDrawablesWithIntrinsicBounds(null,null,getResources().getDrawable(R.drawable.wybrana_ksiazka_dol),null);
-                    }
-                    else{
-                        buttonTresc.setCompoundDrawablesWithIntrinsicBounds(null,null,getResources().getDrawable(R.drawable.wybrana_ksiazka_gora),null);
+                    if (isTrescActive) {
+                        buttonTresc.setCompoundDrawablesWithIntrinsicBounds(null, null, getResources().getDrawable(R.drawable.wybrana_ksiazka_dol), null);
+                    } else {
+                        buttonTresc.setCompoundDrawablesWithIntrinsicBounds(null, null, getResources().getDrawable(R.drawable.wybrana_ksiazka_gora), null);
 
                     }
                     ExpandCollapseAnimation.setHeightForWrapContent(getActivity(), textViewTresc);
                     ExpandCollapseAnimation animation = null;
-                    if(isTrescActive) {
+                    if (isTrescActive) {
                         animation = new ExpandCollapseAnimation(textViewTresc, 500, 1);
                         animation.setAnimationListener(new ViewVisibilityListener(seperatorAfterTresc));
                         isTrescActive = false;
@@ -335,25 +353,31 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
         private class ExerciseRequestListener implements RequestListener<Exercise> {
             @Override
             public void onRequestFailure(SpiceException e) {
-
+                if(!isToastShown){
+                    DajSpisacUtilities.showInternetErrorToast(getActivity());
+                    isToastShown=true;
+                }
             }
 
             @Override
             public void onRequestSuccess(Exercise exercise) {
-                mExercise=exercise;
-                if(isAdded()){
+                mExercise = exercise;
+                if (isAdded()) {
                     updateViews();
                 }
+                isToastShown=false;
             }
 
 
         }
-        private class ViewVisibilityListener implements Animation.AnimationListener{
+
+        private class ViewVisibilityListener implements Animation.AnimationListener {
             View view;
-            public ViewVisibilityListener(View view)
-            {
-                this.view=view;
+
+            public ViewVisibilityListener(View view) {
+                this.view = view;
             }
+
             @Override
             public void onAnimationStart(Animation animation) {
 

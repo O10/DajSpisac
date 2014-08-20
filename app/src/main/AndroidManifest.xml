@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.olek.firsttest" >
 
-    <uses-sdk android:minSdkVersion="14"
+    <uses-sdk android:minSdkVersion="11"
         android:targetSdkVersion="19"
         android:maxSdkVersion="19" />
 
@@ -17,20 +17,14 @@
         android:label="@string/app_name"
         android:theme="@style/DajSpisacTheme"
         android:name="com.swmansion.dajspisac.application.DajSpisacApplication">
+
+
         <activity
-            android:name=".HomeActivity"
-            android:label="@string/app_name"
-            android:theme="@android:style/Theme.Holo.NoActionBar">
+            android:name="com.swmansion.dajspisac.book.SingleBookActivity">
         </activity>
 
         <activity
-            android:name="com.swmansion.dajspisac.book.SingleBookActivity"
-            android:label="@string/app_name">
-        </activity>
-
-        <activity
-            android:name="com.swmansion.dajspisac.exercise.SingleExerciseActivity"
-            android:label="@string/app_name">
+            android:name="com.swmansion.dajspisac.exercise.SingleExerciseActivity">
 
         </activity>
 
@@ -39,8 +33,7 @@
 
         </activity>
 
-        <activity android:name="com.swmansion.dajspisac.book.MyBooksActivity"
-            android:label="Zmień klasę">
+        <activity android:name="com.swmansion.dajspisac.book.MyBooksActivity">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -50,9 +43,6 @@
         </activity>
         <activity
         android:name="com.swmansion.dajspisac.book.BooksChooserActivity">
-
-
-
 
         </activity>
 

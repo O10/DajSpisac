@@ -3,6 +3,7 @@ package com.swmansion.dajspisac.tools;
 /**
  * Created by olek on 04.08.14.
  */
+
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Paint;
