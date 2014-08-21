@@ -178,6 +178,7 @@ public class MyBooksActivity extends FragmentActivity implements TabHost.OnTabCh
         boolean isAnyToastShowing=false;
         HashMap<Integer, MyBooksFragment> mPageReferenceMap;
         HashMap<String, Integer> subjectIndexMap;
+        boolean areAnyBooks[]=new boolean[3];
 
         public MyBooksCollectionPagerAdapter(FragmentManager fm) {
             super(fm);
@@ -241,8 +242,15 @@ public class MyBooksActivity extends FragmentActivity implements TabHost.OnTabCh
 
             @Override
             public void onRequestSuccess(Book book) {
-                mPageReferenceMap.get(subjectIndexMap.get(book.getSubject())).addBook(book);
-                Log.d("retro", "Request succesfull for book: " + book.getName());
+                int index=subjectIndexMap.get(book.getSubject());
+                mPageReferenceMap.get(index).addBook(book);
+
+                areAnyBooks[index]=true;
+                for(int i=0;i<3;i++){
+                    if(!areAnyBooks[i]){
+                        mPageReferenceMap.get(i).setTextNoBooksVisible();
+                    }
+                }
             }
         }
     }
@@ -250,12 +258,18 @@ public class MyBooksActivity extends FragmentActivity implements TabHost.OnTabCh
     public static class MyBooksFragment extends Fragment {
         private ListView mListView;
         MyBooksAdapter myBooksAdapter;
+        TextView textViewNoBooks;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setRetainInstance(true);
             myBooksAdapter = new MyBooksAdapter(getActivity());
+
+        }
+
+        void setTextNoBooksVisible(){
+            textViewNoBooks.setVisibility(View.VISIBLE);
         }
 
         public static MyBooksFragment newInstance(int height) {
@@ -268,6 +282,7 @@ public class MyBooksActivity extends FragmentActivity implements TabHost.OnTabCh
 
         public void addBook(Book book) {
             myBooksAdapter.addBook(book);
+            textViewNoBooks.setVisibility(View.GONE);
         }
 
         @Override
@@ -276,6 +291,7 @@ public class MyBooksActivity extends FragmentActivity implements TabHost.OnTabCh
             View rootView = inflater.inflate(
                     R.layout.books_activity_fragment_layout, container, false);
             mListView = (ListView) rootView.findViewById(R.id.listViewBooks);
+            textViewNoBooks=(TextView)rootView.findViewById(R.id.textViewNoBooks);
             Bundle arguments = getArguments();
             if (arguments != null) {
                 View footerView = new View(getActivity());
@@ -288,7 +304,6 @@ public class MyBooksActivity extends FragmentActivity implements TabHost.OnTabCh
         @Override
         public void onActivityCreated(Bundle savedInstanceState) {
             super.onActivityCreated(savedInstanceState);
-
             mListView.setAdapter(myBooksAdapter);
 
         }

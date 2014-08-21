@@ -144,6 +144,14 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+        int width = DajSpisacUtilities.getScreenWidth(this);
+        /*int previousTabIndex=6;
+        horScrollView.smoothScrollTo(mTabHost.getTabWidget().getChildTabViewAt(previousTabIndex).getLeft() - (width / 2) + (mTabHost.getTabWidget().getChildTabViewAt(previousTabIndex).getWidth() / 2), mTabHost.getTabWidget().getChildTabViewAt(previousTabIndex).getTop());*/
+    }
+
+    @Override
     public void onTabChanged(String s) {
         Log.d("retro","On tab changedinvoked");
         TabWidget mTabWidget = mTabHost.getTabWidget();
@@ -223,6 +231,7 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
             } else {
                 updateViews();
             }
+
         }
 
         @Override

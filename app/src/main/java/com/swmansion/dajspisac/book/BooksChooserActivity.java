@@ -190,12 +190,14 @@ public class BooksChooserActivity extends FragmentActivity implements TabHost.On
         private SpiceManager spiceManager = new SpiceManager(com.octo.android.robospice.Jackson2SpringAndroidSpiceService.class);
         BooksChooseAdapter mBooksChooserAdapter;
         private static boolean isToastShown=false;
+        private TextView textViewNoBooks;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setRetainInstance(true);
             mBooksChooserAdapter = new BooksChooseAdapter(getActivity(), spiceManager);
+
         }
 
         @Override
@@ -222,6 +224,7 @@ public class BooksChooserActivity extends FragmentActivity implements TabHost.On
             View rootView = inflater.inflate(
                     R.layout.books_activity_fragment_layout, container, false);
             mListView = (ListView) rootView.findViewById(R.id.listViewBooks);
+            textViewNoBooks=(TextView)rootView.findViewById(R.id.textViewNoBooks);
             return rootView;
         }
 
@@ -244,6 +247,9 @@ public class BooksChooserActivity extends FragmentActivity implements TabHost.On
             public void onRequestSuccess(BookList books) {
                 if (books != null) {
                     mBooksChooserAdapter.setBooksArray(books);
+                    if(books.size()==0){
+                        textViewNoBooks.setVisibility(View.VISIBLE);
+                    }
                 }
                 isToastShown=false;
             }

@@ -26,6 +26,7 @@
     <string name="htmlend">&#60;&#47;&#98;&#111;&#100;&#121;&#62;&#32;&#60;&#47;&#104;&#116;&#109;&#108;&#62;</string>
     <string name="imgsrc">&#060;&#105;&#109;&#103;&#032;&#115;&#114;&#099;&#061;&#092;&#034;&#037;&#115;&#092;&#034;&#032;&#032;&#047;&#062;</string>
     <string name="interner_error">Błąd połączenia z Internetem!</string>
+    <string name="no_books">BRAK KSIĄŻEK</string>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
     <color name="actionBarColor">#1d1e33</color>

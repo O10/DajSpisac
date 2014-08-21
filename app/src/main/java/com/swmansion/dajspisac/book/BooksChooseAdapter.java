@@ -56,6 +56,8 @@ public class BooksChooseAdapter extends BaseAdapter {
         this.spiceManager = spiceManager;
     }
 
+
+
     @Override
     public int getCount() {
         return mBooksArray.size();

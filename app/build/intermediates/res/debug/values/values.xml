@@ -237,6 +237,7 @@
     <string name="imgsrc">&lt;img src=\"%s\"  /></string>
     <string name="interner_error">Błąd połączenia z Internetem!</string>
     <string name="mathematics">MATEMATYKA</string>
+    <string name="no_books">BRAK KSIĄŻEK</string>
     <string name="numerstrony">NUMER STRONY</string>
     <string name="numeryzadan">NUMERY ZADAŃ</string>
     <string name="numerzadania">NUMER ZADANIA</string>

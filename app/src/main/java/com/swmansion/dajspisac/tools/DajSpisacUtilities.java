@@ -1,9 +1,7 @@
 package com.swmansion.dajspisac.tools;
 
-import android.animation.Animator;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
-import android.animation.ValueAnimator;
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -81,15 +79,15 @@ public class DajSpisacUtilities {
         ObjectAnimator anim = ObjectAnimator.ofFloat(view, "ScaleX", 1f, scalingFactor);
         ObjectAnimator anim2 = ObjectAnimator.ofFloat(view, "ScaleY", 1f, scalingFactor);
         anim.setDuration(500);
-        anim2.addListener(new Animator.AnimatorListener() {
+        /*anim2.addListener(new Animator.AnimatorListener() {
             @Override
             public void onAnimationStart(Animator animator) {
-                viewPage.invalidate();
+                //viewPage.invalidate();
             }
 
             @Override
             public void onAnimationEnd(Animator animator) {
-                viewPage.invalidate();
+                //viewPage.invalidate();
             }
 
             @Override
@@ -105,9 +103,9 @@ public class DajSpisacUtilities {
         anim2.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator valueAnimator) {
-                viewPage.invalidate();
+                //viewPage.invalidate();
             }
-        });
+        });*/
         anim2.setDuration(500);
         aSet.play(anim).with(anim2);
         aSet.start();
@@ -120,7 +118,7 @@ public class DajSpisacUtilities {
         ObjectAnimator anim2 = ObjectAnimator.ofFloat(view, "ScaleY", 1.2f, scalingFactor);
         anim.setDuration(500);
         anim2.setDuration(500);
-        anim2.addListener(new Animator.AnimatorListener() {
+        /*anim2.addListener(new Animator.AnimatorListener() {
             @Override
             public void onAnimationStart(Animator animator) {
                 viewPage.invalidate();
@@ -128,7 +126,7 @@ public class DajSpisacUtilities {
 
             @Override
             public void onAnimationEnd(Animator animator) {
-                viewPage.invalidate();
+                //viewPage.invalidate();
 
             }
 
@@ -145,9 +143,9 @@ public class DajSpisacUtilities {
         anim2.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator valueAnimator) {
-                viewPage.invalidate();
+                //viewPage.invalidate();
             }
-        });
+        });*/
         aSet.play(anim).with(anim2);
         aSet.start();
     }
@@ -155,7 +153,7 @@ public class DajSpisacUtilities {
     public static void showInternetErrorToast(Activity activity){
         Toast toast = new Toast(activity.getApplicationContext());
         View errorToastView=activity.getLayoutInflater().inflate(R.layout.internet_error_toast_layout,(ViewGroup)activity.findViewById(R.id.toastlayout));
-        toast.setDuration(Toast.LENGTH_LONG);
+        toast.setDuration(Toast.LENGTH_SHORT);
         toast.setView(errorToastView);
         toast.setGravity(Gravity.CENTER_HORIZONTAL,0,200);
         toast.show();

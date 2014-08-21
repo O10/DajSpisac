@@ -17,41 +17,50 @@
             android:layout_height="wrap_content"
             tools:layout="@layout/choose_class_fragment_layout" />
 
-        <View
-            android:id="@+id/separator"
-            android:layout_width="fill_parent"
-            android:layout_height="0.5dp"
-            android:alpha="0.8"
-            android:background="@color/darkBlueDajSpisac"
-            android:visibility="visible" />
 
-        <TabWidget
-            android:id="@android:id/tabs"
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0"
-            android:background="@drawable/tab_widget_backgorund"
-            android:orientation="horizontal"
-            android:showDividers="none" />
-        <!--<View
-            android:layout_width="fill_parent"
-            android:layout_height="3.5dp"
-            android:alpha="0.8"
-            android:id="@+id/separator2"
-            android:visibility="visible"
-            android:background="@color/darkBlueDajSpisac"/>-->
+            android:layout_height="match_parent"
+            android:clipChildren="false">
 
-        <FrameLayout
-            android:id="@android:id/tabcontent"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <android.support.v4.view.ViewPager
-                android:id="@+id/viewpager"
-                android:layout_width="fill_parent"
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom" />
-        </FrameLayout>
+                android:clipChildren="false"
+                android:layout_marginTop="78dp"
+                >
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewpager"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:clipChildren="false" />
+
+            </FrameLayout>
+            <View
+                android:id="@+id/separator"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:alpha="0.8"
+                android:background="@color/darkBlueDajSpisac"
+                android:visibility="visible" />
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/separator"
+                android:background="@drawable/tab_widget_backgorund"
+                android:clipChildren="false"
+                android:orientation="horizontal"
+                android:showDividers="none"/>
+
+
+
+        </RelativeLayout>
 
 
     </LinearLayout>
