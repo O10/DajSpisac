@@ -27,6 +27,8 @@ import android.widget.TabHost;
 import android.widget.TabWidget;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.octo.android.robospice.SpiceManager;
 import com.octo.android.robospice.persistence.DurationInMillis;
 import com.octo.android.robospice.persistence.exception.SpiceException;
@@ -56,6 +58,11 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
         } else {
             setContentView(R.layout.exercise_activity_layout);
         }
+
+        AdView adView = (AdView) this.findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
+
         Bundle b = getIntent().getExtras();
         relativeContainer = (RelativeLayout) findViewById(R.id.relativeContainer);
         if (b == null)

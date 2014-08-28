@@ -2,7 +2,6 @@ package com.swmansion.dajspisac.book;
 
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TabHost;
@@ -31,19 +30,16 @@ public class BooksActivity extends FragmentActivity implements TabHost.OnTabChan
                 return v;
             }
         };
-
-        mTabHost.addTab(mTabHost.newTabSpec("chemia").setIndicator(getLayoutInflater().inflate(R.layout.tab_chemistry_layout, null)).setContent(defaultTabCont));
         mTabHost.addTab(mTabHost.newTabSpec("matematyka").setIndicator(getLayoutInflater().inflate(R.layout.tab_mathematics_layout, null)).setContent(defaultTabCont));
+        mTabHost.addTab(mTabHost.newTabSpec("chemia").setIndicator(getLayoutInflater().inflate(R.layout.tab_chemistry_layout, null)).setContent(defaultTabCont));
         mTabHost.addTab(mTabHost.newTabSpec("fizyka").setIndicator(getLayoutInflater().inflate(R.layout.tab_physics_layout, null)).setContent(defaultTabCont));
 
     }
 
     @Override
     public void onTabChanged(String s) {
-
-        Log.d("retro", "On tab changedinvoked");
-        int[] RDrawableCoverBlada = {R.drawable.twojeksiazki_chemia_blady, R.drawable.twojeksiazki_matematyka_blada, R.drawable.twojeksiazki_fizyka_blada};
-        int[] RDrawableCoverLosos = {R.drawable.twojeksiazki_chemia_losos, R.drawable.twojeksiazki_matematyka_lososiowa, R.drawable.twojeksiazki_fizyka_lososiowa};
+        int[] RDrawableCoverBlada = {R.drawable.twojeksiazki_matematyka_blada,R.drawable.twojeksiazki_chemia_blady, R.drawable.twojeksiazki_fizyka_blada};
+        int[] RDrawableCoverLosos = { R.drawable.twojeksiazki_matematyka_lososiowa,R.drawable.twojeksiazki_chemia_losos, R.drawable.twojeksiazki_fizyka_lososiowa};
 
         TabWidget mTabWidget = mTabHost.getTabWidget();
         View previousView;

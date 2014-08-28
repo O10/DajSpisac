@@ -2,9 +2,7 @@ package com.swmansion.dajspisac.book;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Bitmap;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +16,6 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.FailReason;
 import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
 import com.swmansion.dajspisac.R;
-import com.swmansion.dajspisac.tools.BitmapLoadSave;
 import com.swmansion.dajspisac.tools.DajSpisacUtilities;
 import com.swmansion.dajspisac.tools.ImageHelper;
 
@@ -117,16 +114,7 @@ public class BooksChooseAdapter extends BaseAdapter {
             viewHolder.bookLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if (!positionsMarked[position]) {
-                        addDeleteButtonClicked(position, viewHolder);
-                    }
-                    Intent intent = new Intent(context, SingleBookActivity.class);
-                    intent.putExtra("QUERY", "ksiazki/" + viewHolder.id);
-                    if (!BitmapLoadSave.saveBitmapToInternal(context, bArray[position], "lastminiature.png")) {
-                        Log.d("retro", "Saving miniature failed");
-                        return;
-                    }
-                    context.startActivity(intent);
+                    addDeleteButtonClicked(position, viewHolder);
                 }
             });
         }

@@ -99,7 +99,7 @@ public class BooksChooserActivity extends BooksActivity implements FragmentChoos
 
     public class DemoCollectionPagerAdapter extends FragmentStatePagerAdapter {
 
-        String qFinish[] = {"&subject=Chemia", "&subject=Matematyka", "&subject=Fizyka"};
+        String qFinish[] = {"&subject=Matematyka","&subject=Chemia",  "&subject=Fizyka"};
 
         public DemoCollectionPagerAdapter(FragmentManager fm) {
             super(fm);

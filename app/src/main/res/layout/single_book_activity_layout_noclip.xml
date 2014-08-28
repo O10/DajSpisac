@@ -7,7 +7,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        xmlns:ads="http://schemas.android.com/apk/res-auto">
 
         <include
             android:id="@+id/actionBar"
@@ -52,8 +53,8 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/pageNumTv"
-            android:fadingEdgeLength="0dp"
-            android:scrollbars="none">
+            android:scrollbars="none"
+            android:fadingEdgeLength="0dp">
 
             <TabWidget
                 android:id="@android:id/tabs"
@@ -67,6 +68,7 @@
 
         <FrameLayout
             android:id="@android:id/tabcontent"
+            android:layout_above="@+id/adView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/textView">
@@ -78,6 +80,14 @@
                 android:layout_gravity="bottom" />
 
         </FrameLayout>
+
+
+        <com.google.android.gms.ads.AdView android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ads:adUnitId="ca-app-pub-7235212965293571/2631947538"
+            ads:adSize="BANNER"
+            android:layout_alignParentBottom="true"/>
 
 
     </RelativeLayout>

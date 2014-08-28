@@ -8,7 +8,8 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:clipChildren="false">
+        android:clipChildren="false"
+        xmlns:ads="http://schemas.android.com/apk/res-auto">
 
         <include
             layout="@layout/actionbar_layout_singlebook"
@@ -77,8 +78,15 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:layout_below="@id/textView" />
+            android:layout_below="@id/textView"
+            android:layout_above="@+id/adView"/>
 
+        <com.google.android.gms.ads.AdView android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ads:adUnitId="ca-app-pub-7235212965293571/2631947538"
+            ads:adSize="BANNER"
+            android:layout_alignParentBottom="true"/>
 
     </RelativeLayout>
 </TabHost>

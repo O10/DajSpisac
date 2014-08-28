@@ -10,7 +10,8 @@
         android:layout_height="match_parent"
         android:background="@color/white"
         android:clipChildren="false"
-        android:id="@+id/relativeContainer">
+        android:id="@+id/relativeContainer"
+        xmlns:ads="http://schemas.android.com/apk/res-auto">
 
         <include
             layout="@layout/actionbar_layout_singlebook"
@@ -40,13 +41,15 @@
             android:layout_height="0dp"
             android:layout_weight="0" />
 
-        <android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+        <android.support.v4.view.ViewPager
+            xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/viewPagerSingleExercise"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/white"
             android:layout_marginTop="5dp"
-            android:layout_below="@+id/frameCont" />
+            android:layout_below="@+id/frameCont"
+            android:layout_above="@+id/adView"/>
 
 
         <FrameLayout
@@ -71,7 +74,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-
                     android:clipChildren="false">
 
                     <TabWidget
@@ -87,5 +89,11 @@
         </FrameLayout>
 
 
+        <com.google.android.gms.ads.AdView android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ads:adUnitId="ca-app-pub-7235212965293571/2631947538"
+            ads:adSize="BANNER"
+            android:layout_alignParentBottom="true"/>
     </RelativeLayout>
 </TabHost>

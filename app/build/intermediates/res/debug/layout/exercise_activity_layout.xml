@@ -10,7 +10,8 @@
         android:layout_height="match_parent"
         android:background="@color/white"
         android:clipChildren="false"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        xmlns:ads="http://schemas.android.com/apk/res-auto">
 
         <include
             android:id="@+id/actionBar"
@@ -47,7 +48,8 @@
             android:layout_height="match_parent"
             android:layout_below="@+id/frameCont"
             android:layout_marginTop="5dp"
-            android:background="@color/white" />
+            android:background="@color/white"
+            android:layout_above="@+id/adView"/>
 
 
         <FrameLayout
@@ -88,5 +90,12 @@
         </FrameLayout>
 
 
+
+        <com.google.android.gms.ads.AdView android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ads:adUnitId="ca-app-pub-7235212965293571/2631947538"
+            ads:adSize="BANNER"
+            android:layout_alignParentBottom="true"/>
     </RelativeLayout>
 </TabHost><!-- From: file:/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout/exercise_activity_layout.xml -->

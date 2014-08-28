@@ -8,7 +8,6 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.HorizontalScrollView;
@@ -18,6 +17,8 @@ import android.widget.TabHost;
 import android.widget.TabWidget;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.octo.android.robospice.SpiceManager;
 import com.octo.android.robospice.persistence.DurationInMillis;
 import com.octo.android.robospice.persistence.exception.SpiceException;
@@ -59,6 +60,10 @@ public class SingleBookActivity extends FragmentActivity implements TabHost.OnTa
             setContentView(R.layout.single_book_activity_layout);
         }
         spiceManager = new SpiceManager(com.octo.android.robospice.Jackson2SpringAndroidSpiceService.class);
+
+        AdView adView = (AdView) this.findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
 
         textViewNrZadan = (TextView) findViewById(R.id.textView);
         horScrollView = (HorizontalScrollView) findViewById(R.id.horizontalscrollview);
@@ -112,10 +117,11 @@ public class SingleBookActivity extends FragmentActivity implements TabHost.OnTa
         spiceManager.start(this);
 
         if (lastTabNum != -1) {
-            Log.d("retro", "Setting last tab " + Integer.toString(lastTabNum));
             viewPager.setCurrentItem(lastTabNum);
         }
-
+        else{
+            lastTabNum=DajSpisacUtilities.getLastPageFromPreferences(SingleBookActivity.this, getIntent().getIntExtra("CURBOOKID", -1));
+        }
 
         BookRequest request = new BookRequest(getIntent().getStringExtra("QUERY"));
         String lastRequestCacheKey = request.createCacheKey();
@@ -127,6 +133,7 @@ public class SingleBookActivity extends FragmentActivity implements TabHost.OnTa
     protected void onStop() {
         spiceManager.shouldStop();
         lastTabNum = mTabHost.getCurrentTab();
+        DajSpisacUtilities.saveLastPageToPreferences(SingleBookActivity.this,getIntent().getIntExtra("CURBOOKID", -1),lastTabNum);
         super.onStop();
     }
 
@@ -234,6 +241,18 @@ public class SingleBookActivity extends FragmentActivity implements TabHost.OnTa
                     pagesNumbers.add(dBook.getPages().get(i));
                 }
                 setAdapter();
+                if(lastTabNum>0){
+                    viewPager.setCurrentItem(lastTabNum);
+                    horScrollView.post(new Runnable() {
+                        public void run() {
+                            View previousView = mTabHost.getTabWidget().getChildTabViewAt(lastTabNum);
+                            int width = DajSpisacUtilities.getScreenWidth(SingleBookActivity.this);
+                            horScrollView.scrollTo(previousView.getLeft() - (width / 2) + (previousView.getWidth() / 2), 0);
+                        }
+                    });
+
+
+                }
             }
         }
     }

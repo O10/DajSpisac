@@ -109,4 +109,16 @@ public class DajSpisacUtilities {
         toast.show();
         Log.d("retro", "Showing Toast");
     }
+
+    public static void saveLastPageToPreferences(Context context, int bookID,int tabNum){
+        SharedPreferences preferences=context.getSharedPreferences("PAGENUMS",0);
+        SharedPreferences.Editor editor=preferences.edit();
+        editor.putInt(Integer.toString(bookID),tabNum);
+        editor.commit();
+    }
+
+    public static int getLastPageFromPreferences(Context context,int bookID){
+        SharedPreferences preferences=context.getSharedPreferences("PAGENUMS",0);
+        return preferences.getInt(Integer.toString(bookID),-1);
+    }
 }

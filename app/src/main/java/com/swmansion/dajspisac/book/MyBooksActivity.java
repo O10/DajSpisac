@@ -15,6 +15,8 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.octo.android.robospice.SpiceManager;
 import com.octo.android.robospice.persistence.DurationInMillis;
 import com.octo.android.robospice.persistence.exception.SpiceException;
@@ -30,7 +32,7 @@ import java.util.HashMap;
  */
 public class MyBooksActivity extends BooksActivity {
     private RelativeLayout addBookLayout;
-    private final static int expectedFooterHeight = 100;
+    private final static int expectedFooterHeight = 171;
     private MyBooksCollectionPagerAdapter mMyBooksCollectionPagerAdapter;
     private SpiceManager spiceManager;
 
@@ -42,6 +44,10 @@ public class MyBooksActivity extends BooksActivity {
         } else {
             setContentView(R.layout.mybooksactivitylayout);
         }
+
+        final AdView adView = (AdView) this.findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
 
 
         spiceManager = new SpiceManager(com.octo.android.robospice.Jackson2SpringAndroidSpiceService.class);
@@ -117,14 +123,16 @@ public class MyBooksActivity extends BooksActivity {
             super(fm);
             mPageReferenceMap = new HashMap<Integer, MyBooksFragment>();
             subjectIndexMap = new HashMap<String, Integer>();
-            subjectIndexMap.put("Chemia", 0);
-            subjectIndexMap.put("Matematyka", 1);
+            subjectIndexMap.put("Matematyka", 0);
+            subjectIndexMap.put("Chemia", 1);
             subjectIndexMap.put("Fizyka", 2);
 
         }
 
         void makeRequest() {
             myBooksIds = DajSpisacUtilities.getMyBookIds(MyBooksActivity.this);
+
+
             for (String s : myBooksIds) {
                 BookRequest request = new BookRequest(String.format("ksiazki/%s", s));
                 String lastRequestCacheKey = request.createCacheKey();
