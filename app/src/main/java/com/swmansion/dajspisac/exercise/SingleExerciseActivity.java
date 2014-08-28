@@ -43,8 +43,6 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
     private ViewPager viewPager;
     private TabHost mTabHost;
     private int book_id, exercise_id, previousTabIndex;
-    private TabHost.TabContentFactory defaultTabCont;
-    private boolean mActive = false;
     private int[] exerciseIds;
     private String[] exerciseNumbers;
     private HorizontalScrollView horScrollView;
@@ -53,14 +51,13 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if(Build.VERSION.SDK_INT<12){
+        if (Build.VERSION.SDK_INT < 12) {
             setContentView(R.layout.exercise_activity_layout_noclip);
-        }
-        else{
+        } else {
             setContentView(R.layout.exercise_activity_layout);
         }
         Bundle b = getIntent().getExtras();
-        relativeContainer=(RelativeLayout)findViewById(R.id.relativeContainer);
+        relativeContainer = (RelativeLayout) findViewById(R.id.relativeContainer);
         if (b == null)
             finish();
         book_id = b.getInt("BOOK_ID");
@@ -104,6 +101,7 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
         mTabHost = (TabHost) findViewById(R.id.tabhost);
         mTabHost.setup();
         mTabHost.setOnTabChangedListener(this);
+        TabHost.TabContentFactory defaultTabCont;
 
         defaultTabCont = new TabHost.TabContentFactory() {
             @Override
@@ -156,14 +154,11 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
     @Override
     protected void onResume() {
         super.onResume();
-        int width = DajSpisacUtilities.getScreenWidth(this);
-        /*int previousTabIndex=6;
-        horScrollView.smoothScrollTo(mTabHost.getTabWidget().getChildTabViewAt(previousTabIndex).getLeft() - (width / 2) + (mTabHost.getTabWidget().getChildTabViewAt(previousTabIndex).getWidth() / 2), mTabHost.getTabWidget().getChildTabViewAt(previousTabIndex).getTop());*/
     }
 
     @Override
     public void onTabChanged(String s) {
-        Log.d("retro","On tab changedinvoked");
+        Log.d("retro", "On tab changedinvoked");
         TabWidget mTabWidget = mTabHost.getTabWidget();
         View previousView = mTabWidget.getChildTabViewAt(previousTabIndex);
         previousView.setBackgroundResource(R.drawable.tab_background_default);
@@ -171,7 +166,7 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
         TextView previousTextView = (TextView) previousView.findViewById(R.id.textViewExerciseNumber);
         previousTextView.setTextColor(getResources().getColor(R.color.lightBlueDajSpisac));
 
-        DajSpisacUtilities.startTabUnChoosedAnimation(previousView,null);
+        DajSpisacUtilities.startTabUnChoosedAnimation(previousView);
         int pos = mTabHost.getCurrentTab();
 
         previousTabIndex = pos;
@@ -184,7 +179,7 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
 
         viewPager.setCurrentItem(pos);
         previousView.setBackgroundResource(R.drawable.tab_background_default_chosen);
-        DajSpisacUtilities.startTabChoosedAnimation(previousView, null);
+        DajSpisacUtilities.startTabChoosedAnimation(previousView);
     }
 
     public class ExerciseFragmentsAdapter extends FragmentStatePagerAdapter {
@@ -225,7 +220,7 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
         private WebView mWebWievSolution;
         private ProgressBar mProgressBar;
         Exercise mExercise;
-        private static boolean isToastShown=false;
+        private static boolean isToastShown = false;
 
 
         @Override
@@ -261,13 +256,13 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             View rootView = inflater.inflate(
                     R.layout.exercise_activity_fragment_layout, container, false);
-            textViewTresc = (TextView) rootView.findViewById(R.id.textViewTresc);;
+            textViewTresc = (TextView) rootView.findViewById(R.id.textViewTresc);
             buttonTresc = (Button) rootView.findViewById(R.id.buttonTresc);
             buttonSolution = (Button) rootView.findViewById(R.id.buttonSolution);
             seperatorAfterTresc = rootView.findViewById(R.id.sepAfterTresc);
             seperatorAfterSolution = rootView.findViewById(R.id.sepAfteSolution);
             mWebWievSolution = (WebView) rootView.findViewById(R.id.webViewSolution);
-            mProgressBar=(ProgressBar)rootView.findViewById(R.id.progressBar);
+            mProgressBar = (ProgressBar) rootView.findViewById(R.id.progressBar);
 
             return rootView;
 
@@ -291,7 +286,7 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
             isSolActive = true;
 
 
-            mWebWievSolution.setWebViewClient(new WebViewClient(){
+            mWebWievSolution.setWebViewClient(new WebViewClient() {
                 @Override
                 public void onPageStarted(WebView view, String url, Bitmap favicon) {
                     mProgressBar.setVisibility(View.VISIBLE);
@@ -310,15 +305,14 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
 
 
             String htmlString;
-            if(mExercise.getAttachments()!=null&&mExercise.getAttachments().size()!=0){
-                String imgSrcString=String.format(getResources().getString(R.string.imgsrc),mExercise.getAttachments().get(0).getImage().getImage().getUrl());
-                htmlString=getResources().getString(R.string.htmlstart)+"\n"+mExercise.getSolution()+"\n"+imgSrcString+getResources().getString(R.string.htmlend);
-            }
-            else{
-                htmlString=getResources().getString(R.string.htmlstart)+"\n"+mExercise.getSolution()+"\n"+getResources().getString(R.string.htmlend);
+            if (mExercise.getAttachments() != null && mExercise.getAttachments().size() != 0) {
+                String imgSrcString = String.format(getResources().getString(R.string.imgsrc), mExercise.getAttachments().get(0).getImage().getImage().getUrl());
+                htmlString = getResources().getString(R.string.htmlstart) + "\n" + mExercise.getSolution() + "\n" + imgSrcString + getResources().getString(R.string.htmlend);
+            } else {
+                htmlString = getResources().getString(R.string.htmlstart) + "\n" + mExercise.getSolution() + "\n" + getResources().getString(R.string.htmlend);
             }
 
-            mWebWievSolution.loadDataWithBaseURL("http://dajspisac.pl/",htmlString,"text/html","UTF-8","");
+            mWebWievSolution.loadDataWithBaseURL("http://dajspisac.pl/", htmlString, "text/html", "UTF-8", "");
 
             buttonTresc.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -330,7 +324,7 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
 
                     }
                     ExpandCollapseAnimation.setHeightForWrapContent(getActivity(), textViewTresc);
-                    ExpandCollapseAnimation animation = null;
+                    ExpandCollapseAnimation animation;
                     if (isTrescActive) {
                         animation = new ExpandCollapseAnimation(textViewTresc, 500, 1);
                         animation.setAnimationListener(new ViewVisibilityListener(seperatorAfterTresc));
@@ -355,7 +349,7 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
                     }
 
                     ExpandCollapseAnimation.setHeightForWrapContent(getActivity(), mWebWievSolution);
-                    ExpandCollapseAnimation animation = null;
+                    ExpandCollapseAnimation animation;
                     if (isSolActive) {
                         animation = new ExpandCollapseAnimation(mWebWievSolution, 500, 1);
                         isSolActive = false;
@@ -375,9 +369,9 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
         private class ExerciseRequestListener implements RequestListener<Exercise> {
             @Override
             public void onRequestFailure(SpiceException e) {
-                if(!isToastShown){
+                if (!isToastShown) {
                     DajSpisacUtilities.showInternetErrorToast(getActivity());
-                    isToastShown=true;
+                    isToastShown = true;
                 }
             }
 
@@ -387,7 +381,7 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
                 if (isAdded()) {
                     updateViews();
                 }
-                isToastShown=false;
+                isToastShown = false;
             }
 
 

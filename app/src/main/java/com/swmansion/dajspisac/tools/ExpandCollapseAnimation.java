@@ -15,10 +15,6 @@ public class ExpandCollapseAnimation extends Animation {
     private int mEndHeight;
     private int mType;
 
-    public ExpandCollapseAnimation() {
-
-    }
-
     public ExpandCollapseAnimation(View view, int duration, int type) {
         setDuration(duration);
         mAnimatedView = view;
@@ -65,7 +61,6 @@ public class ExpandCollapseAnimation extends Animation {
         int widthMeasureSpec = View.MeasureSpec.makeMeasureSpec(screenWidth, View.MeasureSpec.EXACTLY);
 
         view.measure(widthMeasureSpec, heightMeasureSpec);
-        int height = view.getMeasuredHeight();
-        view.getLayoutParams().height = height;
+        view.getLayoutParams().height = view.getMeasuredHeight();
     }
 }

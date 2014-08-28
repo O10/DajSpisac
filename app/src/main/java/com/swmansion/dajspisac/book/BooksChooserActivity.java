@@ -37,12 +37,12 @@ public class BooksChooserActivity extends BooksActivity implements FragmentChoos
 
         mViewPager = (ViewPager) findViewById(R.id.viewpager);
 
-        TextView pageTitle= (TextView)findViewById(R.id.textViewTitle);
+        TextView pageTitle = (TextView) findViewById(R.id.textViewTitle);
         pageTitle.setText("Wybierz książkę");
-        ImageView imageViewTemp=(ImageView)findViewById(R.id.imageViewRight);
+        ImageView imageViewTemp = (ImageView) findViewById(R.id.imageViewRight);
         imageViewTemp.setVisibility(View.GONE);
-        imageViewTemp=(ImageView)findViewById(R.id.imageViewLeft);
-        imageViewTemp.setOnClickListener(new View.OnClickListener(){
+        imageViewTemp = (ImageView) findViewById(R.id.imageViewLeft);
+        imageViewTemp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
@@ -140,7 +140,7 @@ public class BooksChooserActivity extends BooksActivity implements FragmentChoos
         private ListView mListView;
         private SpiceManager spiceManager = new SpiceManager(com.octo.android.robospice.Jackson2SpringAndroidSpiceService.class);
         BooksChooseAdapter mBooksChooserAdapter;
-        private static boolean isToastShown=false;
+        private static boolean isToastShown = false;
         private TextView textViewNoBooks;
 
         @Override
@@ -175,7 +175,7 @@ public class BooksChooserActivity extends BooksActivity implements FragmentChoos
             View rootView = inflater.inflate(
                     R.layout.books_activity_fragment_layout, container, false);
             mListView = (ListView) rootView.findViewById(R.id.listViewBooks);
-            textViewNoBooks=(TextView)rootView.findViewById(R.id.textViewNoBooks);
+            textViewNoBooks = (TextView) rootView.findViewById(R.id.textViewNoBooks);
             return rootView;
         }
 
@@ -188,9 +188,9 @@ public class BooksChooserActivity extends BooksActivity implements FragmentChoos
         private class ListBooksRequestListener implements RequestListener<BookList> {
             @Override
             public void onRequestFailure(SpiceException e) {
-                if(!isToastShown){
+                if (!isToastShown) {
                     DajSpisacUtilities.showInternetErrorToast(getActivity());
-                    isToastShown=true;
+                    isToastShown = true;
                 }
             }
 
@@ -198,11 +198,11 @@ public class BooksChooserActivity extends BooksActivity implements FragmentChoos
             public void onRequestSuccess(BookList books) {
                 if (books != null) {
                     mBooksChooserAdapter.setBooksArray(books);
-                    if(books.size()==0){
+                    if (books.size() == 0) {
                         textViewNoBooks.setVisibility(View.VISIBLE);
                     }
                 }
-                isToastShown=false;
+                isToastShown = false;
             }
         }
 

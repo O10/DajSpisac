@@ -25,9 +25,9 @@ import com.swmansion.dajspisac.tools.DajSpisacUtilities;
 public class SinglePageFragment extends Fragment {
     private SpiceManager spiceManager;
     private int bookId;
-    private boolean hasButtons=false;
+    private boolean hasButtons = false;
     private ExerciseList mExercises;
-    private static boolean isToastShown=false;
+    private static boolean isToastShown = false;
 
 
     @Override
@@ -41,10 +41,8 @@ public class SinglePageFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(
+        return inflater.inflate(
                 R.layout.single_book_activity_fragment_layout, container, false);
-
-        return rootView;
     }
 
     @Override
@@ -52,11 +50,11 @@ public class SinglePageFragment extends Fragment {
         super.onStart();
         spiceManager.start(getActivity());
         if (mExercises == null) {
-            ExercisesRequestListener listener=new ExercisesRequestListener();
+            ExercisesRequestListener listener = new ExercisesRequestListener();
             ExercisesRequest request = new ExercisesRequest(getArguments().getString("QUERY"));
             String lastRequestCacheKey = request.createCacheKey();
             spiceManager.execute(request, lastRequestCacheKey, DurationInMillis.ONE_WEEK, listener);
-        } else if(!hasButtons) {
+        } else if (!hasButtons) {
             updateButtonViews();
         }
 
@@ -69,10 +67,11 @@ public class SinglePageFragment extends Fragment {
             spiceManager.shouldStop();
         }
     }
+
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        hasButtons=false;
+        hasButtons = false;
     }
 
     @Override
@@ -82,7 +81,7 @@ public class SinglePageFragment extends Fragment {
     }
 
     void updateButtonViews() {
-        hasButtons=true;
+        hasButtons = true;
         TableLayout rootContainer;
         rootContainer = (TableLayout) getView().findViewById(R.id.allButtonsContainer);
 
@@ -133,9 +132,9 @@ public class SinglePageFragment extends Fragment {
 
         @Override
         public void onRequestFailure(SpiceException e) {
-            if(!isToastShown){
+            if (!isToastShown) {
                 DajSpisacUtilities.showInternetErrorToast(getActivity());
-                isToastShown=true;
+                isToastShown = true;
             }
         }
 
@@ -145,7 +144,7 @@ public class SinglePageFragment extends Fragment {
             if (isAdded()) {
                 updateButtonViews();
             }
-            isToastShown=false;
+            isToastShown = false;
         }
     }
 

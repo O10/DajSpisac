@@ -3,32 +3,30 @@
     android:id="@+id/tabhost"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:clipChildren="false"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:clipChildren="false">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:clipChildren="false"
-        android:background="@color/white">
+        android:background="@color/white"
+        android:clipChildren="false">
 
 
         <FrameLayout
             android:id="@android:id/tabcontent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:clipChildren="false"
             android:layout_marginTop="@dimen/tabcontent_top_margin"
-            >
+            android:clipChildren="false">
 
-        <android.support.v4.view.ViewPager
+            <android.support.v4.view.ViewPager
 
-            android:id="@+id/viewpager"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:clipChildren="false"
-            />
+                android:id="@+id/viewpager"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:clipChildren="false" />
 
         </FrameLayout>
 
@@ -40,11 +38,14 @@
             android:background="@drawable/tab_widget_backgorund"
             android:clipChildren="false"
             android:orientation="horizontal"
-            android:showDividers="none"
-            />
+            android:showDividers="none" />
 
-        <include layout="@layout/actionbar_layout_singlebook" android:layout_width="match_parent" android:layout_height="48dp" android:layout_alignParentTop="true"
-            android:id="@+id/actionBar"/>
+        <include
+            android:id="@+id/actionBar"
+            layout="@layout/actionbar_layout_singlebook"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentTop="true" />
 
     </RelativeLayout>
 

@@ -11,8 +11,11 @@
         android:orientation="vertical"
         android:background="@color/white">
 
-        <include layout="@layout/actionbar_layout_singlebook" android:layout_width="match_parent" android:layout_height="40dp"
-            android:id="@+id/actionBar"/>
+        <include
+            layout="@layout/actionbar_layout_singlebook"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/actionBar" />
 
 
         <fragment
@@ -21,7 +24,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:layout="@layout/choose_class_fragment_layout" />
-
 
 
         <RelativeLayout
@@ -34,8 +36,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clipChildren="false"
-                android:layout_marginTop="63dp"
-                >
+                android:layout_marginTop="63dp">
 
                 <android.support.v4.view.ViewPager
                     android:id="@+id/viewpager"
@@ -45,13 +46,6 @@
                     android:clipChildren="false" />
 
             </FrameLayout>
-            <!--<View
-                android:id="@+id/separator"
-                android:layout_width="fill_parent"
-                android:layout_height="0.5dp"
-                android:alpha="0.8"
-                android:background="@color/darkBlueDajSpisac"
-                android:visibility="visible" />-->
 
             <TabWidget
                 android:id="@android:id/tabs"
@@ -60,8 +54,7 @@
                 android:background="@drawable/tab_widget_backgorund"
                 android:clipChildren="false"
                 android:orientation="horizontal"
-                android:showDividers="none"/>
-
+                android:showDividers="none" />
 
 
         </RelativeLayout>

@@ -33,12 +33,11 @@ public class BooksChooseAdapter extends BaseAdapter {
     Bitmap[] bArray;
     boolean positionsMarked[];
 
-    String currentUserBooksIDS;
     ArrayList<String> bookIDS;
 
     static class ViewHolderItem {
         TextView author, title;
-        ImageView miniature, sign;
+        ImageView miniature;
         Button addDeleteButton;
         LinearLayout bookLayout;
         int id;
@@ -51,7 +50,6 @@ public class BooksChooseAdapter extends BaseAdapter {
     }
 
 
-
     @Override
     public int getCount() {
         return mBooksArray.size();
@@ -62,7 +60,7 @@ public class BooksChooseAdapter extends BaseAdapter {
         return mBooksArray.get(i);
     }
 
-    private void addDeleteButtonClicked(int position,ViewHolderItem viewHolder){
+    private void addDeleteButtonClicked(int position, ViewHolderItem viewHolder) {
         if (positionsMarked[position]) {
             viewHolder.addDeleteButton.setBackgroundResource(R.drawable.twojeksiazki_plus_lightblue);
             DajSpisacUtilities.removeBookById(context, viewHolder.id);
@@ -113,14 +111,14 @@ public class BooksChooseAdapter extends BaseAdapter {
             viewHolder.addDeleteButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    addDeleteButtonClicked(position,viewHolder);
+                    addDeleteButtonClicked(position, viewHolder);
                 }
             });
             viewHolder.bookLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     if (!positionsMarked[position]) {
-                        addDeleteButtonClicked(position,viewHolder);
+                        addDeleteButtonClicked(position, viewHolder);
                     }
                     Intent intent = new Intent(context, SingleBookActivity.class);
                     intent.putExtra("QUERY", "ksiazki/" + viewHolder.id);
@@ -141,11 +139,7 @@ public class BooksChooseAdapter extends BaseAdapter {
         bookIDS = DajSpisacUtilities.getMyBookIds(context);
 
         for (int i = 0; i < positionsMarked.length; i++) {
-            if (bookIDS.contains(Integer.toString(mBooksArray.get(i).getId()))) {
-                positionsMarked[i] = true;
-            } else {
-                positionsMarked[i] = false;
-            }
+            positionsMarked[i] = bookIDS.contains(Integer.toString(mBooksArray.get(i).getId()));
         }
 
     }
@@ -185,9 +179,9 @@ public class BooksChooseAdapter extends BaseAdapter {
 
         @Override
         public void onLoadingComplete(String s, View view, Bitmap bitmap) {
-            Bitmap finalbmp = ImageHelper.getRoundedCornerBitmap(bitmap, 8);
-            bArray[position] = finalbmp;
-            imageView.setImageBitmap(finalbmp);
+            Bitmap finalBmp = ImageHelper.getRoundedCornerBitmap(bitmap, 8);
+            bArray[position] = finalBmp;
+            imageView.setImageBitmap(finalBmp);
             notifyDataSetChanged();
         }
 

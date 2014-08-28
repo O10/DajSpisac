@@ -13,7 +13,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.FailReason;
 import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
@@ -35,7 +34,7 @@ public class MyBooksAdapter extends BaseAdapter {
 
     static class ViewHolderItem {
         TextView author, title;
-        ImageView miniature, sign;
+        ImageView miniature;
         Button addDeleteButton;
         LinearLayout bookLayout;
         int id;
@@ -96,7 +95,6 @@ public class MyBooksAdapter extends BaseAdapter {
             viewHolder.title.setText(book.getName().toUpperCase());
             viewHolder.id = mBooksArray.get(position).getId();
             if (null == bitmapMap.get(position)) {
-                DisplayImageOptions options = new DisplayImageOptions.Builder().cacheInMemory(true).build();
                 ImageLoader.getInstance().loadImage(String.format("http://dajspisac.pl%s", book.getCover_small()), new MImageLoadingListener(viewHolder.miniature, position));
             } else {
                 viewHolder.miniature.setImageBitmap(bitmapMap.get(position));

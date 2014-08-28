@@ -1,5 +1,4 @@
-<TabHost
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/tabhost"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,8 +11,13 @@
         android:background="@color/white"
         android:clipChildren="false"
         android:id="@+id/relativeContainer">
-        <include layout="@layout/actionbar_layout_singlebook" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true"
-            android:id="@+id/actionBar"/>
+
+        <include
+            layout="@layout/actionbar_layout_singlebook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:id="@+id/actionBar" />
 
         <TextView
             android:layout_width="match_parent"
@@ -28,7 +32,7 @@
             android:background="@color/darkBlueDajSpisac"
             android:textColor="@color/lightBlueDajSpisac"
             android:gravity="center_horizontal"
-            android:layout_below="@id/actionBar"/>
+            android:layout_below="@id/actionBar" />
 
         <FrameLayout
             android:id="@android:id/tabcontent"
@@ -36,14 +40,13 @@
             android:layout_height="0dp"
             android:layout_weight="0" />
 
-        <android.support.v4.view.ViewPager
-            xmlns:android="http://schemas.android.com/apk/res/android"
+        <android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/viewPagerSingleExercise"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/white"
             android:layout_marginTop="5dp"
-            android:layout_below="@+id/frameCont"/>
+            android:layout_below="@+id/frameCont" />
 
 
         <FrameLayout
@@ -53,37 +56,36 @@
             android:background="@color/darkBlueDajSpisac"
             android:layout_below="@id/tVNrZad"
             android:clipChildren="false">
-        <HorizontalScrollView
-            android:scrollbars="none"
-            android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:id="@+id/horizontalscrollview"
-            android:background="@color/darkBlueDajSpisac"
-            android:layout_gravity="center_horizontal"
-            android:clipChildren="false">
-            <LinearLayout android:id="@+id/top_buttons"
+
+            <HorizontalScrollView
+                android:scrollbars="none"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:id="@+id/horizontalscrollview"
+                android:background="@color/darkBlueDajSpisac"
+                android:layout_gravity="center_horizontal"
+                android:clipChildren="false">
 
-                android:clipChildren="false"
-                >
-
-                <TabWidget
-                    android:id="@android:id/tabs"
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
+                <LinearLayout
+                    android:id="@+id/top_buttons"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:clipChildren="false"
-                    android:background="@color/darkBlueDajSpisac"
-                    android:showDividers="none"/>
-            </LinearLayout>
-        </HorizontalScrollView>
-    </FrameLayout>
+                    android:orientation="horizontal"
+
+                    android:clipChildren="false">
+
+                    <TabWidget
+                        android:id="@android:id/tabs"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipChildren="false"
+                        android:background="@color/darkBlueDajSpisac"
+                        android:showDividers="none" />
+                </LinearLayout>
+            </HorizontalScrollView>
+        </FrameLayout>
 
 
-
-
-
-
-</RelativeLayout>
+    </RelativeLayout>
 </TabHost>

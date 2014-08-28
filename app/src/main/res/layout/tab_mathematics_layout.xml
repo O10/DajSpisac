@@ -1,30 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="@drawable/tab_background_default_chosen"
-    android:paddingLeft="10dp"
-    android:paddingRight="10dp"
-    android:paddingBottom="5dp"
     android:gravity="center_horizontal"
-    android:longClickable="false">
+    android:longClickable="false"
+    android:orientation="vertical"
+    android:paddingBottom="5dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
     <ImageView
+        android:id="@+id/imageViewSubjectIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/twojeksiazki_matematyka_blada"
-        android:layout_marginTop="5dp"
         android:layout_gravity="center_horizontal"
-        android:id="@+id/imageViewSubjectIcon" />
+        android:layout_marginTop="5dp"
+        android:src="@drawable/twojeksiazki_matematyka_blada" />
+
     <TextView
+        android:id="@+id/textViewTab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:singleLine="true"
         android:text="@string/mathematics"
         android:textColor="@color/lightBlueDajSpisac"
-        android:textStyle="bold"
-        android:layout_marginTop="5dp"
-        android:layout_gravity="center_horizontal"
-        android:singleLine="true" android:ellipsize="end" android:lines="1"
-        android:id="@+id/textViewTab" />
+        android:textStyle="bold" />
 
 </LinearLayout>

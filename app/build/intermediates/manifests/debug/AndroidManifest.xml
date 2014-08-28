@@ -19,8 +19,7 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/DajSpisacTheme" >
-        <activity android:name="com.swmansion.dajspisac.book.SingleBookActivity" >
-        </activity>
+        <activity android:name="com.swmansion.dajspisac.book.SingleBookActivity" />
         <activity android:name="com.swmansion.dajspisac.exercise.SingleExerciseActivity" >
         </activity>
         <activity android:name="com.swmansion.dajspisac.book.MyBooksActivity" >

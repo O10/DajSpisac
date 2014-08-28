@@ -32,7 +32,7 @@ import java.util.ArrayList;
 /**
  * Created by olek on 05.08.14.
  */
-public class SingleBookActivity extends FragmentActivity implements TabHost.OnTabChangeListener{
+public class SingleBookActivity extends FragmentActivity implements TabHost.OnTabChangeListener {
     Book book;
     ViewPager viewPager;
     SpiceManager spiceManager;
@@ -40,30 +40,27 @@ public class SingleBookActivity extends FragmentActivity implements TabHost.OnTa
     private TabHost mTabHost;
     TabHost.TabContentFactory defaultTabCont;
     private int previousTabIndex;
-    private TextView textViewNrZadan,textViewNrStrony;
+    private TextView textViewNrZadan;
     private HorizontalScrollView horScrollView;
     private LinearLayout actionBar;
-    int lastTabNum=-1;
+    int lastTabNum = -1;
 
     void setAdapter() {
         viewPager.setAdapter(new PagesForBookAdapter(getSupportFragmentManager()));
     }
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if(Build.VERSION.SDK_INT<12){
+        if (Build.VERSION.SDK_INT < 12) {
             setContentView(R.layout.single_book_activity_layout_noclip);
-        }
-        else{
+        } else {
             setContentView(R.layout.single_book_activity_layout);
         }
         spiceManager = new SpiceManager(com.octo.android.robospice.Jackson2SpringAndroidSpiceService.class);
 
-        textViewNrZadan=(TextView)findViewById(R.id.textView);
-        textViewNrStrony=(TextView)findViewById(R.id.pageNumTv);
+        textViewNrZadan = (TextView) findViewById(R.id.textView);
         horScrollView = (HorizontalScrollView) findViewById(R.id.horizontalscrollview);
         horScrollView.getViewTreeObserver().addOnScrollChangedListener(new ViewTreeObserver.OnScrollChangedListener() {
             @Override
@@ -73,7 +70,7 @@ public class SingleBookActivity extends FragmentActivity implements TabHost.OnTa
             }
         });
 
-        actionBar=(LinearLayout)findViewById(R.id.actionBar);
+        actionBar = (LinearLayout) findViewById(R.id.actionBar);
         actionBar.setVisibility(View.GONE);
 
         viewPager = (ViewPager) findViewById(R.id.viewPagerSingleBook);
@@ -114,8 +111,8 @@ public class SingleBookActivity extends FragmentActivity implements TabHost.OnTa
         super.onStart();
         spiceManager.start(this);
 
-        if(lastTabNum!=-1){
-            Log.d("retro","Setting last tab "+Integer.toString(lastTabNum));
+        if (lastTabNum != -1) {
+            Log.d("retro", "Setting last tab " + Integer.toString(lastTabNum));
             viewPager.setCurrentItem(lastTabNum);
         }
 
@@ -129,7 +126,7 @@ public class SingleBookActivity extends FragmentActivity implements TabHost.OnTa
     @Override
     protected void onStop() {
         spiceManager.shouldStop();
-        lastTabNum=mTabHost.getCurrentTab();
+        lastTabNum = mTabHost.getCurrentTab();
         super.onStop();
     }
 
@@ -147,7 +144,7 @@ public class SingleBookActivity extends FragmentActivity implements TabHost.OnTa
         previousView.setBackgroundResource(R.drawable.tab_background_default);
         TextView previousTextView = (TextView) previousView.findViewById(R.id.textViewPageNumber);
         previousTextView.setTextColor(getResources().getColor(R.color.lightBlueDajSpisac));
-        DajSpisacUtilities.startTabUnChoosedAnimation(previousView,viewPager);
+        DajSpisacUtilities.startTabUnChoosedAnimation(previousView);
         int pos = mTabHost.getCurrentTab();
         previousTabIndex = pos;
 
@@ -160,7 +157,7 @@ public class SingleBookActivity extends FragmentActivity implements TabHost.OnTa
 
         viewPager.setCurrentItem(pos);
         previousView.setBackgroundResource(R.drawable.tab_background_default_chosen);
-        DajSpisacUtilities.startTabChoosedAnimation(previousView,viewPager);
+        DajSpisacUtilities.startTabChoosedAnimation(previousView);
 
 
     }
@@ -197,7 +194,6 @@ public class SingleBookActivity extends FragmentActivity implements TabHost.OnTa
     }
 
 
-
     private class BookRequestListener implements RequestListener<Book> {
         @Override
         public void onRequestFailure(SpiceException e) {
@@ -206,7 +202,7 @@ public class SingleBookActivity extends FragmentActivity implements TabHost.OnTa
 
         @Override
         public void onRequestSuccess(Book dBook) {
-            if(book!=null){
+            if (book != null) {
                 return;
             }
             book = dBook;
@@ -230,7 +226,6 @@ public class SingleBookActivity extends FragmentActivity implements TabHost.OnTa
 
             if (dBook != null) {
                 pagesNumbers = new ArrayList<Integer>();
-                LinearLayout ll = (LinearLayout) findViewById(R.id.top_buttons);
                 for (int i = 0; i < dBook.getPages().size(); i++) {
                     View tabIndicatorView = getLayoutInflater().inflate(R.layout.tab_page_number_layout, null);
                     TextView textViewTab = (TextView) tabIndicatorView.findViewById(R.id.textViewPageNumber);

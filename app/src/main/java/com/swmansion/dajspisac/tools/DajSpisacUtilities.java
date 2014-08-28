@@ -59,7 +59,7 @@ public class DajSpisacUtilities {
     }
 
     public static int getScreenWidth(Activity activity) {
-        int screenWidth = 0;
+        int screenWidth;
         if (android.os.Build.VERSION.SDK_INT < 13) {
             Display display = activity.getWindowManager().getDefaultDisplay();
             screenWidth = display.getWidth();
@@ -72,7 +72,7 @@ public class DajSpisacUtilities {
         return screenWidth;
     }
 
-    public static void startTabChoosedAnimation(final View view,final View viewInvalidate){
+    public static void startTabChoosedAnimation(final View view) {
         if (android.os.Build.VERSION.SDK_INT <= android.os.Build.VERSION_CODES.GINGERBREAD) {
             return;
         }
@@ -81,39 +81,12 @@ public class DajSpisacUtilities {
         ObjectAnimator anim = ObjectAnimator.ofFloat(view, "ScaleX", 1f, scalingFactor);
         ObjectAnimator anim2 = ObjectAnimator.ofFloat(view, "ScaleY", 1f, scalingFactor);
         anim.setDuration(250);
-        /*anim2.addListener(new Animator.AnimatorListener() {
-            @Override
-            public void onAnimationStart(Animator animator) {
-                //viewPage.invalidate();
-            }
-
-            @Override
-            public void onAnimationEnd(Animator animator) {
-                //viewPage.invalidate();
-            }
-
-            @Override
-            public void onAnimationCancel(Animator animator) {
-
-            }
-
-            @Override
-            public void onAnimationRepeat(Animator animator) {
-
-            }
-        });
-        anim2.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator valueAnimator) {
-                //viewPage.invalidate();
-            }
-        });*/
         anim2.setDuration(250);
         aSet.play(anim).with(anim2);
         aSet.start();
     }
 
-    public static void startTabUnChoosedAnimation(final View view,final View viewInvalidate){
+    public static void startTabUnChoosedAnimation(final View view) {
         if (android.os.Build.VERSION.SDK_INT <= android.os.Build.VERSION_CODES.GINGERBREAD) {
             return;
         }
@@ -123,45 +96,17 @@ public class DajSpisacUtilities {
         ObjectAnimator anim2 = ObjectAnimator.ofFloat(view, "ScaleY", 1.2f, scalingFactor);
         anim.setDuration(250);
         anim2.setDuration(250);
-        /*anim2.addListener(new Animator.AnimatorListener() {
-            @Override
-            public void onAnimationStart(Animator animator) {
-                viewPage.invalidate();
-            }
-
-            @Override
-            public void onAnimationEnd(Animator animator) {
-                //viewPage.invalidate();
-
-            }
-
-            @Override
-            public void onAnimationCancel(Animator animator) {
-
-            }
-
-            @Override
-            public void onAnimationRepeat(Animator animator) {
-
-            }
-        });
-        anim2.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator valueAnimator) {
-                //viewPage.invalidate();
-            }
-        });*/
         aSet.play(anim).with(anim2);
         aSet.start();
     }
 
-    public static void showInternetErrorToast(Activity activity){
+    public static void showInternetErrorToast(Activity activity) {
         Toast toast = new Toast(activity.getApplicationContext());
-        View errorToastView=activity.getLayoutInflater().inflate(R.layout.internet_error_toast_layout,(ViewGroup)activity.findViewById(R.id.toastlayout));
+        View errorToastView = activity.getLayoutInflater().inflate(R.layout.internet_error_toast_layout, (ViewGroup) activity.findViewById(R.id.toastlayout));
         toast.setDuration(Toast.LENGTH_SHORT);
         toast.setView(errorToastView);
-        toast.setGravity(Gravity.CENTER_HORIZONTAL,0,200);
+        toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, 200);
         toast.show();
-        Log.d("retro","Showing Toast");
+        Log.d("retro", "Showing Toast");
     }
 }

@@ -263,15 +263,7 @@
     <!-- From: file:/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/values/styles.xml -->
     <eat-comment />
 
-    <style name="DajSpisacTheme" parent="android:Theme.Light.NoTitleBar">
-        <!--
-        <item name="android:panelFullBackground">@color/actionBarColor</item>
-        <item name="android:panelBackground">@color/actionBarColor</item>
-        <item name="android:panelColorBackground">@color/actionBarColor</item>
-        <item name="android:itemBackground">@color/actionBarColor</item>
-        <item name="android:itemTextAppearance">@style/TextAppearance</item>
-        -->
-    </style>
+    <style name="DajSpisacTheme" parent="android:Theme.Light.NoTitleBar" />
 
     <style name="DajSpisacTheme.ActionBarDajSpisac.Overflow" parent="android:style/Widget.Holo.ActionButton.Overflow">
         <item name="android:src">@drawable/ic_launcher</item>

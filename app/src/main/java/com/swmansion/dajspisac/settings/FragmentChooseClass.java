@@ -17,8 +17,6 @@ import com.swmansion.dajspisac.R;
 public class FragmentChooseClass extends Fragment {
     private final int schoolCount = 2;
     private final int classCount = 3;
-    private final int defaultClassIndex = 1;
-    private final int defaultSchoolIndex = 1;
     private int previousClickedClassIndex = 0, previousSchoolClickedIndex = 0;
     boolean isInitial = false;
     private Button[] schoolButtons = new Button[schoolCount];
@@ -29,9 +27,6 @@ public class FragmentChooseClass extends Fragment {
     private String currentSchoolQuery;
     private int[] buttonDrawables = {R.drawable.button_background_chooseclassdialog_left, R.drawable.button_background_chooseclassdialog_right, R.drawable.button_background_chooseclass_dialog_middle};
     private int[] buttonDrawablesClicked = {R.drawable.button_background_chooseclassdialog_left_clicked, R.drawable.button_background_chooseclassdialog_right_clicked, R.drawable.button_background_chooseclassdialog_middle_clicked};
-
-    private View.OnClickListener schoolButtonsListener;
-    private View.OnClickListener classButtonsListener;
 
     ClassChangeListener mClassChangeListener;
 
@@ -67,7 +62,7 @@ public class FragmentChooseClass extends Fragment {
         return rootView;
     }
 
-    private void onSchoolButtonClicked(View view){
+    private void onSchoolButtonClicked(View view) {
         int nowClickedIndex = (Integer) view.getTag();
         if (nowClickedIndex == previousSchoolClickedIndex && isInitial) {
             return;
@@ -92,7 +87,7 @@ public class FragmentChooseClass extends Fragment {
         }
     }
 
-    private void onClassButtonClicked(View view){
+    private void onClassButtonClicked(View view) {
         int nowClickedIndex = (Integer) view.getTag();
         if (nowClickedIndex == previousClickedClassIndex) {
             return;
@@ -115,6 +110,11 @@ public class FragmentChooseClass extends Fragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+
+        final int defaultClassIndex = 1;
+        final int defaultSchoolIndex = 1;
+        View.OnClickListener schoolButtonsListener;
+        View.OnClickListener classButtonsListener;
 
         schoolButtonsListener = new View.OnClickListener() {
             @Override

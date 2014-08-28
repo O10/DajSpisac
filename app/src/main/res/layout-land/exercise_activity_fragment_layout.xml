@@ -43,16 +43,6 @@
             android:paddingRight="15dp"
             android:visibility="gone" />
 
-        <!--   <WebView  xmlns:android="http://schemas.android.com/apk/res/android"
-               android:id="@+id/webViewTresc"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:paddingLeft="15dp"
-               android:paddingRight="15dp"
-               android:paddingTop="10dp"
-               android:paddingBottom="10dp"
-               android:visibility="gone"/>-->
-
         <TextView
             android:id="@+id/textViewTresc"
             android:layout_width="match_parent"
@@ -111,7 +101,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/progressBar"
-            android:minHeight="100dp"/>
+            android:minHeight="100dp" />
 
         <WebView xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/webViewSolution"
@@ -122,19 +112,6 @@
             android:paddingRight="15dp"
             android:paddingTop="10dp"
             android:visibility="gone" />
-        <!--TextView
-            android:id="@+id/textViewSolution"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="hello"
-            android:visibility="gone"
-            android:textColor="#19172c"
-            android:background="#dbdbdb"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"/>-->
-
 
         <View
             android:layout_width="match_parent"

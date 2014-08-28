@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.swmansion.dajspisac" >
+    package="com.swmansion.dajspisac">
 
-    <uses-sdk android:minSdkVersion="9"
-        android:targetSdkVersion="19"
-        android:maxSdkVersion="19" />
+    <uses-sdk
+        android:maxSdkVersion="19"
+        android:minSdkVersion="9"
+        android:targetSdkVersion="19" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -12,19 +13,16 @@
 
 
     <application
+        android:name="com.swmansion.dajspisac.application.DajSpisacApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/DajSpisacTheme"
-        android:name="com.swmansion.dajspisac.application.DajSpisacApplication">
+        android:theme="@style/DajSpisacTheme">
 
 
-        <activity
-            android:name="com.swmansion.dajspisac.book.SingleBookActivity">
-        </activity>
+        <activity android:name="com.swmansion.dajspisac.book.SingleBookActivity"></activity>
 
-        <activity
-            android:name="com.swmansion.dajspisac.exercise.SingleExerciseActivity">
+        <activity android:name="com.swmansion.dajspisac.exercise.SingleExerciseActivity">
 
         </activity>
 
@@ -36,8 +34,7 @@
             </intent-filter>
 
         </activity>
-        <activity
-        android:name="com.swmansion.dajspisac.book.BooksChooserActivity">
+        <activity android:name="com.swmansion.dajspisac.book.BooksChooserActivity">
 
         </activity>
 

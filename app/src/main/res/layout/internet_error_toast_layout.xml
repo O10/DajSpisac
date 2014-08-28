@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="wrap_content"
-    android:layout_height="wrap_content" android:background="@drawable/toast_internet_error_drawable"
-    android:id="@+id/toastlayout">
+    android:id="@+id/toastlayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/toast_internet_error_drawable"
+    android:orientation="vertical">
 
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/interner_error"
-        android:id="@+id/textView"
         android:layout_gravity="center"
-        android:textColor="@color/white"
+        android:layout_marginBottom="20dp"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:textSize="20sp"
-        android:gravity="center" />
+        android:gravity="center"
+        android:text="@string/interner_error"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
 </LinearLayout>

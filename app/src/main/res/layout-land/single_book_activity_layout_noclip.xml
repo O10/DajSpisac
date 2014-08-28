@@ -1,5 +1,4 @@
-<TabHost
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/tabhost"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,8 +8,14 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <include layout="@layout/actionbar_layout_singlebook" android:layout_width="match_parent" android:layout_height="wrap_content"
-            android:id="@+id/actionBar" android:layout_alignParentTop="true" />
+
+        <include
+            layout="@layout/actionbar_layout_singlebook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/actionBar"
+            android:layout_alignParentTop="true" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -24,7 +29,7 @@
             android:background="@color/darkBlueDajSpisac"
             android:textColor="@color/lightBlueDajSpisac"
             android:gravity="center_horizontal"
-            android:layout_below="@id/actionBar"/>
+            android:layout_below="@id/actionBar" />
 
         <TextView
             android:layout_width="match_parent"
@@ -40,21 +45,23 @@
             android:paddingBottom="7dp"
             android:textStyle="bold"
             android:textColor="@color/lightBlueDajSpisac"
-            android:layout_below="@+id/horizontalscrollview"/>
+            android:layout_below="@+id/horizontalscrollview" />
+
         <HorizontalScrollView
             android:scrollbars="none"
-            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
             android:layout_below="@id/pageNumTv"
             android:id="@+id/horizontalscrollview"
             android:fadingEdgeLength="0dp">
+
             <TabWidget
                 android:id="@android:id/tabs"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/darkBlueDajSpisac"
-                android:showDividers="none"
-                />
+                android:showDividers="none" />
         </HorizontalScrollView>
 
         <FrameLayout
@@ -68,8 +75,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:layout_below="@id/textView"/>
-
+            android:layout_below="@id/textView" />
 
 
     </RelativeLayout>

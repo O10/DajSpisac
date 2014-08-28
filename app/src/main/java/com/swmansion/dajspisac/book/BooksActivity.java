@@ -49,7 +49,7 @@ public class BooksActivity extends FragmentActivity implements TabHost.OnTabChan
         View previousView;
         TextView previousTextView;
         ImageView previousImageView;
-        if(previousTabIndex!=-1){
+        if (previousTabIndex != -1) {
             previousView = mTabWidget.getChildTabViewAt(previousTabIndex);
             previousTextView = (TextView) previousView.findViewById(R.id.textViewTab);
             previousImageView = (ImageView) previousView.findViewById(R.id.imageViewSubjectIcon);
@@ -57,7 +57,7 @@ public class BooksActivity extends FragmentActivity implements TabHost.OnTabChan
 
             previousImageView.setImageResource(RDrawableCoverBlada[previousTabIndex]);
             previousTextView.setTextColor(getResources().getColor(R.color.lightBlueDajSpisac));
-            DajSpisacUtilities.startTabUnChoosedAnimation(previousView, mViewPager);
+            DajSpisacUtilities.startTabUnChoosedAnimation(previousView);
         }
         int pos = mTabHost.getCurrentTab();
         previousTabIndex = pos;
@@ -70,7 +70,7 @@ public class BooksActivity extends FragmentActivity implements TabHost.OnTabChan
         previousTextView.setTextColor(getResources().getColor(R.color.orangeDajSpisac));
 
         mViewPager.setCurrentItem(pos);
-        DajSpisacUtilities.startTabChoosedAnimation(previousView,mViewPager);
+        DajSpisacUtilities.startTabChoosedAnimation(previousView);
     }
 
 }

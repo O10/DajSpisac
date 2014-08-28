@@ -37,22 +37,21 @@ public class MyBooksActivity extends BooksActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if(Build.VERSION.SDK_INT<12){
+        if (Build.VERSION.SDK_INT < 12) {
             setContentView(R.layout.mybooksactivitylayout_noclip);
-        }
-        else{
+        } else {
             setContentView(R.layout.mybooksactivitylayout);
         }
 
 
-        spiceManager= new SpiceManager(com.octo.android.robospice.Jackson2SpringAndroidSpiceService.class);
+        spiceManager = new SpiceManager(com.octo.android.robospice.Jackson2SpringAndroidSpiceService.class);
 
-        TextView pageTitle= (TextView)findViewById(R.id.textViewTitle);
-        ImageView imageViewTemp=(ImageView)findViewById(R.id.imageViewLeft);
+        TextView pageTitle = (TextView) findViewById(R.id.textViewTitle);
+        ImageView imageViewTemp = (ImageView) findViewById(R.id.imageViewLeft);
         imageViewTemp.setVisibility(View.GONE);
 
-        imageViewTemp=(ImageView)findViewById(R.id.imageViewRight);
-        imageViewTemp.setPadding(6,5,0,5);
+        imageViewTemp = (ImageView) findViewById(R.id.imageViewRight);
+        imageViewTemp.setPadding(6, 5, 0, 5);
 
 
         pageTitle.setText("Twoje książki");
