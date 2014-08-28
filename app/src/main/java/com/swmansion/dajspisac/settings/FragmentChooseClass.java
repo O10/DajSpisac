@@ -8,7 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.example.olek.firsttest.R;
+import com.swmansion.dajspisac.R;
+
 
 /**
  * Created by olek on 13.08.14.
@@ -66,6 +67,51 @@ public class FragmentChooseClass extends Fragment {
         return rootView;
     }
 
+    private void onSchoolButtonClicked(View view){
+        int nowClickedIndex = (Integer) view.getTag();
+        if (nowClickedIndex == previousSchoolClickedIndex && isInitial) {
+            return;
+        }
+        isInitial = true;
+        if (nowClickedIndex == 0) {
+            changeTextsOnClassButtons(4);
+        } else {
+            changeTextsOnClassButtons(1);
+        }
+        changeState(schoolButtons, previousSchoolClickedIndex, nowClickedIndex);
+        previousSchoolClickedIndex = nowClickedIndex;
+        String classString;
+        if (nowClickedIndex == 0) {
+            classString = primaryClassStrings[previousClickedClassIndex];
+        } else {
+            classString = secondaryClassStrings[previousClickedClassIndex];
+        }
+        currentSchoolQuery = String.format("%s %s", classString, schoolStrings[nowClickedIndex]);
+        if (mClassChangeListener != null) {
+            mClassChangeListener.onClassChanged(currentSchoolQuery);
+        }
+    }
+
+    private void onClassButtonClicked(View view){
+        int nowClickedIndex = (Integer) view.getTag();
+        if (nowClickedIndex == previousClickedClassIndex) {
+            return;
+        }
+        changeState(classButtons, previousClickedClassIndex, nowClickedIndex);
+        previousClickedClassIndex = nowClickedIndex;
+
+        String classString;
+        if (previousSchoolClickedIndex == 0) {
+            classString = primaryClassStrings[nowClickedIndex];
+        } else {
+            classString = secondaryClassStrings[nowClickedIndex];
+        }
+        currentSchoolQuery = String.format("%s %s", classString, schoolStrings[previousSchoolClickedIndex]);
+        if (mClassChangeListener != null) {
+            mClassChangeListener.onClassChanged(currentSchoolQuery);
+        }
+    }
+
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
@@ -73,51 +119,14 @@ public class FragmentChooseClass extends Fragment {
         schoolButtonsListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int nowClickedIndex = (Integer) view.getTag();
-                if (nowClickedIndex == previousSchoolClickedIndex && isInitial) {
-                    return;
-                }
-                isInitial = true;
-                if (nowClickedIndex == 0) {
-                    changeTextsOnClassButtons(4);
-                } else {
-                    changeTextsOnClassButtons(1);
-                }
-                changeState(schoolButtons, previousSchoolClickedIndex, nowClickedIndex);
-                previousSchoolClickedIndex = nowClickedIndex;
-                String classString;
-                if (nowClickedIndex == 0) {
-                    classString = primaryClassStrings[previousClickedClassIndex];
-                } else {
-                    classString = secondaryClassStrings[previousClickedClassIndex];
-                }
-                currentSchoolQuery = String.format("%s %s", classString, schoolStrings[nowClickedIndex]);
-                if (mClassChangeListener != null) {
-                    mClassChangeListener.onClassChanged(currentSchoolQuery);
-                }
+                onSchoolButtonClicked(view);
             }
         };
 
         classButtonsListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int nowClickedIndex = (Integer) view.getTag();
-                if (nowClickedIndex == previousClickedClassIndex) {
-                    return;
-                }
-                changeState(classButtons, previousClickedClassIndex, nowClickedIndex);
-                previousClickedClassIndex = nowClickedIndex;
-
-                String classString;
-                if (previousSchoolClickedIndex == 0) {
-                    classString = primaryClassStrings[nowClickedIndex];
-                } else {
-                    classString = secondaryClassStrings[nowClickedIndex];
-                }
-                currentSchoolQuery = String.format("%s %s", classString, schoolStrings[previousSchoolClickedIndex]);
-                if (mClassChangeListener != null) {
-                    mClassChangeListener.onClassChanged(currentSchoolQuery);
-                }
+                onClassButtonClicked(view);
             }
         };
 
@@ -128,11 +137,11 @@ public class FragmentChooseClass extends Fragment {
             b.setOnClickListener(classButtonsListener);
         }
         if (savedInstanceState == null) {
-            schoolButtons[defaultSchoolIndex].callOnClick();
-            classButtons[defaultClassIndex].callOnClick();
+            onSchoolButtonClicked(schoolButtons[defaultSchoolIndex]);
+            onClassButtonClicked(classButtons[defaultClassIndex]);
         } else {
-            schoolButtons[savedInstanceState.getInt("SCHOOLINDEX", defaultSchoolIndex)].callOnClick();
-            classButtons[savedInstanceState.getInt("CLASSINDEX", defaultClassIndex)].callOnClick();
+            onSchoolButtonClicked(schoolButtons[savedInstanceState.getInt("SCHOOLINDEX", defaultSchoolIndex)]);
+            onClassButtonClicked(classButtons[savedInstanceState.getInt("CLASSINDEX", defaultClassIndex)]);
         }
     }
 

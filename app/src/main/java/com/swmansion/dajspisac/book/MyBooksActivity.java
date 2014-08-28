@@ -1,30 +1,25 @@
 package com.swmansion.dajspisac.book;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
-import android.widget.TabHost;
-import android.widget.TabWidget;
 import android.widget.TextView;
 
-import com.example.olek.firsttest.R;
 import com.octo.android.robospice.SpiceManager;
 import com.octo.android.robospice.persistence.DurationInMillis;
 import com.octo.android.robospice.persistence.exception.SpiceException;
 import com.octo.android.robospice.request.listener.RequestListener;
+import com.swmansion.dajspisac.R;
 import com.swmansion.dajspisac.tools.DajSpisacUtilities;
 
 import java.util.ArrayList;
@@ -33,33 +28,35 @@ import java.util.HashMap;
 /**
  * Created by olek on 13.08.14.
  */
-public class MyBooksActivity extends FragmentActivity implements TabHost.OnTabChangeListener {
-    SpiceManager spiceManager;
-    ViewPager mViewPager;
-    RelativeLayout addBookLayout;
-    private TabHost mTabHost;
+public class MyBooksActivity extends BooksActivity {
+    private RelativeLayout addBookLayout;
     private final static int expectedFooterHeight = 100;
-    private int previousTabIndex = -1;
-    Animation tabClickedAnimation;
-    Animation tabClickedAnimationBack;
-    MyBooksCollectionPagerAdapter mMyBooksCollectionPagerAdapter;
-    View firstSeperator;
+    private MyBooksCollectionPagerAdapter mMyBooksCollectionPagerAdapter;
+    private SpiceManager spiceManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.mybooksactivitylayout);
+        if(Build.VERSION.SDK_INT<12){
+            setContentView(R.layout.mybooksactivitylayout_noclip);
+        }
+        else{
+            setContentView(R.layout.mybooksactivitylayout);
+        }
 
-        firstSeperator=findViewById(R.id.separator);
+
+        spiceManager= new SpiceManager(com.octo.android.robospice.Jackson2SpringAndroidSpiceService.class);
+
+        TextView pageTitle= (TextView)findViewById(R.id.textViewTitle);
+        ImageView imageViewTemp=(ImageView)findViewById(R.id.imageViewLeft);
+        imageViewTemp.setVisibility(View.GONE);
+
+        imageViewTemp=(ImageView)findViewById(R.id.imageViewRight);
+        imageViewTemp.setPadding(6,5,0,5);
 
 
-        tabClickedAnimation = AnimationUtils.loadAnimation(this, R.anim.tab_clicked_animation);
-        tabClickedAnimationBack=AnimationUtils.loadAnimation(this,R.anim.tab_clicked_animation_back);
+        pageTitle.setText("Twoje książki");
 
-
-        spiceManager = new SpiceManager(com.octo.android.robospice.Jackson2SpringAndroidSpiceService.class);
-
-        setTitle("Twoje książki");
 
         addBookLayout = (RelativeLayout) findViewById(R.id.addBookLayout);
 
@@ -81,7 +78,6 @@ public class MyBooksActivity extends FragmentActivity implements TabHost.OnTabCh
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
-
             }
 
             @Override
@@ -94,68 +90,6 @@ public class MyBooksActivity extends FragmentActivity implements TabHost.OnTabCh
 
             }
         });
-    }
-
-
-    private void initialiseTabHost() {
-        mTabHost = (TabHost) findViewById(R.id.tabhost);
-        mTabHost.setup();
-        mTabHost.setOnTabChangedListener(this);
-
-        TabHost.TabContentFactory defaultTabCont = new TabHost.TabContentFactory() {
-            @Override
-            public View createTabContent(String s) {
-                View v = new View(MyBooksActivity.this);
-                v.setMinimumWidth(0);
-                v.setMinimumHeight(0);
-                return v;
-            }
-        };
-
-        mTabHost.addTab(mTabHost.newTabSpec("chemia").setIndicator(getLayoutInflater().inflate(R.layout.tab_chemistry_layout, null)).setContent(defaultTabCont));
-        mTabHost.addTab(mTabHost.newTabSpec("matematyka").setIndicator(getLayoutInflater().inflate(R.layout.tab_mathematics_layout, null)).setContent(defaultTabCont));
-        mTabHost.addTab(mTabHost.newTabSpec("fizyka").setIndicator(getLayoutInflater().inflate(R.layout.tab_physics_layout, null)).setContent(defaultTabCont));
-
-    }
-
-
-    @Override
-    public void onTabChanged(String s) {
-
-        Log.d("retro","On tab changedinvoked");
-        int[] RDrawableCoverBlada = {R.drawable.twojeksiazki_chemia_blady, R.drawable.twojeksiazki_matematyka_blada, R.drawable.twojeksiazki_fizyka_blada};
-        int[] RDrawableCoverLosos = {R.drawable.twojeksiazki_chemia_losos, R.drawable.twojeksiazki_matematyka_lososiowa, R.drawable.twojeksiazki_fizyka_lososiowa};
-
-        TabWidget mTabWidget = mTabHost.getTabWidget();
-        View previousView;
-        TextView previousTextView;
-        ImageView previousImageView;
-        if(previousTabIndex!=-1){
-            previousView = mTabWidget.getChildTabViewAt(previousTabIndex);
-
-            previousTextView = (TextView) previousView.findViewById(R.id.textViewTab);
-            previousImageView = (ImageView) previousView.findViewById(R.id.imageViewSubjectIcon);
-
-
-            previousImageView.setImageResource(RDrawableCoverBlada[previousTabIndex]);
-            previousTextView.setTextColor(getResources().getColor(R.color.lightBlueDajSpisac));
-            DajSpisacUtilities.startTabUnChoosedAnimation(previousView,mViewPager);
-        }
-        int pos = mTabHost.getCurrentTab();
-        previousTabIndex = pos;
-
-        previousView = mTabWidget.getChildTabViewAt(previousTabIndex);
-
-
-        previousTextView = (TextView) previousView.findViewById(R.id.textViewTab);
-        previousImageView = (ImageView) previousView.findViewById(R.id.imageViewSubjectIcon);
-        previousImageView.setImageResource(RDrawableCoverLosos[previousTabIndex]);
-        previousTextView.setTextColor(getResources().getColor(R.color.orangeDajSpisac));
-
-        mViewPager.setCurrentItem(pos);
-
-        DajSpisacUtilities.startTabChoosedAnimation(previousView,mViewPager);
-
     }
 
 
@@ -175,10 +109,10 @@ public class MyBooksActivity extends FragmentActivity implements TabHost.OnTabCh
 
     private class MyBooksCollectionPagerAdapter extends FragmentStatePagerAdapter {
         private ArrayList<String> myBooksIds;
-        boolean isAnyToastShowing=false;
-        HashMap<Integer, MyBooksFragment> mPageReferenceMap;
-        HashMap<String, Integer> subjectIndexMap;
-        boolean areAnyBooks[]=new boolean[3];
+        private boolean isAnyToastShowing = false;
+        private HashMap<Integer, MyBooksFragment> mPageReferenceMap;
+        private HashMap<String, Integer> subjectIndexMap;
+        private boolean areAnyBooks[] = new boolean[3];
 
         public MyBooksCollectionPagerAdapter(FragmentManager fm) {
             super(fm);
@@ -197,14 +131,12 @@ public class MyBooksActivity extends FragmentActivity implements TabHost.OnTabCh
                 String lastRequestCacheKey = request.createCacheKey();
                 spiceManager.execute(request, lastRequestCacheKey, DurationInMillis.ONE_WEEK, new BookListener());
             }
-            Log.d("retro", "Requests made");
         }
 
         @Override
         public Fragment getItem(int i) {
             MyBooksFragment myFragment = MyBooksFragment.newInstance(expectedFooterHeight);
             mPageReferenceMap.put(i, myFragment);
-            Log.d("retro", "Calling getITem " + Integer.toString(expectedFooterHeight));
             return myFragment;
         }
 
@@ -234,20 +166,20 @@ public class MyBooksActivity extends FragmentActivity implements TabHost.OnTabCh
         private class BookListener implements RequestListener<Book> {
             @Override
             public void onRequestFailure(SpiceException e) {
-                if(!isAnyToastShowing){
+                if (!isAnyToastShowing) {
                     DajSpisacUtilities.showInternetErrorToast(MyBooksActivity.this);
-                    isAnyToastShowing=true;
+                    isAnyToastShowing = true;
                 }
             }
 
             @Override
             public void onRequestSuccess(Book book) {
-                int index=subjectIndexMap.get(book.getSubject());
+                int index = subjectIndexMap.get(book.getSubject());
                 mPageReferenceMap.get(index).addBook(book);
 
-                areAnyBooks[index]=true;
-                for(int i=0;i<3;i++){
-                    if(!areAnyBooks[i]){
+                areAnyBooks[index] = true;
+                for (int i = 0; i < 3; i++) {
+                    if (!areAnyBooks[i]) {
                         mPageReferenceMap.get(i).setTextNoBooksVisible();
                     }
                 }
@@ -257,8 +189,8 @@ public class MyBooksActivity extends FragmentActivity implements TabHost.OnTabCh
 
     public static class MyBooksFragment extends Fragment {
         private ListView mListView;
-        MyBooksAdapter myBooksAdapter;
-        TextView textViewNoBooks;
+        private MyBooksAdapter myBooksAdapter;
+        private TextView textViewNoBooks;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -268,7 +200,7 @@ public class MyBooksActivity extends FragmentActivity implements TabHost.OnTabCh
 
         }
 
-        void setTextNoBooksVisible(){
+        void setTextNoBooksVisible() {
             textViewNoBooks.setVisibility(View.VISIBLE);
         }
 
@@ -291,7 +223,7 @@ public class MyBooksActivity extends FragmentActivity implements TabHost.OnTabCh
             View rootView = inflater.inflate(
                     R.layout.books_activity_fragment_layout, container, false);
             mListView = (ListView) rootView.findViewById(R.id.listViewBooks);
-            textViewNoBooks=(TextView)rootView.findViewById(R.id.textViewNoBooks);
+            textViewNoBooks = (TextView) rootView.findViewById(R.id.textViewNoBooks);
             Bundle arguments = getArguments();
             if (arguments != null) {
                 View footerView = new View(getActivity());

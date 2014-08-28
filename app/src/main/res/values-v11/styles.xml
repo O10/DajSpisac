@@ -1,0 +1,13 @@
+<resources>
+
+    <style name="DajSpisacTheme" parent="android:Theme.Holo.NoActionBar">
+        <!--<item name="android:panelFullBackground">@color/actionBarColor</item>
+        <item name="android:panelBackground">@color/actionBarColor</item>
+        <item name="android:panelColorBackground">@color/actionBarColor</item>
+        <item name="android:itemBackground">@color/actionBarColor</item>
+        <item name="android:itemTextAppearance">@style/TextAppearance</item>-->
+    </style>
+
+
+
+</resources>

@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- From: file:/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/values/styles.xml -->
-    <eat-comment />
-
-    <attr name="exerciseAttrButton" format="reference" />
     <!-- From: file:/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/values/strings.xml -->
     <eat-comment />
 
@@ -15,7 +11,7 @@
     <color name="buttonOrangeBorderDajSpisac">#d25819</color>
     <color name="buttonOrangeMainDajSpisac">#e46828</color>
     <color name="buttonTextColorClicked">#f3b18f</color>
-    <!-- From: file:/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values/common_colors.xml -->
+    <!-- From: file:/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values/common_colors.xml -->
     <eat-comment />
 
     <color name="common_action_bar_splitter">#d2d2d2</color>
@@ -38,7 +34,7 @@
     <color name="lightGrey">#d3d3d3</color>
     <color name="orangeDajSpisac">#f2b08d</color>
     <color name="toastredbackground">#c45156</color>
-    <!-- From: file:/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values/wallet_colors.xml -->
+    <!-- From: file:/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values/wallet_colors.xml -->
     <eat-comment />
 
     <color name="wallet_bright_foreground_disabled_holo_light">#ffb2b2b2</color>
@@ -58,7 +54,7 @@
     <eat-comment />
 
     <color name="white">#FFFFFF</color>
-    <!-- From: file:/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values/admob_ads_attrs.xml -->
+    <!-- From: file:/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values/admob_ads_attrs.xml -->
     <eat-comment />
 
     <declare-styleable name="AdsAttrs">
@@ -80,7 +76,7 @@
         <!-- The ad unit ID. -->
         <attr name="adUnitId" format="string" />
     </declare-styleable>
-    <!-- From: file:/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values/maps_attrs.xml -->
+    <!-- From: file:/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values/maps_attrs.xml -->
     <eat-comment />
 
     <declare-styleable name="MapAttrs">
@@ -105,7 +101,7 @@
         <attr name="useViewLifecycle" format="boolean" />
         <attr name="zOrderOnTop" format="boolean" />
     </declare-styleable>
-    <!-- From: file:/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values/wallet_attrs.xml -->
+    <!-- From: file:/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values/wallet_attrs.xml -->
     <eat-comment />
 
     <declare-styleable name="WalletFragmentOptions">
@@ -184,10 +180,12 @@
 
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <!-- From: file:/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values/version.xml -->
+    <dimen name="tabcontent_top_margin">128dp</dimen>
+    <dimen name="tabcontent_top_margin_land">110dp</dimen>
+    <!-- From: file:/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values/version.xml -->
     <eat-comment />
 
-    <integer name="google_play_services_version">5077000</integer>
+    <integer name="google_play_services_version">5208000</integer>
     <!-- From: file:/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/values/strings.xml -->
     <eat-comment />
 
@@ -198,7 +196,7 @@
     <string name="anuluj">Anuluj</string>
     <string name="app_name">DajSpisać</string>
     <string name="chemia">CHEMIA</string>
-    <!-- From: file:/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values/common_strings.xml -->
+    <!-- From: file:/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values/common_strings.xml -->
     <eat-comment />
 
     <string name="common_google_play_services_enable_button" msgid="2523291102206661146">Enable Google Play services</string>
@@ -242,8 +240,15 @@
     <string name="numeryzadan">NUMERY ZADAŃ</string>
     <string name="numerzadania">NUMER ZADANIA</string>
     <string name="podstawowka">PODSTAWÓWKA</string>
+    <!-- From: file:/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values/common_strings.xml -->
+    <eat-comment />
+
+    <string name="pre_release_do_not_ship" translatable="false">true</string>
+    <!-- From: file:/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/values/strings.xml -->
+    <eat-comment />
+
     <string name="rozwiazanie">ROZWIĄZANIE</string>
-    <!-- From: file:/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values/wallet_strings.xml -->
+    <!-- From: file:/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values/wallet_strings.xml -->
     <eat-comment />
 
     <string name="wallet_buy_button_place_holder" translation_description="Text on a button that allows a user to make a payment with Google Wallet [CHAR LIMIT=30]">Buy with Google</string>
@@ -258,39 +263,18 @@
     <!-- From: file:/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/values/styles.xml -->
     <eat-comment />
 
-    <style name="ActionBarTabStyle" parent="@android:style/Widget.Holo.ActionBar.TabView">
-        <item name="android:minHeight">80dip</item>
-    </style>
-
-    <style name="AppTheme" parent="android:Theme.Holo">
-        <!-- Customize your theme here. -->
-    </style>
-
-    <style name="DajSpisacTheme" parent="android:Theme.Holo.Light">
-        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle</item>
-        <item name="android:actionBarSize">55dip</item>
-        <item name="android:actionBarStyle">@style/DajSpisacTheme.ActionBarDajSpisac</item>
+    <style name="DajSpisacTheme" parent="android:Theme.Light.NoTitleBar">
+        <!--
         <item name="android:panelFullBackground">@color/actionBarColor</item>
         <item name="android:panelBackground">@color/actionBarColor</item>
         <item name="android:panelColorBackground">@color/actionBarColor</item>
         <item name="android:itemBackground">@color/actionBarColor</item>
-        <item name="android:actionMenuTextColor">@color/orangeDajSpisac</item>
         <item name="android:itemTextAppearance">@style/TextAppearance</item>
-    </style>
-
-    <style name="DajSpisacTheme.ActionBarDajSpisac" parent="@android:style/Widget.Holo.Light.ActionBar">
-        <item name="android:titleTextStyle">@style/DajSpisacTheme.ActionBarDajSpisac.TitleTextStyle</item>
-        <item name="android:background">@color/actionBarColor</item>
-        <item name="android:actionOverflowButtonStyle">@style/DajSpisacTheme.ActionBarDajSpisac.Overflow</item>
+        -->
     </style>
 
     <style name="DajSpisacTheme.ActionBarDajSpisac.Overflow" parent="android:style/Widget.Holo.ActionButton.Overflow">
         <item name="android:src">@drawable/ic_launcher</item>
-    </style>
-
-    <style name="DajSpisacTheme.ActionBarDajSpisac.TitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
-        <item name="android:textColor">@color/orangeDajSpisac</item>
-        <item name="android:left">20dp</item>
     </style>
 
     <style name="SingleExerciseButton">
@@ -304,10 +288,6 @@
         <item name="android:textSize">40dp</item>
     </style>
 
-    <style name="SingleExsButton">
-        <item name="@attr/exerciseAttrButton">@style/SingleExerciseButton</item>
-    </style>
-
     <style name="SingleItem">
         <item name="android:background">@color/white</item>
         <item name="android:textColor">@color/black</item>
@@ -316,7 +296,7 @@
     <style name="TextAppearance">
         <item name="android:textColor">@color/orangeDajSpisac</item>
     </style>
-    <!-- From: file:/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values/admob_iap_style.xml -->
+    <!-- From: file:/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values/admob_iap_style.xml -->
     <eat-comment />
 
     <style name="Theme.IAPTheme" parent="android:Theme">
@@ -327,7 +307,7 @@
         <item name="android:windowIsFloating">true</item>
         <item name="android:backgroundDimEnabled">false</item>
     </style>
-    <!-- From: file:/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values/wallet_styles.xml -->
+    <!-- From: file:/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values/wallet_styles.xml -->
     <eat-comment />
 
     <style name="WalletFragmentDefaultButtonTextAppearance">
@@ -368,13 +348,10 @@
     <!-- From: file:/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/values/styles.xml -->
     <eat-comment />
 
-    <style name="cust_dialog" parent="@android:style/Theme.Dialog">
-        <item name="android:windowTitleStyle">@style/dialog_title_style</item>
-    </style>
-
-    <style name="dialog_title_style" parent="android:Widget.TextView">
-        <item name="android:background">@color/darkBlueDajSpisac</item>
-        <item name="android:padding">10dp</item>
+    <style name="tab_subject_style">
+        <item name="android:background">@drawable/tab_background_default_chosen</item>
+        <item name="android:textColor">@color/lightBlueDajSpisac</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
 </resources>

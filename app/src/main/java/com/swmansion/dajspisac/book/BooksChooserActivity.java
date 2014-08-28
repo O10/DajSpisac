@@ -2,7 +2,6 @@ package com.swmansion.dajspisac.book;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -11,15 +10,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TabHost;
-import android.widget.TabWidget;
 import android.widget.TextView;
 
-import com.example.olek.firsttest.R;
 import com.octo.android.robospice.SpiceManager;
 import com.octo.android.robospice.persistence.DurationInMillis;
 import com.octo.android.robospice.persistence.exception.SpiceException;
 import com.octo.android.robospice.request.listener.RequestListener;
+import com.swmansion.dajspisac.R;
 import com.swmansion.dajspisac.settings.FragmentChooseClass;
 import com.swmansion.dajspisac.tools.DajSpisacUtilities;
 
@@ -29,11 +26,8 @@ import java.net.URLEncoder;
 /**
  * Created by olek on 04.08.14.
  */
-public class BooksChooserActivity extends FragmentActivity implements TabHost.OnTabChangeListener, FragmentChooseClass.ClassChangeListener {
+public class BooksChooserActivity extends BooksActivity implements FragmentChooseClass.ClassChangeListener {
     DemoCollectionPagerAdapter mDemoCollectionPagerAdapter;
-    ViewPager mViewPager;
-    private TabHost mTabHost;
-    private int previousTabIndex = -1;
     private String currentClass;
 
     @Override
@@ -41,9 +35,19 @@ public class BooksChooserActivity extends FragmentActivity implements TabHost.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.books_activity_layout);
 
-        setTitle("Wybierz książkę");
         mViewPager = (ViewPager) findViewById(R.id.viewpager);
 
+        TextView pageTitle= (TextView)findViewById(R.id.textViewTitle);
+        pageTitle.setText("Wybierz książkę");
+        ImageView imageViewTemp=(ImageView)findViewById(R.id.imageViewRight);
+        imageViewTemp.setVisibility(View.GONE);
+        imageViewTemp=(ImageView)findViewById(R.id.imageViewLeft);
+        imageViewTemp.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
         initialiseTabHost();
         mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -64,27 +68,6 @@ public class BooksChooserActivity extends FragmentActivity implements TabHost.On
         });
     }
 
-    private void initialiseTabHost() {
-        mTabHost = (TabHost) findViewById(R.id.tabhost);
-        mTabHost.setup();
-        mTabHost.setOnTabChangedListener(this);
-
-        TabHost.TabContentFactory defaultTabCont = new TabHost.TabContentFactory() {
-            @Override
-            public View createTabContent(String s) {
-                View v = new View(BooksChooserActivity.this);
-                v.setMinimumWidth(0);
-                v.setMinimumHeight(0);
-                return v;
-            }
-        };
-
-        mTabHost.addTab(mTabHost.newTabSpec("chemia").setIndicator(getLayoutInflater().inflate(R.layout.tab_chemistry_layout, null)).setContent(defaultTabCont));
-        mTabHost.addTab(mTabHost.newTabSpec("matematyka").setIndicator(getLayoutInflater().inflate(R.layout.tab_mathematics_layout, null)).setContent(defaultTabCont));
-        mTabHost.addTab(mTabHost.newTabSpec("fizyka").setIndicator(getLayoutInflater().inflate(R.layout.tab_physics_layout, null)).setContent(defaultTabCont));
-
-    }
-
     @Override
     protected void onStart() {
         super.onStart();
@@ -96,38 +79,6 @@ public class BooksChooserActivity extends FragmentActivity implements TabHost.On
         super.onStop();
     }
 
-    @Override
-    public void onTabChanged(String s) {
-        int[] RDrawableCoverBlada = {R.drawable.twojeksiazki_chemia_blady, R.drawable.twojeksiazki_matematyka_blada, R.drawable.twojeksiazki_fizyka_blada};
-        int[] RDrawableCoverLosos = {R.drawable.twojeksiazki_chemia_losos, R.drawable.twojeksiazki_matematyka_lososiowa, R.drawable.twojeksiazki_fizyka_lososiowa};
-
-        TabWidget mTabWidget = mTabHost.getTabWidget();
-        View previousView;
-        TextView previousTextView;
-        ImageView previousImageView;
-        if(previousTabIndex!=-1){
-            previousView = mTabWidget.getChildTabViewAt(previousTabIndex);
-            previousTextView = (TextView) previousView.findViewById(R.id.textViewTab);
-             previousImageView = (ImageView) previousView.findViewById(R.id.imageViewSubjectIcon);
-            previousImageView.setImageResource(RDrawableCoverBlada[previousTabIndex]);
-            previousTextView.setTextColor(getResources().getColor(R.color.lightBlueDajSpisac));
-            DajSpisacUtilities.startTabUnChoosedAnimation(previousView, mViewPager);
-        }
-
-        int pos = mTabHost.getCurrentTab();
-        previousTabIndex = pos;
-
-        previousView = mTabWidget.getChildTabViewAt(previousTabIndex);
-        previousTextView = (TextView) previousView.findViewById(R.id.textViewTab);
-        previousImageView = (ImageView) previousView.findViewById(R.id.imageViewSubjectIcon);
-        previousImageView.setImageResource(RDrawableCoverLosos[previousTabIndex]);
-        previousTextView.setTextColor(getResources().getColor(R.color.orangeDajSpisac));
-
-        mViewPager.setCurrentItem(pos);
-
-        DajSpisacUtilities.startTabChoosedAnimation(previousView,mViewPager);
-
-    }
 
     @Override
     public void onClassChanged(String newClass) {
@@ -196,7 +147,7 @@ public class BooksChooserActivity extends FragmentActivity implements TabHost.On
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setRetainInstance(true);
-            mBooksChooserAdapter = new BooksChooseAdapter(getActivity(), spiceManager);
+            mBooksChooserAdapter = new BooksChooseAdapter(getActivity());
 
         }
 

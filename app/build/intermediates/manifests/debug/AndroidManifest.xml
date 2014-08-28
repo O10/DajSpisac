@@ -6,7 +6,7 @@
 
     <uses-sdk
         android:maxSdkVersion="19"
-        android:minSdkVersion="11"
+        android:minSdkVersion="9"
         android:targetSdkVersion="19" />
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -22,10 +22,6 @@
         <activity android:name="com.swmansion.dajspisac.book.SingleBookActivity" >
         </activity>
         <activity android:name="com.swmansion.dajspisac.exercise.SingleExerciseActivity" >
-        </activity>
-        <activity
-            android:name="com.swmansion.dajspisac.settings.ChooseClassActivity"
-            android:label="Zmień klasę" >
         </activity>
         <activity android:name="com.swmansion.dajspisac.book.MyBooksActivity" >
             <intent-filter>

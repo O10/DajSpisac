@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.olek.firsttest" >
+    package="com.swmansion.dajspisac" >
 
-    <uses-sdk android:minSdkVersion="11"
+    <uses-sdk android:minSdkVersion="9"
         android:targetSdkVersion="19"
         android:maxSdkVersion="19" />
 
@@ -25,11 +25,6 @@
 
         <activity
             android:name="com.swmansion.dajspisac.exercise.SingleExerciseActivity">
-
-        </activity>
-
-        <activity android:name="com.swmansion.dajspisac.settings.ChooseClassActivity"
-            android:label="Zmień klasę">
 
         </activity>
 

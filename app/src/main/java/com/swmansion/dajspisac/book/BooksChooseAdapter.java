@@ -3,7 +3,6 @@ package com.swmansion.dajspisac.book;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -15,18 +14,15 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.olek.firsttest.R;
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.FailReason;
 import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
-import com.octo.android.robospice.SpiceManager;
+import com.swmansion.dajspisac.R;
 import com.swmansion.dajspisac.tools.BitmapLoadSave;
 import com.swmansion.dajspisac.tools.DajSpisacUtilities;
 import com.swmansion.dajspisac.tools.ImageHelper;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 /**
  * Created by olek on 04.08.14.
@@ -35,7 +31,6 @@ public class BooksChooseAdapter extends BaseAdapter {
     Context context;
     ArrayList<Book> mBooksArray;
     Bitmap[] bArray;
-    SpiceManager spiceManager;
     boolean positionsMarked[];
 
     String currentUserBooksIDS;
@@ -49,11 +44,10 @@ public class BooksChooseAdapter extends BaseAdapter {
         int id;
     }
 
-    public BooksChooseAdapter(Context context, SpiceManager spiceManager) {
+    public BooksChooseAdapter(Context context) {
         super();
         this.context = context;
         this.mBooksArray = new ArrayList<Book>();
-        this.spiceManager = spiceManager;
     }
 
 
@@ -66,6 +60,19 @@ public class BooksChooseAdapter extends BaseAdapter {
     @Override
     public Object getItem(int i) {
         return mBooksArray.get(i);
+    }
+
+    private void addDeleteButtonClicked(int position,ViewHolderItem viewHolder){
+        if (positionsMarked[position]) {
+            viewHolder.addDeleteButton.setBackgroundResource(R.drawable.twojeksiazki_plus_lightblue);
+            DajSpisacUtilities.removeBookById(context, viewHolder.id);
+            positionsMarked[position] = false;
+        } else {
+            bookIDS.add(Integer.toString(viewHolder.id));
+            DajSpisacUtilities.addBookById(context, viewHolder.id);
+            viewHolder.addDeleteButton.setBackgroundResource(R.drawable.twojeksiazki_plus_lososiowy);
+            positionsMarked[position] = true;
+        }
     }
 
     @Override
@@ -106,24 +113,14 @@ public class BooksChooseAdapter extends BaseAdapter {
             viewHolder.addDeleteButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-
-                    if (positionsMarked[position]) {
-                        viewHolder.addDeleteButton.setBackgroundResource(R.drawable.twojeksiazki_plus_lightblue);
-                        DajSpisacUtilities.removeBookById(context, viewHolder.id);
-                        positionsMarked[position] = false;
-                    } else {
-                        bookIDS.add(Integer.toString(viewHolder.id));
-                        DajSpisacUtilities.addBookById(context, viewHolder.id);
-                        viewHolder.addDeleteButton.setBackgroundResource(R.drawable.twojeksiazki_plus_lososiowy);
-                        positionsMarked[position] = true;
-                    }
+                    addDeleteButtonClicked(position,viewHolder);
                 }
             });
             viewHolder.bookLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     if (!positionsMarked[position]) {
-                        viewHolder.addDeleteButton.callOnClick();
+                        addDeleteButtonClicked(position,viewHolder);
                     }
                     Intent intent = new Intent(context, SingleBookActivity.class);
                     intent.putExtra("QUERY", "ksiazki/" + viewHolder.id);

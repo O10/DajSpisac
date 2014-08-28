@@ -3,10 +3,10 @@
     version="2"
     xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" >
 
-    <dataSet config="5.0.77" >
-        <source path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res" >
+    <dataSet config="5.2.08" >
+        <source path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res" >
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-es/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-es/auth_strings.xml"
                 qualifiers="es" >
                 <string
                     name="auth_client_requested_by_msg"
@@ -37,13 +37,13 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-es/wallet_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-es/wallet_strings.xml"
                 qualifiers="es" >
                 <string name="wallet_buy_button_place_holder" >Comprar con Google
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-es/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-es/common_strings.xml"
                 qualifiers="es" >
                 <string
                     name="common_google_play_services_install_button"
@@ -150,7 +150,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-sl/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-sl/auth_strings.xml"
                 qualifiers="sl" >
                 <string
                     name="auth_client_needs_installation_title"
@@ -181,7 +181,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-sl/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-sl/common_strings.xml"
                 qualifiers="sl" >
                 <string
                     name="common_google_play_services_unknown_issue"
@@ -288,7 +288,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-uk/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-uk/auth_strings.xml"
                 qualifiers="uk" >
                 <string
                     name="auth_client_needs_enabling_title"
@@ -319,7 +319,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-uk/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-uk/common_strings.xml"
                 qualifiers="uk" >
                 <string
                     name="common_google_play_services_enable_text"
@@ -342,12 +342,12 @@
                     msgid="3827284619958211114" >"Помилка мережі"
                 </string>
                 <string
-                    name="common_google_play_services_update_button"
-                    msgid="8932944190611227642" >"Оновити"
-                </string>
-                <string
                     name="common_google_play_services_enable_title"
                     msgid="529078775174559253" >"Увімкнути Google Play Послуги"
+                </string>
+                <string
+                    name="common_google_play_services_update_button"
+                    msgid="8932944190611227642" >"Оновити"
                 </string>
                 <string
                     name="common_google_play_services_invalid_account_text"
@@ -358,12 +358,12 @@
                     msgid="8120534356798772974" >"Щоб додаток працював, потрібно встановити сервіси Google Play."
                 </string>
                 <string
-                    name="common_google_play_services_update_title"
-                    msgid="6006316683626838685" >"Оновити Google Play Послуги"
-                </string>
-                <string
                     name="common_google_play_services_needs_enabling_title"
                     msgid="2583358409598976717" >"Щоб додаток працював, потрібно ввімкнути сервіси Google Play."
+                </string>
+                <string
+                    name="common_google_play_services_update_title"
+                    msgid="6006316683626838685" >"Оновити Google Play Послуги"
                 </string>
                 <string
                     name="common_google_play_services_notification_ticker"
@@ -390,15 +390,15 @@
                     msgid="9071884888741449141" >"Увійти"
                 </string>
                 <string
-                    name="common_google_play_services_unknown_issue"
-                    msgid="4762332809710093730" >"Google Play Послуги – невідома проблема."
-                </string>
-                <string
                     name="common_google_play_services_error_notification_requested_by_msg"
                     msgid="2443362625939284971" >"Запит від додатка 
 <ns1:g id="APP_NAME" >
 %1$s
                     </ns1:g>"
+                </string>
+                <string
+                    name="common_google_play_services_unknown_issue"
+                    msgid="4762332809710093730" >"Google Play Послуги – невідома проблема."
                 </string>
                 <string
                     name="common_google_play_services_unsupported_text"
@@ -426,7 +426,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-el/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-el/auth_strings.xml"
                 qualifiers="el" >
                 <string
                     name="auth_client_using_bad_version_title"
@@ -457,7 +457,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-el/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-el/common_strings.xml"
                 qualifiers="el" >
                 <string
                     name="common_google_play_services_update_title"
@@ -564,7 +564,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-zh-rCN/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-zh-rCN/auth_strings.xml"
                 qualifiers="zh-rCN" >
                 <string
                     name="auth_client_requested_by_msg"
@@ -595,7 +595,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-zh-rCN/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-zh-rCN/common_strings.xml"
                 qualifiers="zh-rCN" >
                 <string
                     name="common_google_play_services_enable_title"
@@ -702,7 +702,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-tr/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-tr/auth_strings.xml"
                 qualifiers="tr" >
                 <string
                     name="auth_client_needs_update_title"
@@ -733,7 +733,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-tr/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-tr/common_strings.xml"
                 qualifiers="tr" >
                 <string
                     name="common_signin_button_text"
@@ -841,26 +841,26 @@
             </file>
             <file
                 name="wallet_primary_text_holo_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/color/wallet_primary_text_holo_light.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/color/wallet_primary_text_holo_light.xml"
                 qualifiers=""
                 type="color" />
             <file
                 name="common_signin_btn_text_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/color/common_signin_btn_text_light.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/color/common_signin_btn_text_light.xml"
                 qualifiers=""
                 type="color" />
             <file
                 name="wallet_secondary_text_holo_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/color/wallet_secondary_text_holo_dark.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/color/wallet_secondary_text_holo_dark.xml"
                 qualifiers=""
                 type="color" />
             <file
                 name="common_signin_btn_text_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/color/common_signin_btn_text_dark.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/color/common_signin_btn_text_dark.xml"
                 qualifiers=""
                 type="color" />
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-tl/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-tl/auth_strings.xml"
                 qualifiers="tl" >
                 <string
                     name="auth_client_play_services_err_notification_msg"
@@ -891,7 +891,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-tl/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-tl/common_strings.xml"
                 qualifiers="tl" >
                 <string
                     name="common_google_play_services_unknown_issue"
@@ -985,10 +985,6 @@
                     msgid="3827284619958211114" >"May Error sa Network"
                 </string>
                 <string
-                    name="common_google_play_services_install_button"
-                    msgid="8515591849428043265" >"Kumuha ng Google Play services"
-                </string>
-                <string
                     name="common_google_play_services_notification_needs_update_title"
                     msgid="1388129345631079938" >"Kailangan ng application ng update sa Mga Serbisyo ng Google Play."
                 </string>
@@ -996,9 +992,13 @@
                     name="common_google_play_services_unsupported_title"
                     msgid="6334768798839376943" >"Mga serbisyo ng Google Play"
                 </string>
+                <string
+                    name="common_google_play_services_install_button"
+                    msgid="8515591849428043265" >"Kumuha ng Google Play services"
+                </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-vi/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-vi/auth_strings.xml"
                 qualifiers="vi" >
                 <string
                     name="auth_client_needs_update_title"
@@ -1029,7 +1029,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-vi/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-vi/common_strings.xml"
                 qualifiers="vi" >
                 <string
                     name="common_google_play_services_unsupported_title"
@@ -1136,7 +1136,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-ja/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-ja/auth_strings.xml"
                 qualifiers="ja" >
                 <string
                     name="auth_client_needs_enabling_title"
@@ -1167,7 +1167,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-ja/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-ja/common_strings.xml"
                 qualifiers="ja" >
                 <string
                     name="common_google_play_services_notification_needs_installation_title"
@@ -1274,7 +1274,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-fi/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-fi/auth_strings.xml"
                 qualifiers="fi" >
                 <string
                     name="auth_client_needs_update_title"
@@ -1305,7 +1305,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-fi/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-fi/common_strings.xml"
                 qualifiers="fi" >
                 <string
                     name="common_signin_button_text_long"
@@ -1412,7 +1412,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-sr/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-sr/auth_strings.xml"
                 qualifiers="sr" >
                 <string
                     name="auth_client_needs_installation_title"
@@ -1443,7 +1443,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-sr/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-sr/common_strings.xml"
                 qualifiers="sr" >
                 <string
                     name="common_google_play_services_install_text_phone"
@@ -1550,7 +1550,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-pt/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-pt/auth_strings.xml"
                 qualifiers="pt" >
                 <string
                     name="auth_client_needs_installation_title"
@@ -1581,7 +1581,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-pt/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-pt/common_strings.xml"
                 qualifiers="pt" >
                 <string
                     name="common_google_play_services_invalid_account_title"
@@ -1688,7 +1688,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-ko/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-ko/auth_strings.xml"
                 qualifiers="ko" >
                 <string
                     name="auth_client_play_services_err_notification_msg"
@@ -1719,7 +1719,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-ko/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-ko/common_strings.xml"
                 qualifiers="ko" >
                 <string
                     name="common_google_play_services_unsupported_date_text"
@@ -1826,7 +1826,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-mn-rMN/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-mn-rMN/auth_strings.xml"
                 qualifiers="mn-rMN" >
                 <string
                     name="auth_client_using_bad_version_title"
@@ -1857,7 +1857,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-mn-rMN/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-mn-rMN/common_strings.xml"
                 qualifiers="mn-rMN" >
                 <string
                     name="common_signin_button_text"
@@ -1964,7 +1964,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-ms-rMY/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-ms-rMY/auth_strings.xml"
                 qualifiers="ms-rMY" >
                 <string
                     name="auth_client_needs_update_title"
@@ -1995,7 +1995,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-ms-rMY/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-ms-rMY/common_strings.xml"
                 qualifiers="ms-rMY" >
                 <string
                     name="common_signin_button_text_long"
@@ -2102,7 +2102,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-iw/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-iw/auth_strings.xml"
                 qualifiers="iw" >
                 <string
                     name="auth_client_needs_update_title"
@@ -2133,7 +2133,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-iw/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-iw/common_strings.xml"
                 qualifiers="iw" >
                 <string
                     name="common_google_play_services_install_text_tablet"
@@ -2240,7 +2240,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-am/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-am/auth_strings.xml"
                 qualifiers="am" >
                 <string
                     name="auth_client_needs_update_title"
@@ -2271,7 +2271,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-am/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-am/common_strings.xml"
                 qualifiers="am" >
                 <string
                     name="common_google_play_services_update_title"
@@ -2378,7 +2378,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-zh-rTW/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-zh-rTW/auth_strings.xml"
                 qualifiers="zh-rTW" >
                 <string
                     name="auth_client_using_bad_version_title"
@@ -2409,7 +2409,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-zh-rTW/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-zh-rTW/common_strings.xml"
                 qualifiers="zh-rTW" >
                 <string
                     name="common_google_play_services_install_button"
@@ -2516,7 +2516,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-be/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-be/auth_strings.xml"
                 qualifiers="be" >
                 <string
                     name="auth_client_needs_update_title"
@@ -2547,7 +2547,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-be/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-be/common_strings.xml"
                 qualifiers="be" >
                 <string
                     name="common_google_play_services_update_title"
@@ -2578,12 +2578,12 @@
                     msgid="8685301130651051380" >"Гэта прыкладанне не будзе працаваць без службаў Google Play, якіх няма ў вашым тэлефоне."
                 </string>
                 <string
-                    name="common_google_play_services_unknown_issue"
-                    msgid="4762332809710093730" >"Невядомая праблема са службамі Google Play."
-                </string>
-                <string
                     name="common_google_play_services_unsupported_text"
                     msgid="3542578567569488671" >"Службы Google Play, да якiх прывязаны некаторыя прыкладаннi, не падтрымлiваюцца на вашай прыладзе. Па дапамогу звярнiцеся да вытворцы."
+                </string>
+                <string
+                    name="common_google_play_services_unknown_issue"
+                    msgid="4762332809710093730" >"Невядомая праблема са службамі Google Play."
                 </string>
                 <string
                     name="common_google_play_services_enable_text"
@@ -2611,7 +2611,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-af/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-af/auth_strings.xml"
                 qualifiers="af" >
                 <string
                     name="auth_client_needs_update_title"
@@ -2642,7 +2642,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-af/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-af/common_strings.xml"
                 qualifiers="af" >
                 <string
                     name="common_google_play_services_network_error_title"
@@ -2750,136 +2750,136 @@
             </file>
             <file
                 name="common_signin_btn_text_disabled_focus_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-mdpi/common_signin_btn_text_disabled_focus_light.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-mdpi/common_signin_btn_text_disabled_focus_light.9.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="powered_by_google_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-mdpi/powered_by_google_light.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-mdpi/powered_by_google_light.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_text_disabled_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-mdpi/common_signin_btn_text_disabled_dark.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-mdpi/common_signin_btn_text_disabled_dark.9.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_text_disabled_focus_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-mdpi/common_signin_btn_text_disabled_focus_dark.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-mdpi/common_signin_btn_text_disabled_focus_dark.9.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_icon_disabled_focus_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-mdpi/common_signin_btn_icon_disabled_focus_light.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-mdpi/common_signin_btn_icon_disabled_focus_light.9.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="ic_plusone_tall_off_client"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-mdpi/ic_plusone_tall_off_client.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-mdpi/ic_plusone_tall_off_client.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_text_normal_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-mdpi/common_signin_btn_text_normal_light.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-mdpi/common_signin_btn_text_normal_light.9.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="ic_plusone_small_off_client"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-mdpi/ic_plusone_small_off_client.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-mdpi/ic_plusone_small_off_client.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_text_disabled_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-mdpi/common_signin_btn_text_disabled_light.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-mdpi/common_signin_btn_text_disabled_light.9.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_icon_normal_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-mdpi/common_signin_btn_icon_normal_light.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-mdpi/common_signin_btn_icon_normal_light.9.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_icon_focus_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-mdpi/common_signin_btn_icon_focus_dark.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-mdpi/common_signin_btn_icon_focus_dark.9.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_text_normal_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-mdpi/common_signin_btn_text_normal_dark.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-mdpi/common_signin_btn_text_normal_dark.9.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_text_focus_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-mdpi/common_signin_btn_text_focus_light.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-mdpi/common_signin_btn_text_focus_light.9.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="ic_plusone_medium_off_client"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-mdpi/ic_plusone_medium_off_client.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-mdpi/ic_plusone_medium_off_client.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_icon_disabled_focus_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-mdpi/common_signin_btn_icon_disabled_focus_dark.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-mdpi/common_signin_btn_icon_disabled_focus_dark.9.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_icon_disabled_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-mdpi/common_signin_btn_icon_disabled_dark.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-mdpi/common_signin_btn_icon_disabled_dark.9.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_icon_disabled_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-mdpi/common_signin_btn_icon_disabled_light.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-mdpi/common_signin_btn_icon_disabled_light.9.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_icon_pressed_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-mdpi/common_signin_btn_icon_pressed_light.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-mdpi/common_signin_btn_icon_pressed_light.9.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_icon_pressed_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-mdpi/common_signin_btn_icon_pressed_dark.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-mdpi/common_signin_btn_icon_pressed_dark.9.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_text_pressed_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-mdpi/common_signin_btn_text_pressed_dark.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-mdpi/common_signin_btn_text_pressed_dark.9.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="powered_by_google_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-mdpi/powered_by_google_dark.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-mdpi/powered_by_google_dark.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_icon_focus_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-mdpi/common_signin_btn_icon_focus_light.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-mdpi/common_signin_btn_icon_focus_light.9.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="ic_plusone_standard_off_client"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-mdpi/ic_plusone_standard_off_client.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-mdpi/ic_plusone_standard_off_client.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_icon_normal_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-mdpi/common_signin_btn_icon_normal_dark.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-mdpi/common_signin_btn_icon_normal_dark.9.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_text_focus_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-mdpi/common_signin_btn_text_focus_dark.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-mdpi/common_signin_btn_text_focus_dark.9.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_text_pressed_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-mdpi/common_signin_btn_text_pressed_light.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-mdpi/common_signin_btn_text_pressed_light.9.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-ar/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-ar/auth_strings.xml"
                 qualifiers="ar" >
                 <string
                     name="auth_client_play_services_err_notification_msg"
@@ -2910,7 +2910,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-ar/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-ar/common_strings.xml"
                 qualifiers="ar" >
                 <string
                     name="common_signin_button_text"
@@ -3017,7 +3017,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-ro/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-ro/auth_strings.xml"
                 qualifiers="ro" >
                 <string
                     name="auth_client_needs_update_title"
@@ -3048,7 +3048,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-ro/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-ro/common_strings.xml"
                 qualifiers="ro" >
                 <string
                     name="common_google_play_services_notification_ticker"
@@ -3155,7 +3155,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-hy-rAM/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-hy-rAM/auth_strings.xml"
                 qualifiers="hy-rAM" >
                 <string
                     name="auth_client_play_services_err_notification_msg"
@@ -3186,7 +3186,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-hy-rAM/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-hy-rAM/common_strings.xml"
                 qualifiers="hy-rAM" >
                 <string
                     name="common_google_play_services_notification_needs_installation_title"
@@ -3294,136 +3294,136 @@
             </file>
             <file
                 name="common_signin_btn_text_disabled_focus_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xhdpi/common_signin_btn_text_disabled_focus_light.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xhdpi/common_signin_btn_text_disabled_focus_light.9.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="powered_by_google_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xhdpi/powered_by_google_light.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xhdpi/powered_by_google_light.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_text_disabled_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xhdpi/common_signin_btn_text_disabled_dark.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xhdpi/common_signin_btn_text_disabled_dark.9.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_text_disabled_focus_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xhdpi/common_signin_btn_text_disabled_focus_dark.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xhdpi/common_signin_btn_text_disabled_focus_dark.9.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_icon_disabled_focus_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xhdpi/common_signin_btn_icon_disabled_focus_light.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xhdpi/common_signin_btn_icon_disabled_focus_light.9.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="ic_plusone_tall_off_client"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xhdpi/ic_plusone_tall_off_client.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xhdpi/ic_plusone_tall_off_client.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_text_normal_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xhdpi/common_signin_btn_text_normal_light.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xhdpi/common_signin_btn_text_normal_light.9.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="ic_plusone_small_off_client"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xhdpi/ic_plusone_small_off_client.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xhdpi/ic_plusone_small_off_client.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_text_disabled_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xhdpi/common_signin_btn_text_disabled_light.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xhdpi/common_signin_btn_text_disabled_light.9.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_icon_normal_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xhdpi/common_signin_btn_icon_normal_light.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xhdpi/common_signin_btn_icon_normal_light.9.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_icon_focus_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xhdpi/common_signin_btn_icon_focus_dark.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xhdpi/common_signin_btn_icon_focus_dark.9.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_text_normal_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xhdpi/common_signin_btn_text_normal_dark.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xhdpi/common_signin_btn_text_normal_dark.9.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_text_focus_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xhdpi/common_signin_btn_text_focus_light.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xhdpi/common_signin_btn_text_focus_light.9.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="ic_plusone_medium_off_client"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xhdpi/ic_plusone_medium_off_client.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xhdpi/ic_plusone_medium_off_client.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_icon_disabled_focus_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xhdpi/common_signin_btn_icon_disabled_focus_dark.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xhdpi/common_signin_btn_icon_disabled_focus_dark.9.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_icon_disabled_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xhdpi/common_signin_btn_icon_disabled_dark.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xhdpi/common_signin_btn_icon_disabled_dark.9.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_icon_disabled_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xhdpi/common_signin_btn_icon_disabled_light.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xhdpi/common_signin_btn_icon_disabled_light.9.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_icon_pressed_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xhdpi/common_signin_btn_icon_pressed_light.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xhdpi/common_signin_btn_icon_pressed_light.9.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_icon_pressed_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xhdpi/common_signin_btn_icon_pressed_dark.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xhdpi/common_signin_btn_icon_pressed_dark.9.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_text_pressed_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xhdpi/common_signin_btn_text_pressed_dark.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xhdpi/common_signin_btn_text_pressed_dark.9.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="powered_by_google_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xhdpi/powered_by_google_dark.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xhdpi/powered_by_google_dark.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_icon_focus_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xhdpi/common_signin_btn_icon_focus_light.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xhdpi/common_signin_btn_icon_focus_light.9.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="ic_plusone_standard_off_client"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xhdpi/ic_plusone_standard_off_client.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xhdpi/ic_plusone_standard_off_client.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_icon_normal_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xhdpi/common_signin_btn_icon_normal_dark.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xhdpi/common_signin_btn_icon_normal_dark.9.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_text_focus_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xhdpi/common_signin_btn_text_focus_dark.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xhdpi/common_signin_btn_text_focus_dark.9.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_text_pressed_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xhdpi/common_signin_btn_text_pressed_light.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xhdpi/common_signin_btn_text_pressed_light.9.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-de/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-de/auth_strings.xml"
                 qualifiers="de" >
                 <string
                     name="auth_client_needs_installation_title"
@@ -3454,7 +3454,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-de/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-de/common_strings.xml"
                 qualifiers="de" >
                 <string
                     name="common_google_play_services_unsupported_title"
@@ -3561,7 +3561,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-en-rIN/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-en-rIN/auth_strings.xml"
                 qualifiers="en-rIN" >
                 <string
                     name="auth_client_using_bad_version_title"
@@ -3592,7 +3592,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-en-rIN/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-en-rIN/common_strings.xml"
                 qualifiers="en-rIN" >
                 <string
                     name="common_google_play_services_update_button"
@@ -3699,7 +3699,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-cs/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-cs/auth_strings.xml"
                 qualifiers="cs" >
                 <string
                     name="auth_client_requested_by_msg"
@@ -3730,7 +3730,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-cs/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-cs/common_strings.xml"
                 qualifiers="cs" >
                 <string
                     name="common_signin_button_text_long"
@@ -3837,7 +3837,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-zu/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-zu/auth_strings.xml"
                 qualifiers="zu" >
                 <string
                     name="auth_client_needs_update_title"
@@ -3868,7 +3868,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-zu/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-zu/common_strings.xml"
                 qualifiers="zu" >
                 <string
                     name="common_google_play_services_notification_ticker"
@@ -3975,7 +3975,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-fr-rCA/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-fr-rCA/auth_strings.xml"
                 qualifiers="fr-rCA" >
                 <string
                     name="auth_client_play_services_err_notification_msg"
@@ -4006,7 +4006,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-fr-rCA/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-fr-rCA/common_strings.xml"
                 qualifiers="fr-rCA" >
                 <string
                     name="common_google_play_services_unsupported_text"
@@ -4113,7 +4113,7 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values/wallet_attrs.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values/wallet_attrs.xml"
                 qualifiers="" >
                 <declare-styleable name="WalletFragmentStyle" >
 
@@ -4256,7 +4256,7 @@
                 </declare-styleable>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values/common_colors.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values/common_colors.xml"
                 qualifiers="" >
                 <color name="common_signin_btn_light_text_pressed" >@android:color/white
                 </color>
@@ -4280,7 +4280,7 @@
                 </color>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values/wallet_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values/wallet_strings.xml"
                 qualifiers="" >
                 <string
                     name="wallet_buy_button_place_holder"
@@ -4288,13 +4288,11 @@
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values/common_strings.xml"
                 qualifiers="" >
                 <string name="common_google_play_services_notification_needs_installation_title" >An application requires installation of Google Play services.
                 </string>
                 <string name="common_google_play_services_notification_needs_update_title" >An application requires an update for Google Play services.
-                </string>
-                <string name="common_google_play_services_invalid_account_title" >Invalid Account
                 </string>
                 <string name="common_google_play_services_error_notification_requested_by_msg" >Requested by 
 <ns1:g id="app_name" >
@@ -4306,6 +4304,36 @@
                     name="common_google_play_services_install_title"
                     msgid="7215213145546190223" >Get Google Play services
                 </string>
+                <string name="common_signin_button_text" >Sign in
+                </string>
+                <string name="common_google_play_services_unknown_issue" >Unknown issue with Google Play services.
+                </string>
+                <string name="common_google_play_services_needs_enabling_title" >An application requires Google Play services to be enabled.
+                </string>
+                <string
+                    name="common_google_play_services_update_text"
+                    msgid="9053896323427875356" >This app won\'t run unless you update Google Play services.
+                </string>
+                <string
+                    name="common_google_play_services_update_button"
+                    msgid="6556509956452265614" >Update
+                </string>
+                <string name="common_signin_button_text_long" >Sign in with Google
+                </string>
+                <string
+                    name="common_google_play_services_install_button"
+                    msgid="7153882981874058840" >Get Google Play services
+                </string>
+                <string
+                    name="common_google_play_services_install_text_tablet"
+                    msgid="7351599665250191022" >This app won\'t run without Google Play services, which are missing from your tablet.
+                </string>
+                <string
+                    name="pre_release_do_not_ship"
+                    translatable="false" >true
+                </string>
+                <string name="common_google_play_services_invalid_account_title" >Invalid Account
+                </string>
                 <string name="common_google_play_services_notification_ticker" >Google Play services error
                 </string>
                 <string
@@ -4313,8 +4341,6 @@
                     msgid="5122002158466380389" >Enable Google Play services
                 </string>
                 <string name="common_google_play_services_unsupported_title" >Google Play services
-                </string>
-                <string name="common_signin_button_text" >Sign in
                 </string>
                 <string
                     name="common_google_play_services_update_title"
@@ -4324,23 +4350,9 @@
                     name="common_google_play_services_enable_text"
                     msgid="227660514972886228" >This app won\'t work unless you enable Google Play services.
                 </string>
-                <string name="common_google_play_services_unknown_issue" >Unknown issue with Google Play services.
-                </string>
-                <string name="common_google_play_services_needs_enabling_title" >An application requires Google Play services to be enabled.
-                </string>
                 <string name="common_google_play_services_unsupported_date_text" >The date on the device appears to be incorrect. Please check the date on the device.
                 </string>
-                <string
-                    name="common_google_play_services_update_text"
-                    msgid="9053896323427875356" >This app won\'t run unless you update Google Play services.
-                </string>
                 <string name="common_google_play_services_network_error_title" >Network Error
-                </string>
-                <string
-                    name="common_google_play_services_update_button"
-                    msgid="6556509956452265614" >Update
-                </string>
-                <string name="common_signin_button_text_long" >Sign in with Google
                 </string>
                 <string
                     name="common_google_play_services_install_text_phone"
@@ -4352,19 +4364,11 @@
                 </string>
                 <string name="common_google_play_services_invalid_account_text" >The specified account does not exist on this device. Please choose a different account.
                 </string>
-                <string
-                    name="common_google_play_services_install_button"
-                    msgid="7153882981874058840" >Get Google Play services
-                </string>
-                <string
-                    name="common_google_play_services_install_text_tablet"
-                    msgid="7351599665250191022" >This app won\'t run without Google Play services, which are missing from your tablet.
-                </string>
                 <string name="common_google_play_services_network_error_text" >A data connection is required to connect to Google Play services.
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values/wallet_styles.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values/wallet_styles.xml"
                 qualifiers="" >
 
                 <style name="WalletFragmentDefaultDetailsTextAppearance" >
@@ -4454,7 +4458,7 @@ normal
                 </style>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values/admob_ads_attrs.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values/admob_ads_attrs.xml"
                 qualifiers="" >
                 <declare-styleable name="AdsAttrs" >
 
@@ -4483,7 +4487,7 @@ normal
                 </declare-styleable>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values/wallet_colors.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values/wallet_colors.xml"
                 qualifiers="" >
                 <color name="wallet_hint_foreground_holo_light" >#808080
                 </color>
@@ -4513,14 +4517,14 @@ normal
                 </color>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values/version.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values/version.xml"
                 qualifiers="" >
                 <integer name="google_play_services_version" >
-5077000
+5208000
                 </integer>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values/maps_attrs.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values/maps_attrs.xml"
                 qualifiers="" >
                 <declare-styleable name="MapAttrs" >
                     <attr
@@ -4584,7 +4588,7 @@ normal
                 </declare-styleable>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values/admob_iap_style.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values/admob_iap_style.xml"
                 qualifiers="" >
 
                 <style
@@ -4611,7 +4615,7 @@ false
                 </style>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-fr/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-fr/auth_strings.xml"
                 qualifiers="fr" >
                 <string
                     name="auth_client_play_services_err_notification_msg"
@@ -4642,7 +4646,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-fr/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-fr/common_strings.xml"
                 qualifiers="fr" >
                 <string
                     name="common_google_play_services_network_error_text"
@@ -4749,7 +4753,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-pt-rBR/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-pt-rBR/auth_strings.xml"
                 qualifiers="pt-rBR" >
                 <string
                     name="auth_client_needs_enabling_title"
@@ -4780,7 +4784,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-pt-rBR/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-pt-rBR/common_strings.xml"
                 qualifiers="pt-rBR" >
                 <string
                     name="common_google_play_services_enable_button"
@@ -4887,7 +4891,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-nl/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-nl/auth_strings.xml"
                 qualifiers="nl" >
                 <string
                     name="auth_client_needs_enabling_title"
@@ -4918,7 +4922,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-nl/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-nl/common_strings.xml"
                 qualifiers="nl" >
                 <string
                     name="common_google_play_services_invalid_account_text"
@@ -5025,7 +5029,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-ka-rGE/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-ka-rGE/auth_strings.xml"
                 qualifiers="ka-rGE" >
                 <string
                     name="auth_client_requested_by_msg"
@@ -5056,7 +5060,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-ka-rGE/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-ka-rGE/common_strings.xml"
                 qualifiers="ka-rGE" >
                 <string
                     name="common_google_play_services_enable_button"
@@ -5071,16 +5075,16 @@ false
                     msgid="1852570676146674985" >"Google Play Services-ის შეცდომა"
                 </string>
                 <string
-                    name="common_google_play_services_invalid_account_title"
-                    msgid="1066672360770936753" >"ანგარიში არასწორია"
+                    name="common_google_play_services_install_text_tablet"
+                    msgid="1589957570365247855" >"ეს აპი ვერ გაეშვება Google Play სერვისების გარეშე, რაც თქვენს ტელეფონზე ვერ იძებნება."
                 </string>
                 <string
                     name="common_google_play_services_notification_needs_installation_title"
                     msgid="8120534356798772974" >"აპლიკაცია საჭიროება Google Play Services-ის ინსტალაციას."
                 </string>
                 <string
-                    name="common_google_play_services_install_text_tablet"
-                    msgid="1589957570365247855" >"ეს აპი ვერ გაეშვება Google Play სერვისების გარეშე, რაც თქვენს ტელეფონზე ვერ იძებნება."
+                    name="common_google_play_services_invalid_account_title"
+                    msgid="1066672360770936753" >"ანგარიში არასწორია"
                 </string>
                 <string
                     name="common_signin_button_text_long"
@@ -5127,20 +5131,20 @@ false
                     msgid="4762332809710093730" >"Google Play სერვისებთან დაკავშირებით უცნობი შეფერხება წარმოიშვა."
                 </string>
                 <string
-                    name="common_google_play_services_network_error_title"
-                    msgid="3827284619958211114" >"ქსელის შეცდომა"
-                </string>
-                <string
                     name="common_google_play_services_update_title"
                     msgid="6006316683626838685" >"Google Play სერვისების განახლება"
                 </string>
                 <string
-                    name="common_google_play_services_invalid_account_text"
-                    msgid="4983316348021735578" >"მითითებული ანგარიში ამ მოწყობილობაზე არ არსებობს. გთხოვთ, აირჩიოთ სხვა ანგარიში."
+                    name="common_google_play_services_network_error_title"
+                    msgid="3827284619958211114" >"ქსელის შეცდომა"
                 </string>
                 <string
                     name="common_google_play_services_notification_needs_update_title"
                     msgid="1388129345631079938" >"აპლიკაცია საჭიროებს Google Play Services-ის განახლებას."
+                </string>
+                <string
+                    name="common_google_play_services_invalid_account_text"
+                    msgid="4983316348021735578" >"მითითებული ანგარიში ამ მოწყობილობაზე არ არსებობს. გთხოვთ, აირჩიოთ სხვა ანგარიში."
                 </string>
                 <string
                     name="common_google_play_services_needs_enabling_title"
@@ -5163,7 +5167,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-lo-rLA/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-lo-rLA/auth_strings.xml"
                 qualifiers="lo-rLA" >
                 <string
                     name="auth_client_play_services_err_notification_msg"
@@ -5194,7 +5198,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-lo-rLA/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-lo-rLA/common_strings.xml"
                 qualifiers="lo-rLA" >
                 <string
                     name="common_google_play_services_unsupported_title"
@@ -5301,7 +5305,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-bg/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-bg/auth_strings.xml"
                 qualifiers="bg" >
                 <string
                     name="auth_client_play_services_err_notification_msg"
@@ -5332,7 +5336,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-bg/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-bg/common_strings.xml"
                 qualifiers="bg" >
                 <string
                     name="common_google_play_services_network_error_title"
@@ -5419,14 +5423,6 @@ false
                     msgid="2429381841831957106" >"Вход с Google"
                 </string>
                 <string
-                    name="common_google_play_services_unsupported_date_text"
-                    msgid="4725396522367789365" >"Изглежда, че датата на устройството е неправилна. Моля, проверете я."
-                </string>
-                <string
-                    name="common_google_play_services_network_error_text"
-                    msgid="9038847255613537209" >"За свързване с услугите за Google Play се изисква връзка за данни."
-                </string>
-                <string
                     name="common_google_play_services_notification_needs_update_title"
                     msgid="1388129345631079938" >"Приложение изисква актуализирането на услугите за Google Play."
                 </string>
@@ -5437,9 +5433,17 @@ false
 %1$s
                     </ns1:g>"
                 </string>
+                <string
+                    name="common_google_play_services_unsupported_date_text"
+                    msgid="4725396522367789365" >"Изглежда, че датата на устройството е неправилна. Моля, проверете я."
+                </string>
+                <string
+                    name="common_google_play_services_network_error_text"
+                    msgid="9038847255613537209" >"За свързване с услугите за Google Play се изисква връзка за данни."
+                </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-sv/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-sv/auth_strings.xml"
                 qualifiers="sv" >
                 <string
                     name="auth_client_using_bad_version_title"
@@ -5470,7 +5474,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-sv/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-sv/common_strings.xml"
                 qualifiers="sv" >
                 <string
                     name="common_google_play_services_install_text_tablet"
@@ -5577,7 +5581,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-pt-rPT/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-pt-rPT/auth_strings.xml"
                 qualifiers="pt-rPT" >
                 <string
                     name="auth_client_needs_installation_title"
@@ -5608,7 +5612,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-pt-rPT/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-pt-rPT/common_strings.xml"
                 qualifiers="pt-rPT" >
                 <string
                     name="common_google_play_services_notification_ticker"
@@ -5715,7 +5719,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-en-rGB/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-en-rGB/auth_strings.xml"
                 qualifiers="en-rGB" >
                 <string
                     name="auth_client_requested_by_msg"
@@ -5746,7 +5750,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-en-rGB/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-en-rGB/common_strings.xml"
                 qualifiers="en-rGB" >
                 <string
                     name="common_google_play_services_unsupported_text"
@@ -5853,7 +5857,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-pl/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-pl/auth_strings.xml"
                 qualifiers="pl" >
                 <string
                     name="auth_client_needs_enabling_title"
@@ -5884,7 +5888,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-pl/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-pl/common_strings.xml"
                 qualifiers="pl" >
                 <string
                     name="common_google_play_services_error_notification_requested_by_msg"
@@ -5991,7 +5995,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-ca/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-ca/auth_strings.xml"
                 qualifiers="ca" >
                 <string
                     name="auth_client_requested_by_msg"
@@ -6022,7 +6026,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-ca/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-ca/common_strings.xml"
                 qualifiers="ca" >
                 <string
                     name="common_google_play_services_update_title"
@@ -6129,7 +6133,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-nb/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-nb/auth_strings.xml"
                 qualifiers="nb" >
                 <string
                     name="auth_client_play_services_err_notification_msg"
@@ -6160,7 +6164,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-nb/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-nb/common_strings.xml"
                 qualifiers="nb" >
                 <string
                     name="common_google_play_services_install_text_phone"
@@ -6267,7 +6271,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-hr/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-hr/auth_strings.xml"
                 qualifiers="hr" >
                 <string
                     name="auth_client_requested_by_msg"
@@ -6298,7 +6302,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-hr/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-hr/common_strings.xml"
                 qualifiers="hr" >
                 <string
                     name="common_google_play_services_update_button"
@@ -6406,26 +6410,26 @@ false
             </file>
             <file
                 name="common_signin_btn_icon_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable/common_signin_btn_icon_light.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable/common_signin_btn_icon_light.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="common_signin_btn_icon_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable/common_signin_btn_icon_dark.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable/common_signin_btn_icon_dark.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="common_signin_btn_text_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable/common_signin_btn_text_light.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable/common_signin_btn_text_light.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="common_signin_btn_text_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable/common_signin_btn_text_dark.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable/common_signin_btn_text_dark.xml"
                 qualifiers=""
                 type="drawable" />
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-sk/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-sk/auth_strings.xml"
                 qualifiers="sk" >
                 <string
                     name="auth_client_play_services_err_notification_msg"
@@ -6456,7 +6460,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-sk/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-sk/common_strings.xml"
                 qualifiers="sk" >
                 <string
                     name="common_google_play_services_invalid_account_text"
@@ -6563,7 +6567,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-ru/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-ru/auth_strings.xml"
                 qualifiers="ru" >
                 <string
                     name="auth_client_needs_update_title"
@@ -6594,7 +6598,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-ru/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-ru/common_strings.xml"
                 qualifiers="ru" >
                 <string
                     name="common_google_play_services_enable_text"
@@ -6701,7 +6705,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-lv/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-lv/auth_strings.xml"
                 qualifiers="lv" >
                 <string
                     name="auth_client_using_bad_version_title"
@@ -6732,7 +6736,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-lv/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-lv/common_strings.xml"
                 qualifiers="lv" >
                 <string
                     name="common_google_play_services_enable_text"
@@ -6839,7 +6843,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-it/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-it/auth_strings.xml"
                 qualifiers="it" >
                 <string
                     name="auth_client_play_services_err_notification_msg"
@@ -6870,7 +6874,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-it/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-it/common_strings.xml"
                 qualifiers="it" >
                 <string
                     name="common_signin_button_text"
@@ -6916,16 +6920,16 @@ false
                     msgid="3542578567569488671" >"La piattaforma Google Play Services, su cui sono basate alcune delle tue applicazioni, non è supportata dal dispositivo in uso. Per assistenza, contatta il produttore."
                 </string>
                 <string
-                    name="common_google_play_services_needs_enabling_title"
-                    msgid="2583358409598976717" >"Un\'applicazione richiede l\'attivazione di Google Play Services."
-                </string>
-                <string
                     name="common_google_play_services_install_text_phone"
                     msgid="8685301130651051380" >"L\'app non funzionerà senza Google Play Services, non presente sul tuo telefono."
                 </string>
                 <string
                     name="common_google_play_services_network_error_text"
                     msgid="9038847255613537209" >"È necessaria una connessione dati per connettersi a Google Play Services."
+                </string>
+                <string
+                    name="common_google_play_services_needs_enabling_title"
+                    msgid="2583358409598976717" >"Un\'applicazione richiede l\'attivazione di Google Play Services."
                 </string>
                 <string
                     name="common_google_play_services_update_title"
@@ -6977,7 +6981,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-sw/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-sw/auth_strings.xml"
                 qualifiers="sw" >
                 <string
                     name="auth_client_requested_by_msg"
@@ -7008,7 +7012,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-sw/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-sw/common_strings.xml"
                 qualifiers="sw" >
                 <string
                     name="common_google_play_services_error_notification_requested_by_msg"
@@ -7116,136 +7120,136 @@ false
             </file>
             <file
                 name="common_signin_btn_text_disabled_focus_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-hdpi/common_signin_btn_text_disabled_focus_light.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-hdpi/common_signin_btn_text_disabled_focus_light.9.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="powered_by_google_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-hdpi/powered_by_google_light.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-hdpi/powered_by_google_light.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_text_disabled_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-hdpi/common_signin_btn_text_disabled_dark.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-hdpi/common_signin_btn_text_disabled_dark.9.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_text_disabled_focus_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-hdpi/common_signin_btn_text_disabled_focus_dark.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-hdpi/common_signin_btn_text_disabled_focus_dark.9.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_icon_disabled_focus_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-hdpi/common_signin_btn_icon_disabled_focus_light.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-hdpi/common_signin_btn_icon_disabled_focus_light.9.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="ic_plusone_tall_off_client"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-hdpi/ic_plusone_tall_off_client.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-hdpi/ic_plusone_tall_off_client.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_text_normal_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-hdpi/common_signin_btn_text_normal_light.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-hdpi/common_signin_btn_text_normal_light.9.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="ic_plusone_small_off_client"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-hdpi/ic_plusone_small_off_client.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-hdpi/ic_plusone_small_off_client.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_text_disabled_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-hdpi/common_signin_btn_text_disabled_light.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-hdpi/common_signin_btn_text_disabled_light.9.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_icon_normal_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-hdpi/common_signin_btn_icon_normal_light.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-hdpi/common_signin_btn_icon_normal_light.9.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_icon_focus_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-hdpi/common_signin_btn_icon_focus_dark.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-hdpi/common_signin_btn_icon_focus_dark.9.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_text_normal_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-hdpi/common_signin_btn_text_normal_dark.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-hdpi/common_signin_btn_text_normal_dark.9.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_text_focus_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-hdpi/common_signin_btn_text_focus_light.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-hdpi/common_signin_btn_text_focus_light.9.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="ic_plusone_medium_off_client"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-hdpi/ic_plusone_medium_off_client.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-hdpi/ic_plusone_medium_off_client.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_icon_disabled_focus_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-hdpi/common_signin_btn_icon_disabled_focus_dark.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-hdpi/common_signin_btn_icon_disabled_focus_dark.9.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_icon_disabled_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-hdpi/common_signin_btn_icon_disabled_dark.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-hdpi/common_signin_btn_icon_disabled_dark.9.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_icon_disabled_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-hdpi/common_signin_btn_icon_disabled_light.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-hdpi/common_signin_btn_icon_disabled_light.9.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_icon_pressed_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-hdpi/common_signin_btn_icon_pressed_light.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-hdpi/common_signin_btn_icon_pressed_light.9.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_icon_pressed_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-hdpi/common_signin_btn_icon_pressed_dark.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-hdpi/common_signin_btn_icon_pressed_dark.9.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_text_pressed_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-hdpi/common_signin_btn_text_pressed_dark.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-hdpi/common_signin_btn_text_pressed_dark.9.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="powered_by_google_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-hdpi/powered_by_google_dark.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-hdpi/powered_by_google_dark.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_icon_focus_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-hdpi/common_signin_btn_icon_focus_light.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-hdpi/common_signin_btn_icon_focus_light.9.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="ic_plusone_standard_off_client"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-hdpi/ic_plusone_standard_off_client.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-hdpi/ic_plusone_standard_off_client.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_icon_normal_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-hdpi/common_signin_btn_icon_normal_dark.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-hdpi/common_signin_btn_icon_normal_dark.9.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_text_focus_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-hdpi/common_signin_btn_text_focus_dark.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-hdpi/common_signin_btn_text_focus_dark.9.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_text_pressed_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-hdpi/common_signin_btn_text_pressed_light.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-hdpi/common_signin_btn_text_pressed_light.9.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-fa/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-fa/auth_strings.xml"
                 qualifiers="fa" >
                 <string
                     name="auth_client_using_bad_version_title"
@@ -7276,7 +7280,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-fa/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-fa/common_strings.xml"
                 qualifiers="fa" >
                 <string
                     name="common_google_play_services_invalid_account_title"
@@ -7383,7 +7387,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-es-rUS/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-es-rUS/auth_strings.xml"
                 qualifiers="es-rUS" >
                 <string
                     name="auth_client_play_services_err_notification_msg"
@@ -7414,7 +7418,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-es-rUS/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-es-rUS/common_strings.xml"
                 qualifiers="es-rUS" >
                 <string
                     name="common_google_play_services_install_text_tablet"
@@ -7521,7 +7525,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-lt/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-lt/auth_strings.xml"
                 qualifiers="lt" >
                 <string
                     name="auth_client_needs_installation_title"
@@ -7552,7 +7556,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-lt/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-lt/common_strings.xml"
                 qualifiers="lt" >
                 <string
                     name="common_google_play_services_needs_enabling_title"
@@ -7659,7 +7663,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-zh-rHK/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-zh-rHK/auth_strings.xml"
                 qualifiers="zh-rHK" >
                 <string
                     name="auth_client_needs_update_title"
@@ -7690,27 +7694,27 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-zh-rHK/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-zh-rHK/common_strings.xml"
                 qualifiers="zh-rHK" >
-                <string
-                    name="common_google_play_services_install_title"
-                    msgid="26645092511305524" >"取得 Google Play 服務"
-                </string>
                 <string
                     name="common_google_play_services_update_button"
                     msgid="8932944190611227642" >"更新"
+                </string>
+                <string
+                    name="common_google_play_services_install_title"
+                    msgid="26645092511305524" >"取得 Google Play 服務"
                 </string>
                 <string
                     name="common_google_play_services_update_text"
                     msgid="448354684997260580" >"您必須更新 Google Play 服務，才能執行這個應用程式。"
                 </string>
                 <string
-                    name="common_google_play_services_enable_title"
-                    msgid="529078775174559253" >"啟用 Google Play 服務"
-                </string>
-                <string
                     name="common_google_play_services_unknown_issue"
                     msgid="4762332809710093730" >"Google Play 服務出現不明問題。"
+                </string>
+                <string
+                    name="common_google_play_services_enable_title"
+                    msgid="529078775174559253" >"啟用 Google Play 服務"
                 </string>
                 <string
                     name="common_google_play_services_needs_enabling_title"
@@ -7784,12 +7788,12 @@ false
                     msgid="4181637455539816337" >"啟用 Google Play 服務"
                 </string>
                 <string
-                    name="common_google_play_services_notification_needs_update_title"
-                    msgid="1388129345631079938" >"必須更新「Google Play 服務」，才能使用應用程式。"
-                </string>
-                <string
                     name="common_google_play_services_notification_ticker"
                     msgid="1852570676146674985" >"Google Play 服務錯誤"
+                </string>
+                <string
+                    name="common_google_play_services_notification_needs_update_title"
+                    msgid="1388129345631079938" >"必須更新「Google Play 服務」，才能使用應用程式。"
                 </string>
                 <string
                     name="common_google_play_services_notification_needs_installation_title"
@@ -7798,136 +7802,136 @@ false
             </file>
             <file
                 name="common_signin_btn_text_disabled_focus_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xxhdpi/common_signin_btn_text_disabled_focus_light.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xxhdpi/common_signin_btn_text_disabled_focus_light.9.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="powered_by_google_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xxhdpi/powered_by_google_light.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xxhdpi/powered_by_google_light.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_text_disabled_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xxhdpi/common_signin_btn_text_disabled_dark.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xxhdpi/common_signin_btn_text_disabled_dark.9.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_text_disabled_focus_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xxhdpi/common_signin_btn_text_disabled_focus_dark.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xxhdpi/common_signin_btn_text_disabled_focus_dark.9.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_icon_disabled_focus_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xxhdpi/common_signin_btn_icon_disabled_focus_light.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xxhdpi/common_signin_btn_icon_disabled_focus_light.9.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="ic_plusone_tall_off_client"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xxhdpi/ic_plusone_tall_off_client.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xxhdpi/ic_plusone_tall_off_client.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_text_normal_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xxhdpi/common_signin_btn_text_normal_light.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xxhdpi/common_signin_btn_text_normal_light.9.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="ic_plusone_small_off_client"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xxhdpi/ic_plusone_small_off_client.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xxhdpi/ic_plusone_small_off_client.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_text_disabled_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xxhdpi/common_signin_btn_text_disabled_light.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xxhdpi/common_signin_btn_text_disabled_light.9.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_icon_normal_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xxhdpi/common_signin_btn_icon_normal_light.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xxhdpi/common_signin_btn_icon_normal_light.9.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_icon_focus_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xxhdpi/common_signin_btn_icon_focus_dark.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xxhdpi/common_signin_btn_icon_focus_dark.9.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_text_normal_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xxhdpi/common_signin_btn_text_normal_dark.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xxhdpi/common_signin_btn_text_normal_dark.9.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_text_focus_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xxhdpi/common_signin_btn_text_focus_light.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xxhdpi/common_signin_btn_text_focus_light.9.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="ic_plusone_medium_off_client"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xxhdpi/ic_plusone_medium_off_client.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xxhdpi/ic_plusone_medium_off_client.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_icon_disabled_focus_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xxhdpi/common_signin_btn_icon_disabled_focus_dark.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xxhdpi/common_signin_btn_icon_disabled_focus_dark.9.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_icon_disabled_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xxhdpi/common_signin_btn_icon_disabled_dark.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xxhdpi/common_signin_btn_icon_disabled_dark.9.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_icon_disabled_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xxhdpi/common_signin_btn_icon_disabled_light.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xxhdpi/common_signin_btn_icon_disabled_light.9.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_icon_pressed_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xxhdpi/common_signin_btn_icon_pressed_light.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xxhdpi/common_signin_btn_icon_pressed_light.9.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_icon_pressed_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xxhdpi/common_signin_btn_icon_pressed_dark.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xxhdpi/common_signin_btn_icon_pressed_dark.9.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_text_pressed_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xxhdpi/common_signin_btn_text_pressed_dark.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xxhdpi/common_signin_btn_text_pressed_dark.9.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="powered_by_google_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xxhdpi/powered_by_google_dark.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xxhdpi/powered_by_google_dark.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_icon_focus_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xxhdpi/common_signin_btn_icon_focus_light.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xxhdpi/common_signin_btn_icon_focus_light.9.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="ic_plusone_standard_off_client"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xxhdpi/ic_plusone_standard_off_client.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xxhdpi/ic_plusone_standard_off_client.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_icon_normal_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xxhdpi/common_signin_btn_icon_normal_dark.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xxhdpi/common_signin_btn_icon_normal_dark.9.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_text_focus_dark"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xxhdpi/common_signin_btn_text_focus_dark.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xxhdpi/common_signin_btn_text_focus_dark.9.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="common_signin_btn_text_pressed_light"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/drawable-xxhdpi/common_signin_btn_text_pressed_light.9.png"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/drawable-xxhdpi/common_signin_btn_text_pressed_light.9.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-hi/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-hi/auth_strings.xml"
                 qualifiers="hi" >
                 <string
                     name="auth_client_using_bad_version_title"
@@ -7958,7 +7962,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-hi/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-hi/common_strings.xml"
                 qualifiers="hi" >
                 <string
                     name="common_google_play_services_unknown_issue"
@@ -7966,7 +7970,7 @@ false
                 </string>
                 <string
                     name="common_google_play_services_needs_enabling_title"
-                    msgid="2583358409598976717" >"एप्लिकेशन के लिए Google Play सेवाएं सक्षम किए जाने की आवश्यकता है."
+                    msgid="2583358409598976717" >"ऐप्लिकेशन के लिए Google Play सेवाएं सक्षम किए जाने की आवश्यकता है."
                 </string>
                 <string
                     name="common_google_play_services_unsupported_text"
@@ -8029,7 +8033,7 @@ false
                 </string>
                 <string
                     name="common_google_play_services_notification_needs_installation_title"
-                    msgid="8120534356798772974" >"एप्लिकेशन के लिए Google Play सेवाएं इंस्टॉल किए जाने की आवश्यकता है."
+                    msgid="8120534356798772974" >"ऐप्लिकेशन के लिए Google Play सेवाएं इंस्टॉल किए जाने की आवश्यकता है."
                 </string>
                 <string
                     name="common_google_play_services_notification_ticker"
@@ -8057,7 +8061,7 @@ false
                 </string>
                 <string
                     name="common_google_play_services_notification_needs_update_title"
-                    msgid="1388129345631079938" >"एप्लिकेशन के लिए Google Play सेवाओं में नई जानकारी की आवश्यकता है."
+                    msgid="1388129345631079938" >"ऐप्लिकेशन के लिए Google Play सेवाओं में नई जानकारी की आवश्यकता है."
                 </string>
                 <string
                     name="common_google_play_services_install_title"
@@ -8065,7 +8069,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-da/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-da/auth_strings.xml"
                 qualifiers="da" >
                 <string
                     name="auth_client_play_services_err_notification_msg"
@@ -8096,7 +8100,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-da/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-da/common_strings.xml"
                 qualifiers="da" >
                 <string
                     name="common_google_play_services_invalid_account_text"
@@ -8203,7 +8207,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-et-rEE/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-et-rEE/auth_strings.xml"
                 qualifiers="et-rEE" >
                 <string
                     name="auth_client_needs_enabling_title"
@@ -8234,7 +8238,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-et-rEE/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-et-rEE/common_strings.xml"
                 qualifiers="et-rEE" >
                 <string
                     name="common_google_play_services_unsupported_text"
@@ -8341,7 +8345,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-in/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-in/auth_strings.xml"
                 qualifiers="in" >
                 <string
                     name="auth_client_needs_update_title"
@@ -8372,7 +8376,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-in/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-in/common_strings.xml"
                 qualifiers="in" >
                 <string
                     name="common_google_play_services_install_button"
@@ -8479,7 +8483,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-km-rKH/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-km-rKH/auth_strings.xml"
                 qualifiers="km-rKH" >
                 <string
                     name="auth_client_needs_installation_title"
@@ -8510,7 +8514,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-km-rKH/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-km-rKH/common_strings.xml"
                 qualifiers="km-rKH" >
                 <string
                     name="common_google_play_services_unsupported_text"
@@ -8617,7 +8621,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-hu/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-hu/auth_strings.xml"
                 qualifiers="hu" >
                 <string
                     name="auth_client_using_bad_version_title"
@@ -8648,7 +8652,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-hu/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-hu/common_strings.xml"
                 qualifiers="hu" >
                 <string
                     name="common_google_play_services_notification_needs_update_title"
@@ -8755,7 +8759,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-th/auth_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-th/auth_strings.xml"
                 qualifiers="th" >
                 <string
                     name="auth_client_requested_by_msg"
@@ -8786,7 +8790,7 @@ false
                 </string>
             </file>
             <file
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.77/res/values-th/common_strings.xml"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/res/values-th/common_strings.xml"
                 qualifiers="th" >
                 <string
                     name="common_google_play_services_install_text_phone"
@@ -8908,11 +8912,6 @@ false
                 qualifiers=""
                 type="color" />
             <file
-                name="my"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/menu/my.xml"
-                qualifiers=""
-                type="menu" />
-            <file
                 path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/values-v21/styles.xml"
                 qualifiers="v21" >
 
@@ -8922,8 +8921,63 @@ false
                 </style>
             </file>
             <file
+                name="exercise_activity_layout"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout-land/exercise_activity_layout.xml"
+                qualifiers="land"
+                type="layout" />
+            <file
+                name="books_activity_layout"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout-land/books_activity_layout.xml"
+                qualifiers="land"
+                type="layout" />
+            <file
+                name="actionbar_layout_singlebook"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout-land/actionbar_layout_singlebook.xml"
+                qualifiers="land"
+                type="layout" />
+            <file
+                name="tab_mathematics_layout"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout-land/tab_mathematics_layout.xml"
+                qualifiers="land"
+                type="layout" />
+            <file
+                name="choose_class_fragment_layout"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout-land/choose_class_fragment_layout.xml"
+                qualifiers="land"
+                type="layout" />
+            <file
                 name="homeactivity"
                 path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout-land/homeactivity.xml"
+                qualifiers="land"
+                type="layout" />
+            <file
+                name="tab_physics_layout"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout-land/tab_physics_layout.xml"
+                qualifiers="land"
+                type="layout" />
+            <file
+                name="single_book_activity_layout"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout-land/single_book_activity_layout.xml"
+                qualifiers="land"
+                type="layout" />
+            <file
+                name="tab_exercise_number_layout"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout-land/tab_exercise_number_layout.xml"
+                qualifiers="land"
+                type="layout" />
+            <file
+                name="mybooksactivitylayout"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout-land/mybooksactivitylayout.xml"
+                qualifiers="land"
+                type="layout" />
+            <file
+                name="tab_chemistry_layout"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout-land/tab_chemistry_layout.xml"
+                qualifiers="land"
+                type="layout" />
+            <file
+                name="exercise_activity_fragment_layout"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout-land/exercise_activity_fragment_layout.xml"
                 qualifiers="land"
                 type="layout" />
             <file
@@ -8937,19 +8991,28 @@ false
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
-                name="homeactivity"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout-port/homeactivity.xml"
-                qualifiers="port"
-                type="layout" />
+                name="tab_clicked_animation_back"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/anim/tab_clicked_animation_back.xml"
+                qualifiers=""
+                type="anim" />
+            <file
+                name="tab_clicked_animation"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/anim/tab_clicked_animation.xml"
+                qualifiers=""
+                type="anim" />
             <file
                 path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/values/styles.xml"
                 qualifiers="" >
 
-                <style
-                    name="cust_dialog"
-                    parent="@android:style/Theme.Dialog" >
-                    <item name="android:windowTitleStyle">
-@style/dialog_title_style
+                <style name="tab_subject_style" >
+                    <item name="android:background">
+@drawable/tab_background_default_chosen
+                    </item>
+                    <item name="android:textColor">
+@color/lightBlueDajSpisac
+                    </item>
+                    <item name="android:textStyle">
+bold
                     </item>
                 </style>
 
@@ -8967,29 +9030,26 @@ false
                     </item>
                 </style>
 
-                <style
-                    name="DajSpisacTheme.ActionBarDajSpisac.TitleTextStyle"
-                    parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title" >
-                    <item name="android:textColor">
-@color/orangeDajSpisac
+                <style name="SingleItem" >
+                    <item name="android:background">
+@color/white
                     </item>
-                    <item name="android:left">
-20dp
+                    <item name="android:textColor">
+@color/black
                     </item>
                 </style>
 
                 <style
-                    name="DajSpisacTheme.ActionBarDajSpisac"
-                    parent="@android:style/Widget.Holo.Light.ActionBar" >
-                    <item name="android:titleTextStyle">
-@style/DajSpisacTheme.ActionBarDajSpisac.TitleTextStyle
-                    </item>
-                    <item name="android:background">
-@color/actionBarColor
-                    </item>
-                    <item name="android:actionOverflowButtonStyle">
-@style/DajSpisacTheme.ActionBarDajSpisac.Overflow
-                    </item>
+                    name="DajSpisacTheme"
+                    parent="android:Theme.Light.NoTitleBar" >
+
+                    <!--
+        <item name="android:panelFullBackground">@color/actionBarColor</item>
+        <item name="android:panelBackground">@color/actionBarColor</item>
+        <item name="android:panelColorBackground">@color/actionBarColor</item>
+        <item name="android:itemBackground">@color/actionBarColor</item>
+        <item name="android:itemTextAppearance">@style/TextAppearance</item>
+                    -->
                 </style>
 
                 <style name="SingleExerciseButton" >
@@ -9018,90 +9078,17 @@ true
 40dp
                     </item>
                 </style>
-
-                <style
-                    name="ActionBarTabStyle"
-                    parent="@android:style/Widget.Holo.ActionBar.TabView" >
-                    <item name="android:minHeight">
-80dip
-                    </item>
-                </style>
-
-                <style name="SingleExsButton" >
-                    <item name="@attr/exerciseAttrButton">
-@style/SingleExerciseButton
-                    </item>
-                </style>
-
-                <attr
-                    name="exerciseAttrButton"
-                    format="reference" />
-
-                <style name="SingleItem" >
-                    <item name="android:background">
-@color/white
-                    </item>
-                    <item name="android:textColor">
-@color/black
-                    </item>
-                </style>
-
-                <style
-                    name="DajSpisacTheme"
-                    parent="android:Theme.Holo.Light" >
-                    <item name="android:actionBarTabStyle">
-@style/ActionBarTabStyle
-                    </item>
-                    <item name="android:actionBarSize">
-55dip
-                    </item>
-                    <item name="android:actionBarStyle">
-@style/DajSpisacTheme.ActionBarDajSpisac
-                    </item>
-                    <item name="android:panelFullBackground">
-@color/actionBarColor
-                    </item>
-                    <item name="android:panelBackground">
-@color/actionBarColor
-                    </item>
-                    <item name="android:panelColorBackground">
-@color/actionBarColor
-                    </item>
-                    <item name="android:itemBackground">
-@color/actionBarColor
-                    </item>
-                    <item name="android:actionMenuTextColor">
-@color/orangeDajSpisac
-                    </item>
-                    <item name="android:itemTextAppearance">
-@style/TextAppearance
-                    </item>
-                </style>
-
-                <style
-                    name="dialog_title_style"
-                    parent="android:Widget.TextView" >
-                    <item name="android:background">
-@color/darkBlueDajSpisac
-                    </item>
-                    <item name="android:padding">
-10dp
-                    </item>
-                </style>
-
-                <style
-                    name="AppTheme"
-                    parent="android:Theme.Holo" >
-
-                    <!-- Customize your theme here. -->
-                </style>
             </file>
             <file
                 path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/values/dimens.xml"
                 qualifiers="" >
                 <dimen name="activity_horizontal_margin" >16dp
                 </dimen>
+                <dimen name="tabcontent_top_margin_land" >110dp
+                </dimen>
                 <dimen name="activity_vertical_margin" >16dp
+                </dimen>
+                <dimen name="tabcontent_top_margin" >128dp
                 </dimen>
             </file>
             <file
@@ -9114,9 +9101,9 @@ true
                 <string name="wybierzklase" >WYBIERZ KLASĘ
                 </string>
 
-                <color name="darkGreyTransparent" >#80696969
-                </color>
                 <color name="actionbarTitleOrange" >#fad5c2
+                </color>
+                <color name="darkGreyTransparent" >#80696969
                 </color>
                 <color name="actionBarColor" >#1d1e33
                 </color>
@@ -9125,13 +9112,15 @@ true
                 </string>
                 <string name="zmien" >Zmień
                 </string>
-                <string name="imgsrc" >&lt;img src=\"%s\"  />
-                </string>
-                <string name="FIZYKA" >FIZYKA
-                </string>
 
                 <color name="black" >#000000
                 </color>
+
+                <string name="FIZYKA" >FIZYKA
+                </string>
+                <string name="imgsrc" >&lt;img src=\"%s\"  />
+                </string>
+
                 <color name="buttonTextColorClicked" >#f3b18f
                 </color>
                 <color name="orangeDajSpisac" >#f2b08d
@@ -9157,9 +9146,9 @@ true
                 </string>
                 <string name="rozwiazanie" >ROZWIĄZANIE
                 </string>
-                <string name="numerzadania" >NUMER ZADANIA
-                </string>
                 <string name="anuluj" >Anuluj
+                </string>
+                <string name="numerzadania" >NUMER ZADANIA
                 </string>
                 <string name="gimnazjum" >GIMNAZJUM
                 </string>
@@ -9169,12 +9158,12 @@ true
 
                 <string name="interner_error" >Błąd połączenia z Internetem!
                 </string>
-                <string name="htmlstart" >&lt;html>     &lt;head>       &lt;script src="file:///android_asset/asciimath.js" type="text/javascript">&lt;/script> &lt;script>     var AScgiloc = \'http://www.imathas.com/imathas/filter/graph/svgimg.php\';     var AMTcgiloc = \'http://www.imathas.com/cgi-bin/mimetex.cgi\';   &lt;/script>   &lt;script src="file:///android_asset/asciisvg.js" type="text/javascript">&lt;/script> &lt;/head>     &lt;body>
-                </string>
 
                 <color name="darkBlueDajSpisac" >#19172c
                 </color>
 
+                <string name="htmlstart" >&lt;html>     &lt;head>       &lt;script src="file:///android_asset/asciimath.js" type="text/javascript">&lt;/script> &lt;script>     var AScgiloc = \'http://www.imathas.com/imathas/filter/graph/svgimg.php\';     var AMTcgiloc = \'http://www.imathas.com/cgi-bin/mimetex.cgi\';   &lt;/script>   &lt;script src="file:///android_asset/asciisvg.js" type="text/javascript">&lt;/script> &lt;/head>     &lt;body>
+                </string>
                 <string name="znajdzrozwiazanie" >Znajdź Rozwiązanie
                 </string>
                 <string name="no_books" >BRAK KSIĄŻEK
@@ -9227,13 +9216,38 @@ true
                 qualifiers=""
                 type="drawable" />
             <file
+                name="twojeksiazki_plus_lososiowy"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/twojeksiazki_plus_lososiowy.png"
+                qualifiers=""
+                type="drawable" />
+            <file
                 name="button_zmien"
                 path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/button_zmien.xml"
                 qualifiers=""
                 type="drawable" />
             <file
+                name="wybrana_ksiazka_gora"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/wybrana_ksiazka_gora.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="twojeksiazki_iks_losiowy"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/twojeksiazki_iks_losiowy.png"
+                qualifiers=""
+                type="drawable" />
+            <file
                 name="button_background_chooseclassdialog_right"
                 path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/button_background_chooseclassdialog_right.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="twojeksiazki_fizyka_lososiowa"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/twojeksiazki_fizyka_lososiowa.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="twojeksiazki_iks_lightblue"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/twojeksiazki_iks_lightblue.png"
                 qualifiers=""
                 type="drawable" />
             <file
@@ -9247,8 +9261,63 @@ true
                 qualifiers=""
                 type="drawable" />
             <file
+                name="back_losos"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/back_losos.png"
+                qualifiers=""
+                type="drawable" />
+            <file
                 name="button_background_chooseclass_anuluj_clicked"
                 path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/button_background_chooseclass_anuluj_clicked.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="delete_book_buuton"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/delete_book_buuton.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="backgorund_footer_mybooks"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/backgorund_footer_mybooks.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="toast_internet_error_drawable"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/toast_internet_error_drawable.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="wybrana_ksiazka_dol"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/wybrana_ksiazka_dol.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="add_book_button"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/add_book_button.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="twojeksiazki_plus_bialy"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/twojeksiazki_plus_bialy.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="twojeksiazki_matematyka_blada"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/twojeksiazki_matematyka_blada.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="twojeksiazki_matematyka_lososiowa"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/twojeksiazki_matematyka_lososiowa.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="twojeksiazki_plus_lightblue"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/twojeksiazki_plus_lightblue.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="twojeksiazki_chemia_blady"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/twojeksiazki_chemia_blady.png"
                 qualifiers=""
                 type="drawable" />
             <file
@@ -9257,8 +9326,28 @@ true
                 qualifiers=""
                 type="drawable" />
             <file
+                name="tab_widget_backgorund"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/tab_widget_backgorund.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="tab_background_default"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/tab_background_default.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="twojeksiazki_chemia_losos"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/twojeksiazki_chemia_losos.png"
+                qualifiers=""
+                type="drawable" />
+            <file
                 name="button_background_chooseclassdialog_middle_clicked"
                 path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/button_background_chooseclassdialog_middle_clicked.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="twojeksiazki_fizyka_blada"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/twojeksiazki_fizyka_blada.png"
                 qualifiers=""
                 type="drawable" />
             <file
@@ -9277,6 +9366,11 @@ true
                 qualifiers=""
                 type="drawable" />
             <file
+                name="mybook_single_listview_layout"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout/mybook_single_listview_layout.xml"
+                qualifiers=""
+                type="layout" />
+            <file
                 name="single_book_activity_fragment_layout"
                 path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout/single_book_activity_fragment_layout.xml"
                 qualifiers=""
@@ -9287,8 +9381,28 @@ true
                 qualifiers=""
                 type="layout" />
             <file
+                name="internet_error_toast_layout"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout/internet_error_toast_layout.xml"
+                qualifiers=""
+                type="layout" />
+            <file
                 name="books_activity_layout"
                 path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout/books_activity_layout.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="no_book_layout"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout/no_book_layout.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="actionbar_layout_singlebook"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout/actionbar_layout_singlebook.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="tab_mathematics_layout"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout/tab_mathematics_layout.xml"
                 qualifiers=""
                 type="layout" />
             <file
@@ -9302,6 +9416,16 @@ true
                 qualifiers=""
                 type="layout" />
             <file
+                name="footer_mybooks_layout"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout/footer_mybooks_layout.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="choose_class_fragment_layout"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout/choose_class_fragment_layout.xml"
+                qualifiers=""
+                type="layout" />
+            <file
                 name="dialog_choose_class_layout"
                 path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout/dialog_choose_class_layout.xml"
                 qualifiers=""
@@ -9312,13 +9436,38 @@ true
                 qualifiers=""
                 type="layout" />
             <file
+                name="tab_physics_layout"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout/tab_physics_layout.xml"
+                qualifiers=""
+                type="layout" />
+            <file
                 name="single_book_activity_layout"
                 path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout/single_book_activity_layout.xml"
                 qualifiers=""
                 type="layout" />
             <file
+                name="tab_exercise_number_layout"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout/tab_exercise_number_layout.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="mybooksactivitylayout"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout/mybooksactivitylayout.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="tab_chemistry_layout"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout/tab_chemistry_layout.xml"
+                qualifiers=""
+                type="layout" />
+            <file
                 name="exercise_activity_fragment_layout"
                 path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout/exercise_activity_fragment_layout.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="tab_page_number_layout"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout/tab_page_number_layout.xml"
                 qualifiers=""
                 type="layout" />
             <file
@@ -9332,200 +9481,72 @@ true
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
-                name="tab_chemistry_layout"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout/tab_chemistry_layout.xml"
+                name="tab_background_default_chosen"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/tab_background_default_chosen.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="single_book_activity_layout_noclip"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout/single_book_activity_layout_noclip.xml"
                 qualifiers=""
                 type="layout" />
             <file
-                name="tab_mathematics_layout"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout/tab_mathematics_layout.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="tab_physics_layout"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout/tab_physics_layout.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="tab_page_number_layout"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout/tab_page_number_layout.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="actionbar_layout_singlebook"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout/actionbar_layout_singlebook.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="tab_exercise_number_layout"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout/tab_exercise_number_layout.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="twojeksiazki_fizyka_lososiowa"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/twojeksiazki_fizyka_lososiowa.png"
-                qualifiers=""
-                type="drawable" />
-            <file
-                name="twojeksiazki_matematyka_lososiowa"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/twojeksiazki_matematyka_lososiowa.png"
-                qualifiers=""
-                type="drawable" />
-            <file
-                name="twojeksiazki_chemia_blady"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/twojeksiazki_chemia_blady.png"
-                qualifiers=""
-                type="drawable" />
-            <file
-                name="twojeksiazki_fizyka_blada"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/twojeksiazki_fizyka_blada.png"
-                qualifiers=""
-                type="drawable" />
-            <file
-                name="twojeksiazki_chemia_losos"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/twojeksiazki_chemia_losos.png"
-                qualifiers=""
-                type="drawable" />
-            <file
-                name="twojeksiazki_matematyka_blada"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/twojeksiazki_matematyka_blada.png"
-                qualifiers=""
-                type="drawable" />
-            <file
-                name="back_losos"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/back_losos.png"
-                qualifiers=""
-                type="drawable" />
-            <file
-                name="wybrana_ksiazka_dol"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/wybrana_ksiazka_dol.png"
-                qualifiers=""
-                type="drawable" />
-            <file
-                name="wybrana_ksiazka_gora"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/wybrana_ksiazka_gora.png"
-                qualifiers=""
-                type="drawable" />
-            <file
-                name="add_book_button"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/add_book_button.xml"
-                qualifiers=""
-                type="drawable" />
-            <file
-                name="twojeksiazki_plus_lightblue"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/twojeksiazki_plus_lightblue.png"
-                qualifiers=""
-                type="drawable" />
-            <file
-                name="twojeksiazki_plus_lososiowy"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/twojeksiazki_plus_lososiowy.png"
-                qualifiers=""
-                type="drawable" />
-            <file
-                name="choose_class_fragment_layout"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout/choose_class_fragment_layout.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="mybooksactivitylayout"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout/mybooksactivitylayout.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="twojeksiazki_iks_losiowy"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/twojeksiazki_iks_losiowy.png"
-                qualifiers=""
-                type="drawable" />
-            <file
-                name="twojeksiazki_iks_lightblue"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/twojeksiazki_iks_lightblue.png"
-                qualifiers=""
-                type="drawable" />
-            <file
-                name="mybook_single_listview_layout"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout/mybook_single_listview_layout.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="delete_book_buuton"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/delete_book_buuton.xml"
-                qualifiers=""
-                type="drawable" />
-            <file
-                name="footer_mybooks_layout"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout/footer_mybooks_layout.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="twojeksiazki_plus_bialy"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/twojeksiazki_plus_bialy.png"
-                qualifiers=""
-                type="drawable" />
-            <file
-                name="backgorund_footer_mybooks"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/backgorund_footer_mybooks.xml"
-                qualifiers=""
-                type="drawable" />
-            <file
-                name="tab_clicked_animation"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/anim/tab_clicked_animation.xml"
-                qualifiers=""
-                type="anim" />
-            <file
-                name="tab_physics_layout"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout-land/tab_physics_layout.xml"
+                name="single_book_activity_layout_noclip"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout-land/single_book_activity_layout_noclip.xml"
                 qualifiers="land"
                 type="layout" />
             <file
-                name="tab_chemistry_layout"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout-land/tab_chemistry_layout.xml"
+                name="exercise_activity_layout_noclip"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout/exercise_activity_layout_noclip.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="exercise_activity_layout_noclip"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout-land/exercise_activity_layout_noclip.xml"
                 qualifiers="land"
                 type="layout" />
             <file
-                name="tab_mathematics_layout"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout-land/tab_mathematics_layout.xml"
-                qualifiers="land"
+                name="mybooksactivitylayout_noclip"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout/mybooksactivitylayout_noclip.xml"
+                qualifiers=""
                 type="layout" />
             <file
-                name="tab_clicked_animation_back"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/anim/tab_clicked_animation_back.xml"
-                qualifiers=""
-                type="anim" />
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/values-v11/styles.xml"
+                qualifiers="v11" >
+
+                <style
+                    name="DajSpisacTheme"
+                    parent="android:Theme.Holo.NoActionBar" >
+
+                    <!--
+        <item name="android:panelFullBackground">@color/actionBarColor</item>
+        <item name="android:panelBackground">@color/actionBarColor</item>
+        <item name="android:panelColorBackground">@color/actionBarColor</item>
+        <item name="android:itemBackground">@color/actionBarColor</item>
+        <item name="android:itemTextAppearance">@style/TextAppearance</item>
+                    -->
+                </style>
+            </file>
             <file
-                name="tab_background_default"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/tab_background_default.xml"
-                qualifiers=""
+                name="button_background_chooseclassdialog_left_clicked"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable-v12/button_background_chooseclassdialog_left_clicked.xml"
+                qualifiers="v12"
                 type="drawable" />
             <file
-                name="tab_widget_backgorund"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/tab_widget_backgorund.xml"
-                qualifiers=""
+                name="button_background_chooseclassdialog_left"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable-v12/button_background_chooseclassdialog_left.xml"
+                qualifiers="v12"
                 type="drawable" />
             <file
-                name="internet_error_toast_layout"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout/internet_error_toast_layout.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="toast_internet_error_drawable"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable/toast_internet_error_drawable.xml"
-                qualifiers=""
+                name="button_background_chooseclassdialog_right"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable-v12/button_background_chooseclassdialog_right.xml"
+                qualifiers="v12"
                 type="drawable" />
             <file
-                name="no_book_layout"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout/no_book_layout.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="books_activity_layout"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout-land/books_activity_layout.xml"
-                qualifiers="land"
-                type="layout" />
-            <file
-                name="mybooksactivitylayout"
-                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout-land/mybooksactivitylayout.xml"
-                qualifiers="land"
-                type="layout" />
+                name="button_background_chooseclassdialog_right_clicked"
+                path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/drawable-v12/button_background_chooseclassdialog_right_clicked.xml"
+                qualifiers="v12"
+                type="drawable" />
         </source>
         <source path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/generated/res/rs/debug" />
         <source path="/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/build/generated/res/generated/debug" />

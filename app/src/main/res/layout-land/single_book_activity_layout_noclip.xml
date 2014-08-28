@@ -1,0 +1,76 @@
+<TabHost
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/actionbar_layout_singlebook" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:id="@+id/actionBar" android:layout_alignParentTop="true" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/numerstrony"
+            android:textSize="15sp"
+            android:id="@+id/pageNumTv"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:textStyle="bold"
+            android:background="@color/darkBlueDajSpisac"
+            android:textColor="@color/lightBlueDajSpisac"
+            android:gravity="center_horizontal"
+            android:layout_below="@id/actionBar"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/numeryzadan"
+            android:id="@+id/textView"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/lightGrey"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:textStyle="bold"
+            android:textColor="@color/lightBlueDajSpisac"
+            android:layout_below="@+id/horizontalscrollview"/>
+        <HorizontalScrollView
+            android:scrollbars="none"
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:layout_below="@id/pageNumTv"
+            android:id="@+id/horizontalscrollview"
+            android:fadingEdgeLength="0dp">
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/darkBlueDajSpisac"
+                android:showDividers="none"
+                />
+        </HorizontalScrollView>
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPagerSingleBook"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_below="@id/textView"/>
+
+
+
+    </RelativeLayout>
+</TabHost>

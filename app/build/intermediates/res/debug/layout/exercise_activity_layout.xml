@@ -2,13 +2,19 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/tabhost"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:clipChildren="false">
 
-    <LinearLayout
+    <RelativeLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/darkBlueDajSpisac">
+        android:background="@color/white"
+        android:clipChildren="false"
+        android:id="@+id/relativeContainer">
+        <include layout="@layout/actionbar_layout_singlebook" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true"
+            android:id="@+id/actionBar" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -18,31 +24,12 @@
             android:paddingBottom="5dp"
             android:paddingTop="5dp"
             android:textStyle="bold"
+            android:id="@+id/tVNrZad"
             android:background="@color/darkBlueDajSpisac"
             android:textColor="@color/lightBlueDajSpisac"
-            android:gravity="center_horizontal" />
+            android:gravity="center_horizontal"
+            android:layout_below="@id/actionBar"/>
 
-
-
-        <HorizontalScrollView
-            android:scrollbars="none"
-            android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:id="@+id/horizontalscrollview"
-            android:layout_gravity="center_horizontal">
-            <LinearLayout android:id="@+id/top_buttons"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                >
-
-                <TabWidget
-                    android:id="@android:id/tabs"
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/lightBlueDajSpisac"/>
-            </LinearLayout>
-        </HorizontalScrollView>
 
         <FrameLayout
             android:id="@android:id/tabcontent"
@@ -55,9 +42,47 @@
             android:id="@+id/viewPagerSingleExercise"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/white"/>
+            android:background="@color/white"
+            android:layout_below="@+id/frameCont"
+            android:layout_marginTop="5dp"/>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/darkBlueDajSpisac"
+            android:layout_below="@+id/tVNrZad"
+            android:clipChildren="false"
+            android:id="@+id/frameCont">
+        <HorizontalScrollView
+            android:scrollbars="none"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:id="@+id/horizontalscrollview"
+            android:background="@color/darkBlueDajSpisac"
+            android:layout_gravity="center_horizontal"
+            android:clipChildren="false">
+            <LinearLayout android:id="@+id/top_buttons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:clipChildren="false"
+                >
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/darkBlueDajSpisac"
+                    android:clipChildren="false"
+                    android:showDividers="none"
+                    />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        </FrameLayout>
 
 
 
-    </LinearLayout>
+    </RelativeLayout>
 </TabHost><!-- From: file:/home/olek/AndroidStudioProjects/DajSpisac2/DajSpisac/app/src/main/res/layout/exercise_activity_layout.xml -->

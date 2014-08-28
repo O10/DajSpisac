@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clipChildren="false"
-            android:layout_marginTop="63dp"
+            android:layout_marginTop="@dimen/tabcontent_top_margin_land"
             >
 
             <android.support.v4.view.ViewPager
@@ -32,19 +32,23 @@
             android:id="@android:id/tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/separator"
+            android:layout_below="@id/actionBar"
             android:background="@drawable/tab_widget_backgorund"
             android:clipChildren="false"
             android:orientation="horizontal"
             android:showDividers="none"/>
 
-        <View
+       <!-- <View
             android:id="@+id/separator"
             android:layout_width="fill_parent"
             android:layout_height="0.7dp"
             android:alpha="0.8"
             android:background="@color/lightBlueDajSpisac"
-            android:visibility="visible" />
+            android:visibility="gone"
+            android:layout_below="@+id/actionBar" />-->
+
+        <include layout="@layout/actionbar_layout_singlebook" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true"
+            android:id="@+id/actionBar"/>
 
     </RelativeLayout>
 

@@ -2,31 +2,36 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center_vertical">
+    android:layout_height="48dp"
+    android:gravity="center_vertical"
+    android:background="@color/actionBarColor"
+    >
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:id="@+id/imageViewBack"
+        android:id="@+id/imageViewLeft"
         android:src="@drawable/back_losos"
         android:layout_gravity="center_vertical"
-        android:paddingLeft="20dp"
+        android:paddingLeft="15dp"
         android:paddingRight="10dp" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageViewCoverMin"
+        android:id="@+id/imageViewRight"
         android:src="@drawable/ic_launcher"
         android:layout_gravity="center_vertical"
         android:layout_marginLeft="6dp"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp" />
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:focusable="false"
+        android:maxHeight="48dp"
+        android:scaleType="center"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textViewSubjectName"
+        android:id="@+id/textViewTitle"
         android:text="chemia"
         android:textColor="@color/actionbarTitleOrange"
         android:textSize="20sp"

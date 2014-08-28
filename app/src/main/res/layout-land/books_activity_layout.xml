@@ -11,6 +11,10 @@
         android:orientation="vertical"
         android:background="@color/white">
 
+        <include layout="@layout/actionbar_layout_singlebook" android:layout_width="match_parent" android:layout_height="40dp"
+            android:id="@+id/actionBar"/>
+
+
         <fragment
             android:id="@+id/list"
             android:name="com.swmansion.dajspisac.settings.FragmentChooseClass"
@@ -41,19 +45,18 @@
                     android:clipChildren="false" />
 
             </FrameLayout>
-            <View
+            <!--<View
                 android:id="@+id/separator"
                 android:layout_width="fill_parent"
                 android:layout_height="0.5dp"
                 android:alpha="0.8"
                 android:background="@color/darkBlueDajSpisac"
-                android:visibility="visible" />
+                android:visibility="visible" />-->
 
             <TabWidget
                 android:id="@android:id/tabs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/separator"
                 android:background="@drawable/tab_widget_backgorund"
                 android:clipChildren="false"
                 android:orientation="horizontal"

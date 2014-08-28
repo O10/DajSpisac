@@ -1,12 +1,9 @@
 package com.swmansion.dajspisac.tools;
 
-import android.animation.AnimatorSet;
-import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Point;
-import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.Display;
 import android.view.Gravity;
@@ -14,7 +11,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.example.olek.firsttest.R;
+import com.nineoldandroids.animation.AnimatorSet;
+import com.nineoldandroids.animation.ObjectAnimator;
+import com.swmansion.dajspisac.R;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -73,12 +72,15 @@ public class DajSpisacUtilities {
         return screenWidth;
     }
 
-    public static void startTabChoosedAnimation(final View view,final ViewPager viewPage){
+    public static void startTabChoosedAnimation(final View view,final View viewInvalidate){
+        if (android.os.Build.VERSION.SDK_INT <= android.os.Build.VERSION_CODES.GINGERBREAD) {
+            return;
+        }
         float scalingFactor = 1.2f; // scale down to half the size
         AnimatorSet aSet = new AnimatorSet();
         ObjectAnimator anim = ObjectAnimator.ofFloat(view, "ScaleX", 1f, scalingFactor);
         ObjectAnimator anim2 = ObjectAnimator.ofFloat(view, "ScaleY", 1f, scalingFactor);
-        anim.setDuration(500);
+        anim.setDuration(250);
         /*anim2.addListener(new Animator.AnimatorListener() {
             @Override
             public void onAnimationStart(Animator animator) {
@@ -106,18 +108,21 @@ public class DajSpisacUtilities {
                 //viewPage.invalidate();
             }
         });*/
-        anim2.setDuration(500);
+        anim2.setDuration(250);
         aSet.play(anim).with(anim2);
         aSet.start();
     }
 
-    public static void startTabUnChoosedAnimation(final View view,final ViewPager viewPage){
+    public static void startTabUnChoosedAnimation(final View view,final View viewInvalidate){
+        if (android.os.Build.VERSION.SDK_INT <= android.os.Build.VERSION_CODES.GINGERBREAD) {
+            return;
+        }
         float scalingFactor = 1f; // scale down to half the size
         AnimatorSet aSet = new AnimatorSet();
         ObjectAnimator anim = ObjectAnimator.ofFloat(view, "ScaleX", 1.2f, scalingFactor);
         ObjectAnimator anim2 = ObjectAnimator.ofFloat(view, "ScaleY", 1.2f, scalingFactor);
-        anim.setDuration(500);
-        anim2.setDuration(500);
+        anim.setDuration(250);
+        anim2.setDuration(250);
         /*anim2.addListener(new Animator.AnimatorListener() {
             @Override
             public void onAnimationStart(Animator animator) {
