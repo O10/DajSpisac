@@ -32,7 +32,7 @@ import java.util.HashMap;
  */
 public class MyBooksActivity extends BooksActivity {
     private RelativeLayout addBookLayout;
-    private final static int expectedFooterHeight = 171;
+    private final static int expectedFooterHeight = 221;
     private MyBooksCollectionPagerAdapter mMyBooksCollectionPagerAdapter;
     private SpiceManager spiceManager;
 

@@ -111,8 +111,11 @@ public class BooksChooseAdapter extends BaseAdapter {
 
     void setBooksArray(BookList bookList) {
         bookIDS = new LinkedHashSet<String>(DajSpisacUtilities.getMyBookIds(activity));
-        mBooksArray = new ArrayList<Book>(bookList);
-        mBooksArray.removeAll(bookIDS);
+        for (Book book : bookList) {
+            if (!bookIDS.contains(String.valueOf(book.getId()))) {
+                mBooksArray.add(book);
+            }
+        }
         bArray = new Bitmap[mBooksArray.size()];
         positionsMarked = new boolean[mBooksArray.size()];
         notifyDataSetChanged();
