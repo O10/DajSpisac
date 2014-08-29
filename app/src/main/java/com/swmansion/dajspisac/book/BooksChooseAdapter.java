@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -20,29 +19,29 @@ import com.swmansion.dajspisac.tools.DajSpisacUtilities;
 import com.swmansion.dajspisac.tools.ImageHelper;
 
 import java.util.ArrayList;
+import java.util.LinkedHashSet;
 
 /**
  * Created by olek on 04.08.14.
  */
 public class BooksChooseAdapter extends BaseAdapter {
-    Context context;
+    Activity activity;
     ArrayList<Book> mBooksArray;
     Bitmap[] bArray;
     boolean positionsMarked[];
 
-    ArrayList<String> bookIDS;
+    LinkedHashSet<String> bookIDS;
 
     static class ViewHolderItem {
         TextView author, title;
         ImageView miniature;
-        Button addDeleteButton;
         LinearLayout bookLayout;
         int id;
     }
 
-    public BooksChooseAdapter(Context context) {
+    public BooksChooseAdapter(Activity activity) {
         super();
-        this.context = context;
+        this.activity = activity;
         this.mBooksArray = new ArrayList<Book>();
     }
 
@@ -58,30 +57,24 @@ public class BooksChooseAdapter extends BaseAdapter {
     }
 
     private void addDeleteButtonClicked(int position, ViewHolderItem viewHolder) {
-        if (positionsMarked[position]) {
-            viewHolder.addDeleteButton.setBackgroundResource(R.drawable.twojeksiazki_plus_lightblue);
-            DajSpisacUtilities.removeBookById(context, viewHolder.id);
-            positionsMarked[position] = false;
-        } else {
-            bookIDS.add(Integer.toString(viewHolder.id));
-            DajSpisacUtilities.addBookById(context, viewHolder.id);
-            viewHolder.addDeleteButton.setBackgroundResource(R.drawable.twojeksiazki_plus_lososiowy);
-            positionsMarked[position] = true;
-        }
+        bookIDS.add(Integer.toString(viewHolder.id));
+        DajSpisacUtilities.addBookById(activity, viewHolder.id);
+        activity.finish();
     }
 
     @Override
     public View getView(final int position, View view, ViewGroup viewGroup) {
         final ViewHolderItem viewHolder;
         if (view == null) {
-            LayoutInflater inflater = ((Activity) context).getLayoutInflater();
+            LayoutInflater inflater = ((Activity) activity).getLayoutInflater();
             view = inflater.inflate(R.layout.single_book_listview_layout, viewGroup, false);
             viewHolder = new ViewHolderItem();
             viewHolder.author = (TextView) view.findViewById(R.id.tVAuthor);
             viewHolder.title = (TextView) view.findViewById(R.id.tVtitle);
             viewHolder.miniature = (ImageView) view.findViewById(R.id.iViewMin);
             viewHolder.id = mBooksArray.get(position).getId();
-            viewHolder.addDeleteButton = (Button) view.findViewById(R.id.buttonAddDeleteBook);
+            view.findViewById(R.id.buttonAddDeleteBook).setVisibility(View.GONE);
+            view.findViewById(R.id.gradientDivider).setVisibility(View.GONE);
             viewHolder.bookLayout = (LinearLayout) view.findViewById(R.id.booksLayoutSingleItem);
             view.setTag(viewHolder);
         } else {
@@ -99,18 +92,6 @@ public class BooksChooseAdapter extends BaseAdapter {
                 viewHolder.miniature.setImageBitmap(bArray[position]);
             }
 
-            if (positionsMarked[position]) {
-                viewHolder.addDeleteButton.setBackgroundResource(R.drawable.twojeksiazki_plus_lososiowy);
-            } else {
-                viewHolder.addDeleteButton.setBackgroundResource(R.drawable.twojeksiazki_plus_lightblue);
-            }
-
-            viewHolder.addDeleteButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    addDeleteButtonClicked(position, viewHolder);
-                }
-            });
             viewHolder.bookLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -122,16 +103,6 @@ public class BooksChooseAdapter extends BaseAdapter {
         return view;
     }
 
-    private void fillMarkedTable() {
-
-        bookIDS = DajSpisacUtilities.getMyBookIds(context);
-
-        for (int i = 0; i < positionsMarked.length; i++) {
-            positionsMarked[i] = bookIDS.contains(Integer.toString(mBooksArray.get(i).getId()));
-        }
-
-    }
-
     @Override
     public long getItemId(int i) {
         return i;
@@ -139,10 +110,11 @@ public class BooksChooseAdapter extends BaseAdapter {
 
 
     void setBooksArray(BookList bookList) {
-        this.mBooksArray = bookList;
+        bookIDS = new LinkedHashSet<String>(DajSpisacUtilities.getMyBookIds(activity));
+        mBooksArray = new ArrayList<Book>(bookList);
+        mBooksArray.removeAll(bookIDS);
         bArray = new Bitmap[mBooksArray.size()];
         positionsMarked = new boolean[mBooksArray.size()];
-        fillMarkedTable();
         notifyDataSetChanged();
     }
 
