@@ -222,7 +222,7 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
         private boolean isSolActive, isTrescActive;
         private Button buttonTresc, buttonSolution;
         private View seperatorAfterTresc, seperatorAfterSolution;
-        private WebView mWebWievSolution,mWebViewTresc;
+        private WebView mWebWievSolution, mWebViewTresc;
         private ProgressBar mProgressBar;
         Exercise mExercise;
         private static boolean isToastShown = false;
@@ -266,7 +266,7 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
             seperatorAfterTresc = rootView.findViewById(R.id.sepAfterTresc);
             seperatorAfterSolution = rootView.findViewById(R.id.sepAfteSolution);
             mWebWievSolution = (WebView) rootView.findViewById(R.id.webViewSolution);
-            mWebViewTresc=(WebView)rootView.findViewById(R.id.webViewTresc);
+            mWebViewTresc = (WebView) rootView.findViewById(R.id.webViewTresc);
             mProgressBar = (ProgressBar) rootView.findViewById(R.id.progressBar);
 
 
@@ -279,10 +279,10 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
             super.onActivityCreated(savedInstanceState);
         }
 
-        private void prepareWebWiev(WebView webView){
+        private void prepareWebWiev(WebView webView) {
             WebSettings settings = webView.getSettings();
             settings.setBuiltInZoomControls(true);
-            if(Build.VERSION.SDK_INT >= 11){
+            if (Build.VERSION.SDK_INT >= 11) {
                 settings.setDisplayZoomControls(false);
             }
             settings.setSupportZoom(true);
@@ -327,7 +327,7 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
             mWebWievSolution.loadDataWithBaseURL("http://dajspisac.pl/", htmlString, "text/html", "UTF-8", "");
 
             String htmlStringTresc = getResources().getString(R.string.htmlstart) + "\n" + mExercise.getContent() + "\n" + getResources().getString(R.string.htmlend);
-            mWebViewTresc.loadDataWithBaseURL("http://dajspisac.pl/",htmlStringTresc,"text/html", "UTF-8", "");
+            mWebViewTresc.loadDataWithBaseURL("http://dajspisac.pl/", htmlStringTresc, "text/html", "UTF-8", "");
 
             buttonTresc.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -336,9 +336,9 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
                         buttonTresc.setCompoundDrawablesWithIntrinsicBounds(null, null, getResources().getDrawable(R.drawable.wybrana_ksiazka_dol), null);
                     } else {
                         buttonTresc.setCompoundDrawablesWithIntrinsicBounds(null, null, getResources().getDrawable(R.drawable.wybrana_ksiazka_gora), null);
-
+                        ExpandCollapseAnimation.setHeightForWrapContent(getActivity(), mWebViewTresc);
                     }
-                    ExpandCollapseAnimation.setHeightForWrapContent(getActivity(), mWebViewTresc);
+
                     ExpandCollapseAnimation animation;
                     if (isTrescActive) {
                         animation = new ExpandCollapseAnimation(mWebViewTresc, 500, 1);
