@@ -287,6 +287,9 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
 
             WebSettings settings = mWebWievSolution.getSettings();
             settings.setBuiltInZoomControls(true);
+            if(Build.VERSION.SDK_INT >= 11){
+                settings.setDisplayZoomControls(false);
+            }
             settings.setSupportZoom(true);
             settings.setJavaScriptEnabled(true);
             settings.setUseWideViewPort(true);
