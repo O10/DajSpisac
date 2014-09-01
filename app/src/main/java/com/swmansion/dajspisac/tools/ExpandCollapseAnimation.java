@@ -62,12 +62,8 @@ public class ExpandCollapseAnimation extends Animation {
         int widthMeasureSpec = View.MeasureSpec.makeMeasureSpec(screenWidth, View.MeasureSpec.EXACTLY);
 
         view.measure(widthMeasureSpec, heightMeasureSpec);
-        if(view.getMeasuredHeight()!=0){
-            view.getLayoutParams().height = view.getMeasuredHeight();
-        }
-        else{
-            view.getLayoutParams().height = 100;
-        }
+        view.getLayoutParams().height = view.getMeasuredHeight();
+
 
 
         Log.d("retro","Height measured "+view.getLayoutParams().height);

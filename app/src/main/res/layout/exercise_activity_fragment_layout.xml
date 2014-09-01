@@ -41,9 +41,9 @@
             android:background="@color/darkGrey"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
-            android:visibility="gone" />
+            android:visibility="visible" />
 
-        <WebView xmlns:android="http://schemas.android.com/apk/res/android"
+        <WebView
             android:id="@+id/webViewTresc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -51,7 +51,7 @@
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
             android:paddingTop="10dp"
-            android:visibility="gone" />
+            android:visibility="gone"/>
 
         <View
             android:layout_width="fill_parent"
@@ -97,7 +97,6 @@
             android:id="@+id/progressBar"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/progressBar"
             android:minHeight="100dp" />
 
         <WebView xmlns:android="http://schemas.android.com/apk/res/android"
