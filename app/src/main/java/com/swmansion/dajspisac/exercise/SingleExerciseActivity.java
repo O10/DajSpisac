@@ -8,7 +8,6 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -222,9 +221,8 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
         private SpiceManager spiceManager;
         private boolean isSolActive, isTrescActive;
         private Button buttonTresc, buttonSolution;
-        private TextView textViewTresc;
         private View seperatorAfterTresc, seperatorAfterSolution;
-        private WebView mWebWievSolution;
+        private WebView mWebWievSolution,mWebViewTresc;
         private ProgressBar mProgressBar;
         Exercise mExercise;
         private static boolean isToastShown = false;
@@ -263,13 +261,14 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             View rootView = inflater.inflate(
                     R.layout.exercise_activity_fragment_layout, container, false);
-            textViewTresc = (TextView) rootView.findViewById(R.id.textViewTresc);
             buttonTresc = (Button) rootView.findViewById(R.id.buttonTresc);
             buttonSolution = (Button) rootView.findViewById(R.id.buttonSolution);
             seperatorAfterTresc = rootView.findViewById(R.id.sepAfterTresc);
             seperatorAfterSolution = rootView.findViewById(R.id.sepAfteSolution);
             mWebWievSolution = (WebView) rootView.findViewById(R.id.webViewSolution);
+            mWebViewTresc=(WebView)rootView.findViewById(R.id.webViewTresc);
             mProgressBar = (ProgressBar) rootView.findViewById(R.id.progressBar);
+
 
             return rootView;
 
@@ -280,12 +279,8 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
             super.onActivityCreated(savedInstanceState);
         }
 
-        private void updateViews() {
-            textViewTresc.setText(Html.fromHtml(mExercise.getContent()));
-            mProgressBar.setMax(100);
-
-
-            WebSettings settings = mWebWievSolution.getSettings();
+        private void prepareWebWiev(WebView webView){
+            WebSettings settings = webView.getSettings();
             settings.setBuiltInZoomControls(true);
             if(Build.VERSION.SDK_INT >= 11){
                 settings.setDisplayZoomControls(false);
@@ -293,6 +288,13 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
             settings.setSupportZoom(true);
             settings.setJavaScriptEnabled(true);
             settings.setUseWideViewPort(true);
+        }
+
+        private void updateViews() {
+            mProgressBar.setMax(100);
+            prepareWebWiev(mWebViewTresc);
+            prepareWebWiev(mWebWievSolution);
+
             isSolActive = true;
 
 
@@ -324,6 +326,9 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
 
             mWebWievSolution.loadDataWithBaseURL("http://dajspisac.pl/", htmlString, "text/html", "UTF-8", "");
 
+            String htmlStringTresc = getResources().getString(R.string.htmlstart) + "\n" + mExercise.getContent() + "\n" + getResources().getString(R.string.htmlend);
+            mWebViewTresc.loadDataWithBaseURL("http://dajspisac.pl/",htmlStringTresc,"text/html", "UTF-8", "");
+
             buttonTresc.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -333,18 +338,18 @@ public class SingleExerciseActivity extends FragmentActivity implements TabHost.
                         buttonTresc.setCompoundDrawablesWithIntrinsicBounds(null, null, getResources().getDrawable(R.drawable.wybrana_ksiazka_gora), null);
 
                     }
-                    ExpandCollapseAnimation.setHeightForWrapContent(getActivity(), textViewTresc);
+                    ExpandCollapseAnimation.setHeightForWrapContent(getActivity(), mWebViewTresc);
                     ExpandCollapseAnimation animation;
                     if (isTrescActive) {
-                        animation = new ExpandCollapseAnimation(textViewTresc, 500, 1);
-                        animation.setAnimationListener(new ViewVisibilityListener(seperatorAfterTresc));
+                        animation = new ExpandCollapseAnimation(mWebViewTresc, 500, 1);
+                        animation.setAnimationListener(new ViewVisibilityListener(mWebViewTresc));
                         isTrescActive = false;
                     } else {
-                        animation = new ExpandCollapseAnimation(textViewTresc, 500, 0);
+                        animation = new ExpandCollapseAnimation(mWebViewTresc, 500, 0);
                         isTrescActive = true;
                         seperatorAfterTresc.setVisibility(View.VISIBLE);
                     }
-                    textViewTresc.startAnimation(animation);
+                    mWebViewTresc.startAnimation(animation);
                 }
             });
 

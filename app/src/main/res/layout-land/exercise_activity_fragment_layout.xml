@@ -43,17 +43,14 @@
             android:paddingRight="15dp"
             android:visibility="gone" />
 
-        <TextView
-            android:id="@+id/textViewTresc"
+        <WebView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/webViewTresc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
             android:paddingBottom="10dp"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
             android:paddingTop="10dp"
-            android:text="hello"
-            android:textColor="#19172c"
             android:visibility="gone" />
 
         <View

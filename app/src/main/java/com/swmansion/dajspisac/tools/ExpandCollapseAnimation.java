@@ -6,6 +6,7 @@ package com.swmansion.dajspisac.tools;
 
 import android.app.Activity;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.Transformation;
@@ -61,6 +62,14 @@ public class ExpandCollapseAnimation extends Animation {
         int widthMeasureSpec = View.MeasureSpec.makeMeasureSpec(screenWidth, View.MeasureSpec.EXACTLY);
 
         view.measure(widthMeasureSpec, heightMeasureSpec);
-        view.getLayoutParams().height = view.getMeasuredHeight();
+        if(view.getMeasuredHeight()!=0){
+            view.getLayoutParams().height = view.getMeasuredHeight();
+        }
+        else{
+            view.getLayoutParams().height = 100;
+        }
+
+
+        Log.d("retro","Height measured "+view.getLayoutParams().height);
     }
 }
